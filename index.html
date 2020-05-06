@@ -31,62 +31,75 @@
             color: #000000;
         }
 
-        .bg-3 {
+        .navBar {
             background-color: #ffffff;
-            color: #555555;
+            color: #000000;
+            height: 90px;
+            padding-top: 24px;
+        }
+
+        .buttonJunta {
+            background-color: #4CA8E0;
+            border: none;
+            color: white;
+            padding: 20px;
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 6px;
+            border-radius: 50px;
         }
 
         .bg-4 {
-            background-color: #2f2f2f;
-            color: #ffffff;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: #000000;
             text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sec_01">Quem Sou</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sec_02">O Que Faço</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sec_03">Hobbies</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-
-    <div class="container-fluid bg-1">
-        <h3 id="sec_01">Quem sou eu?</h3>
-        <img src="http://lorempixel.com/400/200/" class="rounded-circle" alt="Pessoa">
-        <h3>Eu sou um teste</h3>
+    <div class="navBar">
+        <img class="img-responsive" src="imgs/logo.png"
+            style="width: 9%; display: block; margin-left: auto; margin-right: auto;">
+            <hr style="margin-top: 25px;">
     </div>
 
+    <div class="container-fluid bg-4">
+        <div class="row">
+            <div class="col-lg-2 offset-lg-1">
+                <h3 style="font-size: 26px; color: #4CA8E0;">Improve Your</h3>
+                <h4 style="font-size: 56px;">Running</h4>
+                <button class=" buttonJunta">JUNTA-TE</button>
+            </div>
+            <div class="col-lg-3 my-3">
+                <br>
+                <h3 style="font-size: 17px;">Participa Em Provas e Ganha Pontos</h3>
+                <p style="font-size: 15px;">Entra sozinho ou com a tua equipa em grandes
+                    provas de running da tua região para ganhares pontos 
+                    e conquistas !</p>
+                <img class="img-responsive" src="imgs/Interface/" alt="">
+            </div>
+            <div class="col-lg-3 my-3">
+                <br>
+                <h3 style="font-size: 17px;">Visualiza a Tua Performance Em Prova</h3>
+                <p style="font-size: 15px;">Aqui podes visualizar a tua performance 
+                    e estatísticas sobre as tuas provas</p>
+                <img src="imgs/Interface/" alt="">
+            </div>
+            <div class="col-lg-3 my-3">
+                <br>
+                <h3 style="font-size: 17px;">Cria e Entra Em Equipas</h3>
+                <p style="font-size: 15px;">Junta-te a outros runners para que a tua motivação 
+                    seja  ainda maior</p>
+                <img src="imgs/Interface/" alt="">
+            </div>
+        </div>
+    </div>
+
+    
     <div class="container-fluid bg-2">
         <h3 id="sec_02">O que faço?</h3><br>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores non beatae veniam nemo incidunt accusamus
@@ -121,33 +134,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-3">
-        <!--Secção Hobbies-->
-        <h3 id="sec_03">Hoobies</h3><br>
-        <div class="row">
-            <div class="col-lg-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
-                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
-                    placeat dolorum!</p>
-                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
-                    style="width: 100%;">
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
-                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
-                    placeat dolorum!</p>
-                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
-                    style="width: 100%;">
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
-                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
-                    placeat dolorum!</p>
-                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
-                    style="width: 100%;">
-            </div>
-        </div>
-    </div>
+
     <footer></footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
