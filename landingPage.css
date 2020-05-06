@@ -1,3 +1,70 @@
-#retangulo{
-    background-color: aqua;
+@font-face {
+    font-family: PortoSans-LightItalic;
+    src: url(fonts/PortoSans-LightItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-RegularItalic;
+    src: url(fonts/PortoSans-RegularItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-BoldItalic;
+    src: url(fonts/PortoSans-BoldItalic.otf);
+}
+
+.bg-1 {
+    background-color: rgb(42, 99, 165);
+    color: white;
+    text-align: center;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bg-2 {
+    background-color: #474e5d;
+    color: white;
+    text-align: center;
+}
+
+.modal-dialog {
+    color: #000000;
+}
+
+.navBar {
+    background-color: #ffffff;
+    color: #000000;
+    height: 90px;
+    padding-top: 24px;
+}
+
+.buttonJunta {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.conteudo {
+    margin-top: 90px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+.footer {
+    height: 120px;
+    padding-top: 54px;
+    text-align: center;
+    margin: 0;
+    background-color: #F8F9FA;
 }
