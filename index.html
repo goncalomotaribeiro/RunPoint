@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css.css">
 
     <style>
+        @font-face {
+            font-family: PortoSans-LightItalic;
+            src: url(fonts/PortoSans-LightItalic.otf);
+        }
+
+        @font-face {
+            font-family: PortoSans-RegularItalic;
+            src: url(fonts/PortoSans-RegularItalic.otf);
+        }
+
+        @font-face {
+            font-family: PortoSans-BoldItalic;
+            src: url(fonts/PortoSans-BoldItalic.otf);
+        }
+
         .bg-1 {
             background-color: rgb(42, 99, 165);
             color: white;
@@ -42,20 +57,28 @@
             background-color: #4CA8E0;
             border: none;
             color: white;
-            padding: 20px;
+            padding: 13px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+            font-size: 18px;
             margin: 6px;
             border-radius: 50px;
+            font-family: PortoSans-BoldItalic;
         }
 
-        .bg-4 {
-            margin-top: 20px;
+        .conteudo {
+            margin-top: 90px;
             background-color: #ffffff;
             color: #000000;
             text-align: center;
+        }
+
+        .footer {
+            height: 120px;
+            padding-top: 54px;
+            text-align: center;
+            margin: 0;
+            background-color: #F8F9FA;
         }
     </style>
 </head>
@@ -64,78 +87,56 @@
     <div class="navBar">
         <img class="img-responsive" src="imgs/logo.png"
             style="width: 9%; display: block; margin-left: auto; margin-right: auto;">
-            <hr style="margin-top: 25px;">
+        <hr style="margin-top: 25px;">
     </div>
 
-    <div class="container-fluid bg-4">
+    <div class="container-fluid conteudo">
         <div class="row">
             <div class="col-lg-2 offset-lg-1">
-                <h3 style="font-size: 26px; color: #4CA8E0;">Improve Your</h3>
-                <h4 style="font-size: 56px;">Running</h4>
+                <h3 style="font-size: 30px; color: #4CA8E0; font-family: PortoSans-LightItalic;">Improve Your</h3>
+                <h4 style="font-size: 60px; font-family: PortoSans-BoldItalic;">Running</h4>
                 <button class=" buttonJunta">JUNTA-TE</button>
             </div>
-            <div class="col-lg-3 my-3">
+            <div class="col-lg-3 my-4">
                 <br>
-                <h3 style="font-size: 17px;">Participa Em Provas e Ganha Pontos</h3>
-                <p style="font-size: 15px;">Entra sozinho ou com a tua equipa em grandes
-                    provas de running da tua região para ganhares pontos 
+                <h3 style="font-size: 17px; font-family: PortoSans-BoldItalic;">Participa Em Provas e Ganha Pontos</h3>
+                <p style="font-size: 15px; font-family: PortoSans-RegularItalic;">Entra sozinho ou com a tua equipa em grandes
+                    provas de running da tua região para ganhares pontos
                     e conquistas !</p>
                 <img class="img-responsive" src="imgs/Interface/" alt="">
             </div>
-            <div class="col-lg-3 my-3">
+            <div class="col-lg-3 my-4">
                 <br>
-                <h3 style="font-size: 17px;">Visualiza a Tua Performance Em Prova</h3>
-                <p style="font-size: 15px;">Aqui podes visualizar a tua performance 
+                <h3 style="font-size: 17px; font-family: PortoSans-BoldItalic;">Visualiza a Tua Performance Em Prova</h3>
+                <p style="font-size: 15px; font-family: PortoSans-RegularItalic;">Aqui podes visualizar a tua performance
                     e estatísticas sobre as tuas provas</p>
                 <img src="imgs/Interface/" alt="">
             </div>
-            <div class="col-lg-3 my-3">
+            <div class="col-lg-3 my-4">
                 <br>
-                <h3 style="font-size: 17px;">Cria e Entra Em Equipas</h3>
-                <p style="font-size: 15px;">Junta-te a outros runners para que a tua motivação 
-                    seja  ainda maior</p>
+                <h3 style="font-size: 17px; font-family: PortoSans-BoldItalic;">Cria e Entra Em Equipas</h3>
+                <p style="font-size: 15px; font-family: PortoSans-RegularItalic;">Junta-te a outros runners para que a tua motivação
+                    seja ainda maior</p>
                 <img src="imgs/Interface/" alt="">
             </div>
         </div>
     </div>
 
-    
-    <div class="container-fluid bg-2">
-        <h3 id="sec_02">O que faço?</h3><br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores non beatae veniam nemo incidunt accusamus
-            fuga quos voluptatibus, placeat perferendis facere ratione architecto sed, sunt magnam exercitationem ad at
-            earum.</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelId"> <span
-                class="glyphicon glyphicon-pencil"></span>Mais sobre mim</button>
-        <!-- Modal -->
-        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem eligendi sequi at
-                            expedita aut id nesciunt quos suscipit ex cumque, voluptatum consequuntur odio quas. In a
-                            doloremque nesciunt est.8
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container conteudo">
+        <h3 style="margin-bottom: 40px; font-family: PortoSans-BoldItalic;">Desafia-te. Mantem-te motivado</h3>
+        <h3 style="margin-bottom: 60px; font-family: PortoSans-LightItalic;">Começa como Novice e esforça-te para chegares a Champion.</h3>
+        <img src="imgs/niveis/WINNER2.png" alt="" style="height: 8%; width: 8%; margin-right: 40px;">
+        <span><img src="imgs/niveis/allstar.png" alt="" style="height: 8%; width: 8%; margin-right: 40px;"></span>
+        <span><img src="imgs/niveis/prime.png" alt="" style="height: 8%; width: 8%;"></span><br>
     </div>
+    <!--class="rounded float-right"-->
 
+    <img src="imgs/Interface/Montanhas-PretoeBranco.png" alt="" style="height: 10%; width: 50%; margin-top: 100px;">
 
-    <footer></footer>
+    <hr style="margin: 0;">
+    <div class="footer">
+        <p>© 2020 RunPoint Todos os Direitos Reservados.</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
