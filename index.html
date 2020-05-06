@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RunPoint</title>
+    <link rel="shortcut icon" type="image/png" href="imgs/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+        .bg-1 {
+            background-color: rgb(42, 99, 165);
+            color: white;
+            text-align: center;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            color: white;
+            text-align: center;
+        }
+
+        .modal-dialog {
+            color: #000000;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            color: #555555;
+            text-align: center;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            color: #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec_01">Quem Sou</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec_02">O Que Faço</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec_03">Hobbies</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-1">
+        <h3 id="sec_01">Quem sou eu?</h3>
+        <img src="http://lorempixel.com/400/200/" class="rounded-circle" alt="Pessoa">
+        <h3>Eu sou um teste</h3>
+    </div>
+
+    <div class="container-fluid bg-2">
+        <h3 id="sec_02">O que faço?</h3><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores non beatae veniam nemo incidunt accusamus
+            fuga quos voluptatibus, placeat perferendis facere ratione architecto sed, sunt magnam exercitationem ad at
+            earum.</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelId"> <span
+                class="glyphicon glyphicon-pencil"></span>Mais sobre mim</button>
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem eligendi sequi at
+                            expedita aut id nesciunt quos suscipit ex cumque, voluptatum consequuntur odio quas. In a
+                            doloremque nesciunt est.8
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-3">
+        <!--Secção Hobbies-->
+        <h3 id="sec_03">Hoobies</h3><br>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
+                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
+                    placeat dolorum!</p>
+                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
+                    style="width: 100%;">
+            </div>
+            <div class="col-sm-4">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
+                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
+                    placeat dolorum!</p>
+                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
+                    style="width: 100%;">
+            </div>
+            <div class="col-sm-4">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta rerum repellendus esse autem,
+                    soluta deleniti, fugiat, nesciunt blanditiis dolores cum quod libero. Veniam, quisquam rem sit ex
+                    placeat dolorum!</p>
+                <img src="http://lorempixel.com/output/fashion-q-c-640-480-7.jpg" class="img-responsive"
+                    style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
