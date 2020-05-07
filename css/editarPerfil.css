@@ -1,0 +1,63 @@
+@font-face {
+    font-family: PortoSans-Light;
+    src: url(fonts/PortoSans-Light.otf);
+}
+
+@font-face {
+    font-family: PortoSans-LightItalic;
+    src: url(fonts/PortoSans-LightItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-Bold;
+    src: url(fonts/PortoSans-Bold.otf);
+}
+
+@font-face {
+    font-family: PortoSans-BoldItalic;
+    src: url(fonts/PortoSans-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-Regular;
+    src: url(fonts/PortoSans-Regular.otf);
+}
+
+@font-face {
+    font-family: PortoSans-RegularItalic;
+    src: url(fonts/PortoSans-RegularItalic.otf);
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.navBar {
+    background-color: white;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.buttonPainel {
+    background: none;
+    border: none;
+    color: black;
+    padding: 5px 15px 15px 15px;
+    text-decoration-line: underline;
+    text-decoration-color: #4CA8E0;
+    font-size: 14px;
+    font-family: PortoSans-Regular;
+}
+
+.buttonResultados,
+.buttonProvas,
+.buttonEquipas {
+    background: none;
+    border: none;
+    color: black;
+    padding: 5px 15px 15px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: PortoSans-Regular;
+}

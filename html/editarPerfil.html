@@ -5,26 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RunPoint</title>
-    <link rel="shortcut icon" type="image/png" href="../imgs/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/landingPage.css">
+    <link rel="stylesheet" href="css/editarPerfil.css">
 </head>
 
 <body>
     <div class="navBar">
         <!--MENU-->
-        <div id="divMenu">
-            <img class="img-responsive" src="../imgs/logo.png" style="position: absolute; width: 9%; margin-left: 100px; margin-right: 230px;">
-            <button class="buttonPainel" data-toggle="modal" data-target="#modelId" style="position: absolute; margin-left: 450px;">PAINEL</button>
-            <button class="buttonResultados" data-toggle="modal" data-target="#modelId" style="position: absolute; margin-left: 550px;">RESULTADOS</button>
-            <button class="buttonProvas" data-toggle="modal" data-target="#modelId" style="position: absolute; margin-left: 685px;">PROVAS</button>
-            <button class="buttonEquipas" data-toggle="modal" data-target="#modelId" style="position: absolute; margin-left: 800px;">EQUIPAS</button>
-            <input type="search" id="gsearch" name="gsearch" style="position: absolute; margin-left: 950px;">
-            <button class="buttonSearch" data-toggle="modal" data-target="#modelId"><img src="../imgs/Interface/lupa.png" style="width: 20px; position: absolute; margin-left: 1150px;"></button>
-            <button class="buttonUser" data-toggle="modal" data-target="#modelId"><img src="../imgs/Interface/Grupo 8.png" style="width: 20px; position: absolute; margin-left: 1250px;"></button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <img src="imgs/logo.png" style="width: 30%; padding-top: 5px;">
+                </div>
+                <div class="col-lg">
+                    <button class="buttonPainel" style="width: auto;">PAINEL</button>
+                    <button class="buttonResultados" style="width: auto;">RESULTADOS</button>
+                    <button class="buttonProvas" style="width: auto;">PROVAS</button>
+                    <button class="buttonEquipas" style="width: auto;">EQUIPAS</button>
+                </div>
+                <div class="col-lg">
+                    <input type="search" id="search" placeholder="Pesquisar" style="border: 1px solid #cacaca; background: none; font-size: 12px; font-style: italic; font-family: PortoSans-Regular;">
+                    <button class="buttonSearch" style="background: none; border: none;width: 30px; height: 30px;"><img class="img-lg-responsive" src="imgs/Interface/lupa.png" style="width: 10px;"></button>
+                    <button class="buttonNotif" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="imgs/Interface/" style="margin-left: 25px;width: 10px;"></button>
+                    <button class="buttonPerfil" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="imgs/Interface/do-utilizador.png" style="margin-left: 50px; width: 20px;"></button>
+                </div>
+            </div>
         </div>
     </div>
-    <hr style="margin-top: 1px;">
+
+
+    <!--PAINEL EDITAR EQUIPA-->
+    <div class="container-fluid editar">
+
+    </div>
+
+
     <script src="../js/registo.js"></script>
     <script src="../js/login.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
