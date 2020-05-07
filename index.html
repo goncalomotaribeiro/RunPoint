@@ -86,30 +86,32 @@
                     <div class="container-fluid p-5">
                         <img class="img-lg-responsive" src="imgs/logo.png"
                         style=" display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
-                        <form>
+                        <form action="ex3.html" onsubmit="return validarRegisto()">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input type="email" class="form-control" id="txtEmailRegistar"
                                     aria-describedby="emailHelp" placeholder="email"
-                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;">
+                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;" required>
+                                    <small id="emailHelpId" class="form-text text-muted"></small>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="password" class="form-control" id="txtPasswordRegistar"
                                     placeholder="password"
-                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;">
+                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="password" class="form-control" id="txtPasswordRegistar2"
                                     placeholder="password (novamente)"
-                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;">
+                                    style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;" required>
+                                    <small id="passHelpId" class="form-text text-muted"></small>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" class="form-check-input" id="cbxTermoseCondicoes" required>
                                 <label class="form-check-label" for="exampleCheck1" style="font-family: PortoSans-RegularItalic;">Aceita os nossos termos e
                                     condições?</label>
                             </div>
-                            <button type="submit" class="buttonRegistar">Registar</button>
-                            <button class="buttonLogin" data-dismiss="modal" data-toggle="modal"
-                                data-target="#modelId2">Login</button>
+                            <button type="submit" class="buttonRegistar" id="buttonRegistar">Registar</button>
+                            <small id="loginHelpId" class="form-text text-muted">Já tem conta? <a href="" data-dismiss="modal" data-toggle="modal"
+                                data-target="#modelId2">Faça Login</a></small>
                         </form>
                     </div>
                 </div>
@@ -131,33 +133,35 @@
                     <div class="container-fluid p-5">
                         <img class="img-lg-responsive" src="imgs/logo.png"
                         style=" display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
-                        <form>
+                        <form action="ex3.html" onsubmit="return validarLogin()">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input type="email" class="form-control" id="txtEmailLogin"
                                     aria-describedby="emailHelp" placeholder="email"
                                     style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0; font-family: PortoSans-LightItalic;">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="password" class="form-control" id="txtPasswordLogin"
                                     placeholder="password"
                                     style="border: 0px none; border-bottom: 1px solid rgb(202, 202, 202); border-radius: 0 ; font-family: PortoSans-LightItalic;">
+                                    <small id="dadosInvalidos" class="form-text text-muted"></small>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" class="form-check-input" id="cbxLembrar">
                                 <label class="form-check-label" for="exampleCheck1" style="font-family: PortoSans-RegularItalic;">Lembrar-me.</label>
                             </div>
-                            <button type="submit" class="buttonRegistar">Login</button>
-                            <button class="buttonLogin" data-dismiss="modal" data-toggle="modal"
-                                data-target="#modelId">Registar</button>
+                            <button type="submit" class="buttonRegistar" id="buttonLogin">Login</button>
+                            <small id="RegistoHelpId" class="form-text text-muted">Ainda não tem conta? <a href="" data-dismiss="modal" data-toggle="modal"
+                                data-target="#modelId">Registe-se aqui</a></small>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="registo.js"></script>
+    <script src="login.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-</body>
-
+</body>  
 </html>
