@@ -13,21 +13,9 @@
     src: url(fonts/PortoSans-BoldItalic.otf);
 }
 
-.bg-1 {
-    background-color: rgb(42, 99, 165);
-    color: white;
-    text-align: center;
-}
-
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
-}
-
-.bg-2 {
-    background-color: #474e5d;
-    color: white;
-    text-align: center;
 }
 
 .modal-dialog {
@@ -45,10 +33,24 @@
     background-color: #4CA8E0;
     border: none;
     color: white;
-    padding: 13px;
+    padding: 17px;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.buttonRegistar {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
     margin: 6px;
     border-radius: 50px;
     font-family: PortoSans-BoldItalic;
@@ -62,9 +64,12 @@
 }
 
 .footer {
-    height: 120px;
-    padding-top: 54px;
+    height: 110px;
+    padding-top: 44px;
     text-align: center;
     margin: 0;
     background-color: #F8F9FA;
+    font-family: PortoSans-RegularItalic;
+    color: #666666;
 }
+
