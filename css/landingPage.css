@@ -13,6 +13,11 @@
     src: url(../fonts/PortoSans-BoldItalic.otf);
 }
 
+@font-face {
+    font-family: PortoSans-Regular;
+    src: url(../fonts/PortoSans-Regular.otf);
+}
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
