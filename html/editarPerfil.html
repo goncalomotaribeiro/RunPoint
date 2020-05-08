@@ -37,7 +37,7 @@
 
 
     <!--PAINEL EDITAR EQUIPA-->
-    <div class="container">
+    <div class="container" id="painel">
         <div class="row">
             <div class="col" id="col1">
                 <h3 style="width: auto;font-size: 18px; font-family: PortoSans-Regular; margin-top: 15px; padding-bottom: 50px; padding-left: 50px;">Editar Perfil</h3>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="col">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; margin-right: 10px;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 50px; margin-right: 50px;">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="row" style="padding-top: 110px;">
@@ -121,10 +121,16 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col" style="padding-top: 5%; padding-bottom: 30px;">
+                <button type="submit" class="btnGuardar" id="buttonGuardar">Guardar alterações</button><br>
+                <small><a href="" id="apagarConta" data-dismiss="modal" data-toggle="modal" data-target="#modelId2">Apagar conta</a></small>
+            </div>
+
+        </div>
+
     </div>
-    <div class="container">
-        <button class="btnGuardar">Guardar alterações</button>
-    </div>
+
     <!--FOOTER-->
     <hr style="margin: 0;">
     <div class="footer">

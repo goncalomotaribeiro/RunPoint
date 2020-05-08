@@ -1,6 +1,6 @@
 @font-face {
     font-family: PortoSans-Light;
-    src: url(fonts/PortoSans-Light.otf);
+    src: url(../fonts/PortoSans-Light.otf);
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: PortoSans-Bold;
-    src: url(fonts/PortoSans-Bold.otf);
+    src: url(../fonts/PortoSans-Bold.otf);
 }
 
 @font-face {
