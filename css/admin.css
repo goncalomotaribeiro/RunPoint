@@ -11,6 +11,7 @@
 a{
     font-family: PortoSans-Regular;
 }
+
 a,
 a:hover,
 a:focus {
@@ -71,7 +72,7 @@ a:focus {
 a[aria-expanded="true"] {
     color: #fff;
     background: #141414;
-    border-bottom: 3px solid #4CA8E0;
+    border-bottom: 1px solid #4CA8E0;
 }
 
 a[data-toggle="collapse"] {
