@@ -8,7 +8,7 @@ window.onload = function carregarUtilizadores() {
 
     for (const user of users) { //Percorre o array users
         $('#example').DataTable().row.add([
-            user.nome, user.sobrenome, user.email, user.password, user.localidade, user.genero, user.dataNasc, user.tipo, user.foto, '<img src="../imgs/Interface/editar.png" alt="" class="editar"> <img src="../imgs/Interface/eliminar.png" alt="" class="eliminar">'
+            user.nome, user.sobrenome, user.email, user.password, user.localidade, user.genero, user.dataNasc, user.tipo, user.estado, user.foto, '<img src="../imgs/Interface/editar.png" alt="" class="editar"> <img src="../imgs/Interface/eliminar.png" alt="" class="eliminar">'
         ]).draw();
     }
 }
@@ -16,6 +16,7 @@ window.onload = function carregarUtilizadores() {
 function adicionarAtleta(form){
     let foto = document.getElementById("file-input").value;
     let tipo = "";
+    let estado = "";
     
     if(form.chxAdmin.checked){
         tipo = "admin";
@@ -23,8 +24,14 @@ function adicionarAtleta(form){
         tipo = "comum";
     }
 
+    if(form.chxEstado.checked){
+        estado = "ativo";
+    }else{
+        estado = "bolqueado";
+    }
+
     class User {
-        constructor(nome, sobrenome, email, password, localidade, genero, dataNasc, tipo, foto) {
+        constructor(nome, sobrenome, email, password, localidade, genero, dataNasc, tipo, estado, foto) {
             this.nome = nome
             this.sobrenome = sobrenome
             this.email = email
@@ -33,10 +40,11 @@ function adicionarAtleta(form){
             this.genero = genero
             this.dataNasc = dataNasc
             this.tipo = tipo
+            this.estado = estado
             this.foto = foto
         }
     }
-    const NewUser = new User(form.txtNome.value, form.txtSobrenome.value, form.txtEmail.value, form.txtPassword.value, form.txtLocalidade.value, form.genero.value, form.dataNasc.value, tipo, foto)
+    const NewUser = new User(form.txtNome.value, form.txtSobrenome.value, form.txtEmail.value, form.txtPassword.value, form.txtLocalidade.value, form.genero.value, form.dataNasc.value, tipo, estado, foto)
     let users = []
 
     if (localStorage.getItem("Users")) {
@@ -71,6 +79,12 @@ function editarAtleta(form){
         tipo = "comum";
     }
 
+    if(form.chxEstado.checked){
+        estado = "ativo";
+    }else{
+        estado = "bloqueado";
+    }
+
     if (localStorage.getItem("Users")) {
         users = JSON.parse(localStorage.getItem("Users"))
     }
@@ -87,6 +101,7 @@ function editarAtleta(form){
             user.genero = form.genero.value;
             user.dataNasc = form.dataNasc.value;
             user.tipo = tipo;
+            user.estado = estado;
             if(_foto == ""){
                 user.foto = form.txtFoto.value;
             }else{

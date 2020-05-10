@@ -100,6 +100,7 @@
                         <th>Género</th>
                         <th>DataNasc</th>
                         <th>Tipo</th>
+                        <th>Estado</th>
                         <th>Foto</th>
                         <th>Editar/Eliminar</th>
                     </tr>
@@ -167,6 +168,10 @@
                                     <div class="form-group">
                                         <input type="checkbox" name="chxAdmin" id="chxAdmin">
                                         <label for="chxAdmin">Admin</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="chxEstado" id="chxEstado" checked>
+                                        <label for="chxEstado">Ativo</label>
                                     </div>
                                     <button type="submit" class="btnAdicionar" name="btnAdicionar" id="btnAdicionar" onclick="adicionarAtleta(form)">Adicionar</button>
                                     <button type="submit" class="btnAdicionar" name="btnEditar" id="btnEditar" onclick="editarAtleta(form)" style="display: none;">Editar</button>
@@ -242,7 +247,18 @@
                     form.txtLocalidade.value = data[4];
                     form.genero.value = data[5];
                     form.dataNasc.value = data[6];
-                    form.txtFoto.value = data[8];
+                    form.txtFoto.value = data[9];
+
+                    
+                    if(data[7] == "admin"){
+                        form.chxAdmin.checked = true;
+                    }
+
+                    if(data[8] == "ativo"){
+                        form.chxEstado.checked = true;
+                    }else{
+                        form.chxEstado.checked = false;
+                    }
                     
                 })
 
