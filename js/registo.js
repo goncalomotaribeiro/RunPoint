@@ -15,14 +15,20 @@ function validarRegisto() {
 
     } else {
         class User {
-            constructor(email, password, tipo) {
+            constructor(nome, sobrenome, email, password, localidade, genero, dataNasc, tipo, foto) {
+                this.nome = nome
+                this.sobrenome = sobrenome
                 this.email = email
                 this.password = password
+                this.localidade = localidade
+                this.genero = genero
+                this.dataNasc = dataNasc
                 this.tipo = tipo
+                this.foto = foto
             }
         }
 
-        const NewUser = new User(txtEmail.value, txtPassword.value, "comum")
+        const NewUser = new User("", "", txtEmail.value, txtPassword.value, "", "", "", "comum", "")
         let users = []
 
         if (localStorage.getItem("Users")) {

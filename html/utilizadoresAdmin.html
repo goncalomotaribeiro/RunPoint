@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RunPoint</title>
     <link rel="shortcut icon" type="image/png" href="../imgs/favicon.ico" />
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/fonts.css">
@@ -46,15 +46,23 @@
                 <li>
                     <a href="equipasAdmin.html">Equipas</a>
                 </li>
-                <li class="active">
-                    <a href="#">Utilizadores</a>
+                <li>
+                    <a href="#UtilizadoresSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Utilizadores</a>
+                    <ul class="collapse list-unstyled" id="UtilizadoresSubmenu">
+                        <li class="active">
+                            <a href="#">Contas</a>
+                        </li>
+                        <li>
+                            <a href="#">DadosAtleta</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
 
         <!-- NavBar  -->
         <div id="content">
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
@@ -78,28 +86,34 @@
                 </div>
             </nav>
 
-                
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th>Tipo</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>    
-                    </tbody>
-                </table>
+            <img src="../imgs/Interface/adicionar.png" alt="" class="adicionar" style="margin-top: -7px;"> Adicionar<br><br>
+            <table id="example" class="table table-striped table-bordered" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Localidade</th>
+                        <th>Género</th>
+                        <th>DataNasc</th>
+                        <th>Tipo</th>
+                        <th>Foto</th>
+                        <th>Eliminar/Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
-        
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-        
-        
+
+
 
         <script type="text/javascript">
             $(document).ready(function () {
@@ -109,9 +123,29 @@
             });
 
             $(document).ready(function () {
-                $('#example').DataTable({
-                    "bInfo" : false
+                let table = $('#example').DataTable({
+                    "bInfo": false,
+                    "autoWidth": true
                 });
+                table.columns.adjust().draw();
+                //ELIMINAR UTILIZADOR
+                $('#example tbody').on('click', '.eliminar', function () {
+                    var data = table.row($(this).parents('tr')).data();
+                    let users = []
+
+                    if (localStorage.getItem("Users")) {
+                        users = JSON.parse(localStorage.getItem("Users"))
+                    }
+                    let i = 0
+                    for (const user of users) { //Percorre o array users
+                        if (data[1] == user.email) {
+                            users.splice(i, 1);
+                        }
+                        i++;
+                    }
+                    localStorage.setItem("Users", JSON.stringify(users))
+                    location.reload();
+                })
             });
         </script>
 
