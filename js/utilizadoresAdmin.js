@@ -61,8 +61,8 @@ function adicionarAtleta(form){
 
 function editarAtleta(form){
 
+    let _foto = document.getElementById("file-input").value;
     let users = []
-    let foto = document.getElementById("foto").value;
     let tipo = "";
     
     if(form.chxAdmin.checked){
@@ -87,12 +87,18 @@ function editarAtleta(form){
             user.genero = form.genero.value;
             user.dataNasc = form.dataNasc.value;
             user.tipo = tipo;
-            user.foto = foto;
+            if(_foto == ""){
+                user.foto = form.txtFoto.value;
+            }else{
+                user.foto = _foto;
+            }
+            
         }
         
     }
 
     localStorage.setItem("Users", JSON.stringify(users))
+    location.reload();
 }
 
 
