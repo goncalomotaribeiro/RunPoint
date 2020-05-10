@@ -111,3 +111,53 @@ ul ul a {
         display: none;
     }
 }
+
+form .form-control{
+    border: 0px none;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    border-radius: 0;
+    font-family: PortoSans-LightItalic;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btnAdicionar{
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 6px;
+    border-radius: 30px;
+    font-family: PortoSans-BoldItalic;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
+}
+
+label{
+    font-family: PortoSans-RegularItalic;
+    font-size: 17px;
+    margin-right: 15px;
+}
+
+select, .form-date{
+    border: 0px none;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    font-family: PortoSans-LightItalic;
+}
+
+.image-upload>input {
+    display: none;
+  }
+
+  .image-upload{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
