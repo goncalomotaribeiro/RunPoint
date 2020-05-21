@@ -35,7 +35,7 @@ class App {
     }
 
     _importDataFixtures() {
-        
+        let users =[]
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
