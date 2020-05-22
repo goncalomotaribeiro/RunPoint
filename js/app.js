@@ -1,4 +1,5 @@
 import UserView from './views/UserView.js'
+import UserAdminView from './views/UserAdminView.js'
 
 class App {
     constructor() {
@@ -8,6 +9,9 @@ class App {
             ],
             'index': [
                 UserView,
+            ],
+            'contasAdmin': [
+                UserAdminView,
             ]
         };
 

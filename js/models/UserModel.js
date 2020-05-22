@@ -40,4 +40,30 @@ export default class UserModel {
     _persist() {
         localStorage.setItem('users', JSON.stringify(this.users));
     }
+
+    sort() {
+        this.users.sort(this._compare);
+        this._persist();
+    }
+
+    setCurrentUser(id) {
+        localStorage.setItem("user", id); 
+    }
+
+    getCurrentUser() {
+        return this.users.find(user => user.id === +localStorage.user)
+    }
+
+    remove(id) {
+        this.users = this.users.filter(user => user.id != id)
+        this._persist()
+    }
+   
+    _compare(userA, userB) {
+        if (userA.email < userB.email)
+            return -1;
+        if (userA.email > userB.email)
+            return 1;
+        return 0;
+    }
 }
