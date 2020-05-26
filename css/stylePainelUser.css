@@ -1,9 +1,12 @@
+body {
+    background-color: #f9f9f9;
+}
+
 .navBar {
     background-color: white;
     width: auto;
     padding-top: 15px;
     padding-bottom: 5px;
-    border-bottom: #cacaca;
 }
 
 .buttonPainel {
