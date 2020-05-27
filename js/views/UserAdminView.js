@@ -108,8 +108,7 @@ export default class UserAdminView {
             `<div class="alert alert-${type}" role="alert">${message}</div>`;
     }
 
-    displayUserImage(){
-        
+    displayUserImage(){      
         this.addFoto.onchange =  evt => {
             let tgt = evt.target || window.event.srcElement,
                 files = tgt.files;
