@@ -1,0 +1,29 @@
+@font-face {
+    font-family: PortoSans-Light;
+    src: url(../fonts/PortoSans-Light.otf);
+}
+
+@font-face {
+    font-family: PortoSans-LightItalic;
+    src: url(../fonts/PortoSans-LightItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-Bold;
+    src: url(../fonts/PortoSans-Bold.otf);
+}
+
+@font-face {
+    font-family: PortoSans-BoldItalic;
+    src: url(../fonts/PortoSans-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-RegularItalic;
+    src: url(../fonts/PortoSans-RegularItalic.otf);
+}
+
+@font-face {
+    font-family: PortoSans-Regular;
+    src: url(../fonts/PortoSans-Regular.otf);
+}

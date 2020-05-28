@@ -1,0 +1,30 @@
+.navBar {
+    background-color: white;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: #cacaca;
+}
+
+.buttonPainel {
+    background: none;
+    border: none;
+    color: black;
+    padding: 5px 15px 15px 15px;
+    text-decoration-line: underline;
+    text-decoration-color: #4CA8E0;
+    font-size: 14px;
+    font-family: PortoSans-Regular;
+}
+
+.buttonResultados,
+.buttonProvas,
+.buttonEquipas {
+    background: none;
+    border: none;
+    color: black;
+    padding: 5px 15px 15px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: PortoSans-Regular;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RunPoint</title>
+    <link rel="shortcut icon" type="image/png" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../imgs/logo-branco.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components"><br>
+                <li class="active">
+                    <a href="#">Painel</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Provas</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Provas</a>
+                        </li>
+                        <li>
+                            <a href="#">Inscritos</a>
+                        </li>
+                        <li>
+                            <a href="#">Classificações</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="equipasAdmin.html">Equipas</a>
+                </li>
+                <li>
+                    <a href="#UtilizadoresSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Utilizadores</a>
+                    <ul class="collapse list-unstyled" id="UtilizadoresSubmenu">
+                        <li>
+                            <a href="contasAdmin.html">Contas</a>
+                        </li>
+                        <li>
+                            <a href="dadosAtletaAdmin.html">DadosAtleta</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- NavBar  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btnSidebar">
+                        <img src="../imgs/Interface/menu.png" alt="">
+                    </button>
+                    <button class="btnSidebar d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="../imgs/Interface/sair.png" alt="">
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Sair</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </div>
+            
+    <script src="../js/registo.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

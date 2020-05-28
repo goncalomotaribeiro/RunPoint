@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RunPoint</title>
+    <link rel="shortcut icon" type="image/png" href="../imgs/favicon.ico" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+
+    <script src="../js/utilizadoresAdmin.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../imgs/logo-branco.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components"><br>
+                <li>
+                    <a href="painelAdmin.html">Painel</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Provas</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Provas</a>
+                        </li>
+                        <li>
+                            <a href="#">Inscritos</a>
+                        </li>
+                        <li>
+                            <a href="#">Classificações</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="equipasAdmin.html">Equipas</a>
+                </li>
+                <li class="active">
+                    <a href="#">Utilizadores</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- NavBar  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btnSidebar">
+                        <img src="../imgs/Interface/menu.png" alt="">
+                    </button>
+                    <button class="btnSidebar d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="../imgs/Interface/sair.png" alt="">
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Sair</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Tipo</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>    
+                    </tbody>
+                </table>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        
+        
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    "bInfo" : false
+                });
+            });
+        </script>
+
+</body>
+
+</html>

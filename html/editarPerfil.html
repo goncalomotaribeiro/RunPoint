@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RunPoint</title>
+    <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/editarPerfil.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <!--MENU-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <img src="/imgs/logo.png" style="width: 30%; padding-top: 5px;">
+                </div>
+                <div class="col-lg">
+                    <button class="buttonPainel" style="width: auto;">PAINEL</button>
+                    <button class="buttonResultados" style="width: auto;">RESULTADOS</button>
+                    <button class="buttonProvas" style="width: auto;">PROVAS</button>
+                    <button class="buttonEquipas" style="width: auto;">EQUIPAS</button>
+                </div>
+                <div class="col-lg">
+                    <input type="search" id="search" placeholder="Pesquisar" style="border: 1px solid #cacaca; background: none; font-size: 12px; font-style: italic; font-family: PortoSans-Regular;">
+                    <button class="buttonSearch" style="background: none; border: none;width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png" style="width: 10px;"></button>
+                    <button class="buttonNotif" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/sino.png" style="margin-left: 25px;width: 17px;"></button>
+                    <button class="buttonPerfil" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/do-utilizador.png" style="margin-left: 50px; width: 20px;"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--PAINEL EDITAR EQUIPA-->
+    <div class="container" id="painel">
+        <div class="row">
+            <div class="col" id="col1">
+                <h3 style="width: auto;font-size: 18px; font-family: PortoSans-Regular; margin-top: 15px; padding-bottom: 50px; padding-left: 50px;">Editar Perfil</h3>
+                <div class="container-fluid">
+                    <img class="img-lg-responsive" src="/imgs/Interface/do-utilizador.png" style="width: 25%; margin-left: 80px;"><br>
+                    <button style="border: none; background: none; font-family: PortoSans-Bold; color: #4CA8E0; font-size: 15px; margin-left: 100px;">Alterar</button><br><br>
+                    <img class="img-lg-responsive" src="/imgs/Interface/shirt.png" style="width: 25%; margin-left: 80px;"><br>
+                    <button style="border: none; background: none; font-family: PortoSans-Bold; color: #4CA8E0; font-size: 15px; margin-left: 100px;">Alterar</button>
+                </div>
+            </div>
+            <div class="col">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 50px; margin-right: 50px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row" style="padding-top: 110px;">
+                    <div class="col" style="padding-right: 30px;">
+                        <h3>Nome</h3>
+                        <input type="nome" class="form-control" id="txtNovoNome" placeholder="NomeAtual" style="border: 0px none; border-bottom: 1px solid #cacaca; border-radius: 0; font-family: PortoSans-LightItalic;" required>
+                        <h3 style="padding-top: 50px;">Localidade</h3>
+                        <select id="sltLocalidade">
+                            <option id="porto">Porto</option>
+                            <option>Porto</option>
+                            <option>Porto</option>
+                            <option>Porto</option>
+                            <option>Porto</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <h3>Sobrenome</h3>
+                        <input type="sobrenome" class="form-control" id="txtNovoSobrenome" placeholder="SobrenomeAtual" style="border: 0px none; border-bottom: 1px solid #cacaca; border-radius: 0; font-family: PortoSans-LightItalic;" required>
+                        <h3 style="padding-top: 50px;">Género</h3>
+                        <select id="sltGenero">
+                            <option>Feminino</option>
+                            <option>Masculino</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="padding-left: 30px; width: 95%;">
+                    <h3>E-mail</h3>
+                    <input type="mail" class="form-control" id="txtNovoMail" placeholder="AtualMail" style="border: 0px none; border-bottom: 1px solid #cacaca; border-radius: 0; font-family: PortoSans-LightItalic;" required>
+                </div>
+                <div class="row" style=" padding-left: 20px">
+                    <div class="col">
+                        <h3>Data de nascimento</h3>
+                        <input id="txtDia" type="number" min="1" max="31">
+                        <select id="sltMes">
+                            <option value="janeiro">Janeiro</option>
+                            <option value="fevereiro">Fevereiro</option>
+                            <option value="marco">Março</option>
+                            <option value="abril">Abril</option>
+                            <option value="maio">Maio</option>
+                            <option value="junho">Junho</option>
+                            <option value="julho">Julho</option>
+                            <option value="agosto">Agosto</option>
+                            <option value="setembro">Setembro</option>
+                            <option value="outubro">Outubro</option>
+                            <option value="novembro">Novembro</option>
+                            <option value="dezembro">Dezembro</option>
+                        </select>
+                        <input id="txtAno" type="number" min="1900" max="2020">
+                    </div>
+                </div>
+
+                <div class="row" style=" padding-left: 20px">
+                    <div class="col">
+                        <h3>Tipo de Passada Fav.</h3>
+                        <select id="sltPassada">
+                            <option>Caminhada</option>
+                            <option>Corrida</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <h3>Tipo de Prova Fav.</h3>
+                        <select id="sltGenero">
+                            <option>5K</option>
+                            <option>10K</option>
+                            <option>15K</option>
+                            <option>21K</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="padding-top: 5%; padding-bottom: 30px;">
+                <button type="submit" class="btnGuardar" id="buttonGuardar">Guardar alterações</button><br>
+                <small><a href="" id="apagarConta" data-dismiss="modal" data-toggle="modal" data-target="#modelId2">Apagar conta</a></small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--FOOTER-->
+    <hr style="margin: 0;">
+    <div class="footer">
+        <p>© 2020 RunPoint Todos os Direitos Reservados.</p>
+    </div>
+
+    <script src="../js/registo.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
