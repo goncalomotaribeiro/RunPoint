@@ -1,16 +1,19 @@
+body {
+    background-color: #f9f9f9;
+}
+
 .navBar {
     background-color: white;
     width: auto;
     padding-top: 15px;
-    padding-bottom: 5px;
-    border-bottom: #cacaca;
+    padding-bottom: 15px;
 }
 
 .buttonPainel {
     background: none;
     border: none;
     color: black;
-    padding: 5px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
     text-decoration-line: underline;
     text-decoration-color: #4CA8E0;
     font-size: 14px;

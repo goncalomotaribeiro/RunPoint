@@ -113,11 +113,7 @@ ul ul a {
 }
 
 form .form-control{
-    border: 0px none;
-    border-bottom: 1px solid rgb(202, 202, 202);
-    border-radius: 0;
-    font-family: PortoSans-LightItalic;
-    margin-top: 30px;
+    border-radius: 10;
     margin-bottom: 30px;
 }
 
@@ -132,11 +128,7 @@ form .form-control{
     margin: 6px;
     border-radius: 30px;
     font-family: PortoSans-BoldItalic;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 30px;
-    
 }
 
 label{
@@ -148,7 +140,6 @@ label{
 select, .form-date{
     border: 0px none;
     border-bottom: 1px solid rgb(202, 202, 202);
-    font-family: PortoSans-LightItalic;
 }
 
 .image-upload>input {
@@ -160,4 +151,32 @@ select, .form-date{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+  }
+
+  #imagePreview{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .stats{
+    font-family: PortoSans-RegularItalic;
+    background-color: #4CA8E0;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .dados{
+    font-family: PortoSans-RegularItalic;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #4CA8E0;
+    color: #4CA8E0;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
   }
