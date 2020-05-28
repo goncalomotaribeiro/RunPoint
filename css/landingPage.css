@@ -1,0 +1,90 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.modal-dialog {
+    color: #000000;
+}
+
+.navBar {
+    background-color: #ffffff;
+    color: #000000;
+    height: 90px;
+    padding-top: 24px;
+}
+
+.buttonEntrar {
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000000;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.buttonJunta {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.buttonRegistar {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.buttonLogin {
+    background-color: #ffffff;
+    border: 1px solid #4CA8E0;
+    color: #4CA8E0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 6px;
+    border-radius: 50px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.conteudo {
+    margin-top: 90px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+.footer {
+    height: 110px;
+    padding-top: 44px;
+    text-align: center;
+    margin: 0;
+    background-color: #F8F9FA;
+    font-family: PortoSans-RegularItalic;
+    color: #666666;
+}
+
+.form-group{
+    margin-bottom: 40px;
+}
