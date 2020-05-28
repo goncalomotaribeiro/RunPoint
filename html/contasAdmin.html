@@ -85,7 +85,7 @@
             </nav>
 
             <!-- Tabela -->
-            <a href="" data-toggle="modal" data-target="#modelId"><img src="../imgs/Interface/adicionar.png" alt="" class="adicionar" style="margin-top: -7px;"></a>
+            <a href="" data-toggle="modal" data-target="#modelId" class="adicionar"><img src="../imgs/Interface/adicionar.png" alt="" style="margin-top: -7px;"></a>
             <label for=""> Adicionar</label><br><br>
 
             <form class="form-inline">
@@ -188,8 +188,10 @@
                                             <label for="chxEstado">Ativo</label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btnAdicionar">Adicionar</button>
+                                    <button type="submit" class="btnAdicionar" id="btnAdicionar">Adicionar</button>
+                                    <button type="submit" class="btnAdicionar" id="btnEditar" style="visibility: hidden">Editar</button>
                                     <div id="addUserMessage"></div>
+                                    <input type="text" id="editId" style="visibility: hidden;">
                                   </form>
                             </div>
                         </div>

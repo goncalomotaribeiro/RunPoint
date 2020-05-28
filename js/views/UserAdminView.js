@@ -26,12 +26,21 @@ export default class UserAdminView {
         this.addChxAdmin = document.querySelector("#addChxAdmin")
         this.addChxEstado = document.querySelector("#addChxEstado")
         this.addUserMessage = document.querySelector("#addUserMessage")
+        this.btnAdicionar = document.querySelector("#btnAdicionar")
+
+        //Form Editar
+        this.btnEditar = document.querySelector("#btnEditar")
+        this.modalTitle = document.querySelector("#modal-title")
+        this.editId = document.querySelector("#editId")
 
         this.renderTable(this.userController.getUsers())
         this.bindAddFilterEvent()
         this.bindAddSortEvent()
         this.bindAddAddForm()
         this.displayUserImage()
+        this.bindAddEditEvent()
+        this.ShowEditForm()
+        this.ShowAddForm()
     }
 
     bindAddFilterEvent() {
@@ -58,8 +67,80 @@ export default class UserAdminView {
         }
     }
 
+    ShowEditForm() {
+        for (const btnEdit of document.querySelectorAll(".edit")) {
+            btnEdit.addEventListener('click', event => {
+            this._renderEditButton()
+            this.editUser = this.userController.getUser(event.target.id)
+            this.editId.value = event.target.id
+            this.addEmail.value = this.editUser.email
+            this.addPassword.value = this.editUser.password
+            this.addPassword2.value = this.editUser.password
+            this.addNome.value = this.editUser.nome
+            this.addSobrenome.value = this.editUser.sobrenome
+            this.addLocalidade.value = this.editUser.localidade
+            this.addGenero.value = this.editUser.genero
+            this.addDataNasc.value = this.editUser.dataNasc
+            this.editUser.tipo == 'admin' ? this.addChxAdmin.checked = true : this.addChxAdmin.checked = false
+            this.editUser.estado == 'ativo' ? this.addChxEstado.checked = true : this.addChxEstado.checked = false
+            document.querySelector('#imagePreview').src = this.editUser.foto;
+            })
+        }
+    }
+
+    _renderEditButton(){
+        this.modalTitle.innerHTML = "Editar Utilizador"
+        this.btnEditar.style.visibility = 'visible';
+        this.btnAdicionar.style.visibility = 'hidden';    
+    }
+
+    bindAddEditEvent(){
+        this.btnEditar.addEventListener('click', () => {     
+            try {
+                if (this.addPassword.value !==this.addPassword2.value) {
+                    throw Error('Password and Confirm Password are not equal');   
+                }
+                this.userController.editUser(
+                this.editId.value,
+                this.addEmail.value,
+                this.addPassword.value,
+                this.addNome.value,
+                this.addSobrenome.value,
+                this.addLocalidade.value,
+                this.addGenero.value,
+                this.addDataNasc.value,
+                this.addFoto.value,
+                this.addChxAdmin.checked ? 'admin' : 'comum',
+                this.addChxEstado.checked ? 'ativo' : 'bloqueado'
+                );
+                this.displayAddUserMessage('User edited with success!', 'success');
+
+            } catch(e) {
+                this.displayAddUserMessage(e, 'danger');
+                event.preventDefault();
+            }
+        })
+        
+    }
+
+    ShowAddForm() {
+        for (const btnAdd of document.getElementsByClassName("adicionar")) {
+            btnAdd.addEventListener('click', event => {
+                this._renderAddButton()
+                this.frmNewUser.reset();
+                document.querySelector('#imagePreview').src = '../imgs/Interface/fotoPerfil.png';
+            })
+        }
+    }
+
+    _renderAddButton(){
+        this.modalTitle.innerHTML = "Novo Utilizador"
+        this.btnEditar.style.visibility = 'hidden';
+        this.btnAdicionar.style.visibility = 'visible';
+    }
+
     bindAddAddForm() {
-        this.frmNewUser.addEventListener('submit', () => {      
+        this.btnAdicionar.addEventListener('click', () => {      
             try {
                 if (this.addPassword.value !==this.addPassword2.value) {
                     throw Error('Password and Confirm Password are not equal');   
@@ -85,6 +166,7 @@ export default class UserAdminView {
         })
     }
 
+
     renderTable(users = []) {
         let result = ''
         for (const user of users) {
@@ -96,7 +178,7 @@ export default class UserAdminView {
                 <td>${user.tipo}</td>
                 <td>${user.estado}</td>
                 <td><button id="${user.id}" class="btn dados">Dados Pessoais</button> <button id="${user.id}" class="btn stats">Estatísticas</button></td>
-                <td><a href=""><img src="../imgs/Interface/editar.png" alt="" class="edit"></a> <a href=""><img src="../imgs/Interface/eliminar.png" alt="" id="${user.id}" class="remove"></a></td>
+                <td><a href="" data-toggle="modal" data-target="#modelId"><img src="../imgs/Interface/editar.png" alt="" class="edit"  id="${user.id}"></a> <a href=""><img src="../imgs/Interface/eliminar.png" alt="" id="${user.id}" class="remove"></a></td>
             </tr>`           
         }
         this.tBody.innerHTML = result
@@ -113,7 +195,6 @@ export default class UserAdminView {
             let tgt = evt.target || window.event.srcElement,
                 files = tgt.files;
         
-            // FileReader support
             if (FileReader && files && files.length) {
                 let fr = new FileReader();
                 fr.onload = function () {
@@ -122,7 +203,7 @@ export default class UserAdminView {
                 fr.readAsDataURL(files[0]);
             }
         }
-        
     }
+
 
 }

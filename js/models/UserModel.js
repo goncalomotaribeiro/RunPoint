@@ -25,6 +25,28 @@ export default class UserModel {
         this._persist();
     }
 
+    edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+        const users = this.users;
+
+        for (let i = 0; i < users.length; i++) {
+            const user = users[i];
+            if(i == id - 1){
+                user.email = email;
+                user.password = password;
+                user.nome = nome;
+                user.sobrenome = sobrenome;
+                user.localidade = localidade;
+                user.genero = genero;
+                user.dataNasc = dataNasc;
+                user.foto = foto;
+                user.tipo = tipo;
+                user.estado = estado;
+            }
+        }
+        localStorage.setItem('users', JSON.stringify(users));
+        location.reload();
+    }
+
     login(email) {
         sessionStorage.setItem('loggedUser', email);
     }
@@ -51,7 +73,11 @@ export default class UserModel {
     }
 
     getCurrentUser() {
-        return this.users.find(user => user.id === +localStorage.user)
+        return this.users.find(user => user.id === + localStorage.user)
+    }
+    
+    getUser(id){
+        return this.users.find(user => user.id == id)
     }
 
     remove(id) {

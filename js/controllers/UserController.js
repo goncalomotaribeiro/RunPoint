@@ -13,6 +13,16 @@ export default class UserController {
         }
     }
 
+    editUser(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+        const user =  this.userModel.getUser(id)
+        alert(user.email)
+        if (!this.userModel.getAll().some(user => user.email === email)) {
+            this.userModel.edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado);
+        } else if(user.email != email) {
+            throw Error(`Email already exists`);
+        }
+    }
+
     loginUser(email, password) {
         if (this.userModel.getAll().some(user => { return user.email === email && user.password === password })) {
             this.userModel.login(email);
@@ -40,6 +50,10 @@ export default class UserController {
 
     getCurrentUser() {
         return this.userModel.getCurrentUser()
+    }
+
+    getUser(id) {
+        return this.userModel.getUser(id)
     }
 
     getUsers(filterEmail='', filterType='', isSorted=false) {
