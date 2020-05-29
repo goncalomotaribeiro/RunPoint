@@ -2,34 +2,137 @@ body {
     background-color: #f9f9f9;
 }
 
-.navBar {
-    background-color: white;
-    width: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+body {
+    background-color: #f9f9f9;
 }
 
-.buttonPainel {
-    background: none;
-    border: none;
-    color: black;
-    padding: 15px 15px 15px 15px;
-    text-decoration-line: underline;
-    text-decoration-color: #4CA8E0;
-    font-size: 14px;
-    font-family: PortoSans-Regular;
+.logo {
+    width: 11%;
+    height: auto;
 }
 
-.buttonResultados,
-.buttonProvas,
-.buttonEquipas {
-    background: none;
-    border: none;
+button:focus {
+    outline: 0;
+}
+
+.submenuIcon {
+    margin-right: 10px;
+}
+
+.notifIcon {
+    width: 8%;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 25px;
+}
+
+header a {
+    font-size: 12pt;
+    font-family: PortoSans-BoldItalic;
     color: black;
-    padding: 15px 15px 15px 15px;
+}
+
+header a:hover {
+    color: black;
     text-decoration: none;
-    font-size: 14px;
-    font-family: PortoSans-Regular;
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 10%;
+    background-color: white;
+}
+
+.nav__links {
+    list-style: none;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links .active {
+    border-bottom: 1px solid #4CA8E0;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+#search {
+    border: 1px solid #adadad;
+    background: none;
+    font-size: 10pt;
+    font-style: italic;
+    font-family: PortoSans-LightItalic;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.dropbtn {
+    background-color: white;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    font-family: PortoSans-RegularItalic;
+}
+
+.dropdown img {
+    margin-right: 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000011;
+    background: #ffffff;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.barra {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000011;
+    background: #ffffff;
+    width: 65%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.inline {
+    display: inline;
 }
 
 #painel {

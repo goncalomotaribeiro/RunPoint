@@ -1,17 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Provas</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>RunPoint</title>
+    <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/equipas.css">
+    <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
 <body>
+
+    <header>
+        <img src="/imgs/logo.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/html/painel.html">PAINEL</a></li>
+                <li><a href="/html/resultados.html">RESULTADOS</a></li>
+                <li><a href="/html/provas.html" class="active">PROVAS</a></li>
+                <li><a href="/html/equipas.html">EQUIPAS</a></li>
+            </ul>
+        </nav>
+        <div id="nav__btns">
+            <input type="search" id="search" placeholder="PROCURAR">
+            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+            <div class="dropdown">
+                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                <div class="dropdown-content">
+                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                    <a href="/index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

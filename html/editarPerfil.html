@@ -12,28 +12,29 @@
 </head>
 
 <body>
-    <div class="navBar">
-        <!--MENU-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg">
-                    <img src="/imgs/logo.png" style="width: 30%; padding-top: 5px;">
-                </div>
-                <div class="col-lg">
-                    <button class="buttonPainel" style="width: auto;">PAINEL</button>
-                    <button class="buttonResultados" style="width: auto;">RESULTADOS</button>
-                    <button class="buttonProvas" style="width: auto;">PROVAS</button>
-                    <button class="buttonEquipas" style="width: auto;">EQUIPAS</button>
-                </div>
-                <div class="col-lg" style="padding: 5px 15px 15px 15px;">
-                    <input type="search" id="search" placeholder="Pesquisar" style="border: 1px solid #cacaca; background: none; font-size: 12px; font-style: italic; font-family: PortoSans-Regular;">
-                    <button class="buttonSearch" style="background: none; border: none;width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png" style="width: 100%;"></button>
-                    <button class="buttonNotif" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/sino.png" style="margin-left: 25px;width: 17px;"></button>
-                    <button class="buttonPerfil" style="background: none; border: none; width: 30px; height: 30px;"><img class="img-lg-responsive" src="/imgs/Interface/do-utilizador.png" style="margin-left: 50px; width: 20px;"></button>
+    <header>
+        <img src="/imgs/logo.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/html/painel.html" class="active">PAINEL</a></li>
+                <li><a href="/html/resultados.html">RESULTADOS</a></li>
+                <li><a href="/html/provas.html">PROVAS</a></li>
+                <li><a href="/html/equipas.html">EQUIPAS</a></li>
+            </ul>
+        </nav>
+        <div id="nav__btns">
+            <input type="search" id="search" placeholder="PROCURAR">
+            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+            <div class="dropdown">
+                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                <div class="dropdown-content">
+                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                    <a href="/index.html">Sair</a>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
 
     <!--PAINEL EDITAR EQUIPA-->
