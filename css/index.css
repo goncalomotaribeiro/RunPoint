@@ -3,6 +3,18 @@
     padding-bottom: 70px;
 }
 
+button:focus {outline:0;}
+
+.logoTop{
+    width: 10%;
+    height: auto;
+}
+
+.logoModal{
+    width: 50%;
+    height: auto;
+}
+
 .modal-dialog {
     color: #000000;
 }

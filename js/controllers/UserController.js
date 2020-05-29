@@ -14,11 +14,10 @@ export default class UserController {
     }
 
     editUser(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
-        const user =  this.userModel.getUser(id)
-        alert(user.email)
-        if (!this.userModel.getAll().some(user => user.email === email)) {
+        const userEdit =  this.userModel.getUser(id)
+        if (!this.userModel.getAll().some(user => user.email === email) || (userEdit.email == email) ) {
             this.userModel.edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado);
-        } else if(user.email != email) {
+        } else {
             throw Error(`Email already exists`);
         }
     }
