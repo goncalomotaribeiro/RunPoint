@@ -1,21 +1,22 @@
 body {
     background-color: #f9f9f9;
-}
-.logo{
-    width: 11%;
-    height: auto;
+    overflow: hidden !important;
 }
 button:focus {outline:0;}
 
 .submenuIcon{
     margin-right: 10px;
 }
-
+.logo{
+    object-fit: contain;
+}
 .notifIcon{
-    width: 8%;
-    height: auto;
     margin-right: 15px;
     margin-left: 25px;
+}
+
+header{
+    background-color: white;
 }
 
 header a {
@@ -29,23 +30,13 @@ header a:hover {
     text-decoration: none;;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 10%;
-    background-color: white;
-}
-
 .nav__links{
-    list-style: none;
-    margin-left: 20px;
-    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav__links li{
-    display: inline-block;
-    padding: 0px 20px;
+    display: inline;
 }
 
 .nav__links .active{
@@ -70,7 +61,6 @@ header{
 .dropbtn {
     background-color:white;
     color: white;
-    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -115,13 +105,57 @@ header{
 
 .barra{
     border-radius: 10px;
-    box-shadow: 0px 0px 5px #00000011;
+    box-shadow: 0px 0px 10px #00000011;
     background: #ffffff;
-    width: 65%;
+    width: 80%;
     margin-top: 5%;
     margin-bottom: 15%;
+    padding: 5px;
 }
 
-.inline{
-    display: inline;
+.nomeEquipa{
+    background-color: #4CA8E0;
+    padding: 5px 13px 5px 13px;
+    border-radius: 13px;
+    box-shadow: 0px 0px 5px #00000011;
+    font-family: PortoSans-BoldItalic;
+    color: white;
+    margin-top: 30px;
+    position: fixed;
+    left: 79%;
+    font-size: 1.2em;
 }
+
+.shirt{
+    position: fixed;
+    left: 57%;
+}
+
+.nomeEquipaMobile{
+    background-color: #4CA8E0;
+    padding: 5px 13px 5px 13px;
+    border-radius: 13px;
+    box-shadow: 0px 0px 5px #00000011;
+    font-family: PortoSans-BoldItalic;
+    color: white;
+    margin-top: 30px;
+    font-size: 9pt;
+    font-family: PortoSans-RegularItalic;
+}
+
+.nivel{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.nivelMobile{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    position: fixed;
+    left: 60%;
+    top: 220px;
+}
+
+

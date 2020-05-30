@@ -12,67 +12,65 @@
 </head>
 
 <body>
-
     <header>
-        <img src="/imgs/logo.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="#" class="active">PAINEL</a></li>
-                <li><a href="#">RESULTADOS</a></li>
-                <li><a href="#">PROVAS</a></li>
-                <li><a href="#">EQUIPAS</a></li>
-            </ul>
-        </nav>
-        <div id="nav__btns">
-            <input type="search" id="search" placeholder="PROCURAR">
-            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
-                <div class="dropdown-content">
-                <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                <a href="#">Sair</a>
+        <div class="container-fluid pt-3 pr-3 p-md-4">
+            <div class="row">
+                <div class="col-lg-2 offset-lg-1 d-flex justify-content-between mb-2 mb-lg-0">
+                    <a href="#" class="d-lg-none btnNotif"><img class="img-lg-responsive" src="/imgs/Interface/bell.png"></a>
+                    <img class="logo" src="/imgs/logo2.png" alt="logo">    
+                    <a href="#" class="d-lg-none dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
                 </div>
-              </div>
+                <div class="col-sm-3 offset-lg-1 order-lg-1 d-none d-lg-inline">
+                    <div id="nav__btns" class="mt-2">
+                        <!--<input class="d-none d-md-inline ml-5" type="search" id="search" placeholder="PROCURAR">
+                        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>-->
+                        <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                            <div class="dropdown-content">
+                                <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a href="#">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-md-0 offset-lg-1 pr-5">
+                    <nav>
+                        <ul class="nav__links mt-3">
+                            <li><a href="#" class="active">PAINEL</a></li>
+                            <li><a href="#">RESULTADOS</a></li>
+                            <li><a href="#">PROVAS</a></li>
+                            <li><a href="#">EQUIPAS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
-    
-    <div class="container mt-3 p-2 barra">
-        <div class="d-flex justify-content-between">  
-          <div class="inline">
-            <img src="/imgs/Interface/fotoPerfil.png" alt="">
-            <h5 style="font-size: 14pt; font-family: PortoSans-RegularItalic;">Gonçalo Ribeiro</h5>
-            <h5 style="font-size: 12pt; font-family: PortoSans-RegularItalic;">Porto</h5>
-          </div>
-          <div class="">
-            <img src="/imgs/Interface/fotoPerfil.png" alt="">
-          </div>
-          <div class="">
-            <img src="/imgs/Interface/fotoPerfil.png" alt="">
-          </div>
-        </div>
-      </div>
 
-    <div class="container barra">
+    <div class="container-fluid barra">
         <div class="row">
-          <div class="col-1.5" style="background-color: green;">
-            <img src="/imgs/Interface/fotoPerfil.png" alt="">
-          </div>
-          <div class="col-2">
-            <h5 style="font-size: 14pt; font-family: PortoSans-RegularItalic;">Gonçalo Ribeiro</h5>
-            <h5 style="font-size: 12pt; font-family: PortoSans-RegularItalic;">Porto</h5>
-          </div>
-          <div class="col-5" align="center" style="background-color: aqua;">
-            <img src="/imgs/Interface/fotoPerfil.png" alt="">
-          </div>
-          <div class="col-1">
-            <img src="/imgs/Interface/shirt.png" style="width: 80%; height: auto;" alt="">
-          </div>
-          <div class="col-1">
-            <h5>BOLTRUNNERS</h5>
-          </div>
+            <div class="col-xs-1 ml-4 mb-5 mb-lg-0">
+                <img src="/imgs/Interface/fotoPerfil.png" alt="">
+            </div>
+            <div class="col-xs-1 mt-4 ml-3">
+                <h5 style="font-size: 14pt; font-family: PortoSans-RegularItalic;">Gonçalo Ribeiro</h5>
+                <h5 style="font-size: 12pt; font-family: PortoSans-RegularItalic; color: grey;">Porto</h5>
+            </div>
+            <div class="col-lg-2 offset-lg-3">
+                <img class="d-lg-none" src="/imgs/Interface/shirt.png" alt="">
+                <h5 class="d-lg-none d-inline nomeEquipaMobile">BOLTRUNNERS</h5>
+                <img class="d-lg-none nivelMobile" src="/imgs/niveis/novice2.png" alt="">
+                <img class="d-none d-lg-inline float-right float-lg-none mr-3 mr-lg-0 nivel" src="/imgs/niveis/novice2.png" alt="">   
+            </div>
+            <div class="col-xs-1 offset-lg-2 d-none d-lg-inline shirt">
+                <img src="/imgs/Interface/shirt.png" alt="">
+            </div>
+            <div class="col-xs-1 d-none d-lg-inline">
+                <h5 class="nomeEquipa">BOLTRUNNERS</h5>
+            </div>
         </div>
-      </div>
+    </div>
 
 
     <div class="container">
