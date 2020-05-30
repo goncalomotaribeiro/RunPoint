@@ -2,10 +2,6 @@ body {
     background-color: #f9f9f9;
 }
 
-body {
-    background-color: #f9f9f9;
-}
-
 .logo {
     width: 11%;
     height: auto;
@@ -135,48 +131,16 @@ header {
     display: inline;
 }
 
-#painel {
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #00000011;
-    background: #ffffff;
-    width: 65%;
-    margin-top: 5%;
-    margin-bottom: 15%;
-}
-
-h3 {
-    font-size: 17px;
-    font-family: PortoSans-BoldItalic;
-    padding-top: 50px;
-}
-
-option,
-select {
+#sltCategoria {
     color: black;
-    font-size: 18;
+    font-size: 17pt;
     font-family: PortoSans-Light;
 }
 
-#buttonGuardar {
+#btnCriarEquipa {
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 50px;
     font-family: PortoSans-BoldItalic;
-}
-
-#apagarConta {
-    color: black;
-    text-decoration-line: underline;
-    font-family: PortoSans-LightItalic;
-}
-
-.footer {
-    height: 110px;
-    padding-top: 44px;
-    text-align: center;
-    margin: 0;
-    background-color: #F8F9FA;
-    font-family: PortoSans-RegularItalic;
-    color: #666666;
 }
