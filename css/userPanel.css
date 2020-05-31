@@ -12,8 +12,8 @@ button:focus {
     object-fit: contain;
 }
 .notifIcon{
-    margin-right: 15px;
-    margin-left: 25px;
+    margin-right: 10px;
+    margin-left: 20px;
 }
 
 header{
@@ -269,6 +269,42 @@ header a:hover, .nav-item a {
     width: 80px;
     height: 60px;
     object-fit: cover;
+  }
+
+  .footer {
+    height: 100px;
+    padding-top: 44px;
+    text-align: center;
+    margin-top: 100px;
+    border-top: 1px rgb(119, 119, 119);
+    font-family: PortoSans-LightItalic;
+    color: #666666;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .inscritoText {
+    padding: 32px 0px 32px 12px;
+    border-radius: 50px;
+    background: #ffffff;
+    border: 3px solid #44b7ff;
+    color: #5ab5ec;
+    font-family: PortoSans-BoldItalic;
+    font-size: 1em;
+  }
+
+  .inscreverText {
+    padding: 35px 0px 35px 8px;
+    border-radius: 50px;
+    background: #ffffff;
+    background-color: #5ab5ec;
+    color: #ffffff;
+    font-family: PortoSans-BoldItalic;
+    font-size: 1em;
+  }
+
+  .inscrever:hover, .inscrito:hover{
+    text-decoration: none;
   }
 
 @media only screen and (max-width: 411px) {
