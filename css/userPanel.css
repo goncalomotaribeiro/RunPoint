@@ -1,8 +1,9 @@
 body {
     background-color: #f9f9f9;
-    overflow: hidden !important;
 }
-button:focus {outline:0;}
+button:focus {
+    outline:0;
+}
 
 .submenuIcon{
     margin-right: 10px;
@@ -25,9 +26,9 @@ header a {
     color: black;
 }
 
-header a:hover {
+header a:hover, .nav-item a {
     color: black;
-    text-decoration: none;;
+    text-decoration: none;
 }
 
 .nav__links{
@@ -102,15 +103,38 @@ header a:hover {
     display: block;
   }
 
-
 .barra{
     border-radius: 10px;
     box-shadow: 0px 0px 10px #00000011;
     background: #ffffff;
     width: 80%;
     margin-top: 5%;
-    margin-bottom: 15%;
     padding: 5px;
+}
+
+.barraPontos{
+    margin-left: 10%;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000011;
+    background: white;
+    font-size: 1.2em;
+    padding: 5px;
+    padding-top: 20px;
+    position: relative;
+    z-index: -1;
+    top: -10px;
+}
+
+.nome{
+    font-size: 14pt;
+    font-family: PortoSans-RegularItalic;
+}
+
+.localizacao{
+    font-size: 12pt;
+    font-family: PortoSans-RegularItalic;
+    color: grey;
 }
 
 .nomeEquipa{
@@ -121,15 +145,19 @@ header a:hover {
     font-family: PortoSans-BoldItalic;
     color: white;
     margin-top: 30px;
-    position: fixed;
-    left: 79%;
+    position: relative;
+    left: 75%;
     font-size: 1.2em;
 }
 
 .shirt{
-    position: fixed;
-    left: 57%;
+    position: relative;
+    left: 5%;
 }
+
+.shirtMobile{
+    margin-left: 10px;
+  }
 
 .nomeEquipaMobile{
     background-color: #4CA8E0;
@@ -138,7 +166,7 @@ header a:hover {
     box-shadow: 0px 0px 5px #00000011;
     font-family: PortoSans-BoldItalic;
     color: white;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 9pt;
     font-family: PortoSans-RegularItalic;
 }
@@ -153,9 +181,159 @@ header a:hover {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    position: fixed;
-    left: 60%;
-    top: 220px;
+    position: relative;
+    left: 15%;
+    top: -60px;
 }
 
+.barraProvas{
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #00000011;
+    background: #ffffff;
+    width: 80%;
+    margin-top: 100px;
+    padding: 5px;
+}
 
+#tabs a{
+    font-family: PortoSans-RegularItalic;
+    font-size: 1.2em;
+}
+
+.conteudo{
+    position: relative;
+    top: -50px;
+    left: -0.25%;
+}
+
+.nav-link{
+    color: black;
+}
+
+.nav-link.active, .categoriaProva{
+    color: rgb(46, 183, 247) !important;
+    font-family: PortoSans-RegularItalic !important;
+    font-size: 1em;
+  }
+
+.nav-item{
+    border-radius: 10px;
+    box-shadow: -3px -5px 7px #00000009;
+    background: #ffffff;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+.headerProvas{
+    position: relative;
+    top: -15px;
+    padding: 0px 40px 0px 40px;
+}
+
+.valorDiv{
+    text-align: center;
+    padding: 15px 0px 5px 0px;
+    border-left: 1px solid rgb(216, 216, 216);
+}
+
+.valor{
+    font-family: PortoSans-RegularItalic;
+    font-size: 1.3em;
+}
+
+.categoria{
+    font-family: PortoSans-LightItalic;
+    font-size: 1.2em;
+    color: rgb(179, 179, 179);
+}
+
+.infoProva{
+    font-size: 1em;
+    font-family: PortoSans-LightItalic;
+    margin-right: 10px;
+    color: rgb(179, 179, 179);
+}
+
+.infoProva2{
+    font-size: 0.9em;
+    font-family: PortoSans-RegularItalic;
+    margin-right: 10px;
+    color: rgb(179, 179, 179);
+}
+
+.nomeProva{
+    font-family: PortoSans-RegularItalic;
+    font-size: 1.1em;
+}
+
+.img{
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+@media only screen and (max-width: 411px) {
+    .nav__links li a {
+        font-size: 0.7em;
+        margin-right: 10px;
+    }
+
+    .nivelMobile {
+        width: 80px;
+        height: 80px;
+        left: 0%;
+        top: -60px;
+    }
+    
+    .barraPontos {
+        font-size: 0.8em !important;
+        width: 255px !important;
+    }
+
+    .fotoPerfil{
+        width: 80%;
+    }
+    
+    .nome{
+        font-size: 0.8em;
+    }
+    
+    .localizacao{
+        font-size: 0.6em;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .barraPontos {
+        font-size: 1em;
+        width: 288px;
+    }
+
+    .shirtMobile{
+        width: 20%;
+    }
+  }
+
+@media only screen and (min-width: 640px) {
+    .nivelMobile {
+        width: 150px;
+        height: 150px;
+        left: 20%;
+        top: -60px;
+    }
+  }
+
+@media only screen and (max-width: 1856px) {
+    .nivel {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nomeEquipa{
+        left: 30%;
+        font-size: 0.9em;
+    }
+
+    .shirt{
+        left: 2%;
+    }
+}
