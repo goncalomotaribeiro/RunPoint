@@ -153,3 +153,8 @@ option {
 .cardsEquip {
     padding: 0px 70px 0px 70px;
 }
+
+.card-body {
+    padding: 25px 45px 25px 45px;
+    box-shadow: 5px 5px 7px #00000011;
+}
