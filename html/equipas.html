@@ -37,51 +37,106 @@
         </div>
     </header>
 
-    <div class="container" style="padding-top: 120px; padding-bottom: 20px;">
-        <input type="search" id="search" placeholder="PROCURAR">
-        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-
-        <select id="sltCategoria">
-                <option>Categoria_1</option>
-                <option>Categoria_2</option>
-                <option>Categoria_3</option>
-                <option>Categoria_4</option>
-                <option>Categoria_5</option>
-            </select>
-        <button type="submit" class="btn btn-primary" id="btnCriarEquipa">criar equipa</button><br>
-    </div>
-
-    <div class="container-fluid">
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">Bands Catalog</h1>
-                <p class="lead">The best bands of the world!</p>
-                <hr class="my-2" />
-
-                <form class="form-inline">
-                    <div class="form-group">
-                        <label for="sltGenre">Genre: </label>
-                        <select class="form-control m-2" name="" id="sltGenre">
-                            <option value="">All</option>
-                            <option value="Pop-Rock">Pop-Rock</option>
-                            <option value="Metal">Metal</option>
-                            <option value="Jazz">Jazz</option>
-                        </select>
-                    </div>
-                    <div class="form-group m-2">
-                        <label for="txtBand">Band's name:</label>
-                        <input id="txtBand" type="text" class="form-control m-2" />
-                    </div>
-                    <button id="btnFilter" type="button" class="btn btn-primary">FILTER</button>
-                    <button id="btnSort" type="button" class="btn btn-primary m-2">SORT</button>
-                    <button id="btnAdd" type="button" class="btn btn-outline-primary m-2" style="visibility: hidden">ADD
-                        BAND</button>
-                </form>
-                <hr class="my-2" />
-                <p id="myCatalog"></p>
+    <div class="container">
+        <div class="row">
+            <div id="div_localização" style="padding: 60px 50px 50px 50px;">
+                <input type="search" id="search" placeholder="LOCALIZAÇÃO">
+                <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+            </div>
+            <div id="div_categoria" style="padding: 50px 50px 50px 50px;">
+                <div class="form-group">
+                    <select class="form-control" name="" id="sltCategoria">
+                    <option id="">All</option>
+                    <option id="porto">Porto</option>
+                    <option id="gaia">Gaia</option>
+                    <option id="vilaConde">Vila do Conde</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-4" style="padding: 55px 50px 50px 50px;">
+                <button class="btn btn-primary" id="btnCriar">CRIAR EQUIPA</button>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="row cardsTotal">
+            <div class="col-lg-3 cardsEquip">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
+                            </div>
+                            <div class="col text-center">
+                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
+                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                                <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
+                                <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 cardsEquip">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
+                            </div>
+                            <div class="col text-center">
+                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
+                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                                <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
+                                <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 cardsEquip">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
+                            </div>
+                            <div class="col text-center">
+                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
+                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                                <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
+                                <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 cardsEquip">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
+                            </div>
+                            <div class="col text-center">
+                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
+                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                                <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
+                                <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

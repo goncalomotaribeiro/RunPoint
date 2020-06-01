@@ -131,16 +131,25 @@ header {
     display: inline;
 }
 
-#sltCategoria {
+#sltCategoria,
+option {
     color: black;
     font-size: 17pt;
     font-family: PortoSans-Light;
 }
 
-#btnCriarEquipa {
+#btnCriar {
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 50px;
-    font-family: PortoSans-BoldItalic;
+    font-family: PortoSans-Regular;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.cardsEquip {
+    padding: 0px 70px 0px 70px;
 }
