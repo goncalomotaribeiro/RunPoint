@@ -135,6 +135,9 @@ header {
     display: inline;
 }
 
+
+/*CSS DO PAINEL DE EDITAR PERFIL*/
+
 #painel {
     border-radius: 10px;
     box-shadow: 0px 0px 5px #00000011;
