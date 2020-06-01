@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/userPanel.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
@@ -28,8 +29,8 @@
                         <div class="dropdown">
                             <button class="dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-xl-responsive" src="/imgs/Interface/arrowDown.png"></button>
                             <div class="dropdown-content">
-                                <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                                <a href="#">Sair</a>
+                                <a  href="editarPerfil.html"><img class="float-left" src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a id="btnSair" href="/index.html"><img class="float-left ml-1" src="/imgs/Interface/sair.png" alt="">Sair</a>
                             </div>
                         </div>
                     </div>
@@ -54,8 +55,8 @@
                 <img class="fotoPerfil" src="/imgs/Interface/fotoPerfil.png" alt="">
             </div>
             <div class="col-xs-1 mt-3 mt-xs-4 ml-1 ml-sm-4">
-                <h5 class="nome">Gonçalo Ribeiro</h5>
-                <h5 class="localizacao">Porto</h5>
+                <h5 id="nomeUser" class="nome"></h5>
+                <h5 id="localidade" class="localizacao"></h5>
             </div>
             <div class="col-xl-2 offset-xl-2 offset-xl-3 d-flex align-items-center justify-content-xl-center">
                 <img class="d-xl-none shirtMobile" src="/imgs/Interface/shirt.png" alt="">
@@ -78,6 +79,7 @@
                 <div>
                     <img src="/imgs/Interface/flag2.png" alt="">
                     <span style="font-family: PortoSans-BoldItalic;">1500</span>
+                    <span style="font-family: PortoSans-BoldItalic; color: #5ab5ec;">Pontos</span>
                 </div>
                 <div>
                     <span style="font-family: PortoSans-BoldItalic;">10</span>
@@ -96,16 +98,16 @@
             <div class="col-md-12 conteudo">
                 <ul id="tabs" class="nav nav-tabs-nostyle">
                     <li class="nav-item mr-sm-4"><a href="" data-target="#listaProvas" data-toggle="tab" class="nav-link active">Provas Concluídas</a></li>
-                    <li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link">Próximas Provas</a></li>
+                    <li class="nav-item"><a href="" data-target="#listaPessoal" data-toggle="tab" class="nav-link">Próximas Provas</a></li>
                 </ul>
                 <br> 
                 <div id="tabsContent" class="tab-content">
                     <div class="headerProvas d-flex justify-content-between align-items-center mb-1">
                         <p class="h5" style="font-family: PortoSans-BoldItalic; color: black;">Registo de Provas</p>
-                        <img class="d-none d-lg-inline" style="margin-left: 95px;" src="/imgs/Interface/cronometro.png" alt="">
-                        <img class="d-none d-lg-inline" style="margin-right: 100px;" src="/imgs/Interface/stickman.png" alt="">
-                        <img class="d-none d-lg-inline" style="margin-right: 38px;" src="/imgs/Interface/podio.png" alt="">
-                        <img class="d-none d-lg-inline mr-2" src="/imgs/Interface/medalha.png" alt="">
+                        <img class="d-none d-xl-inline" style="margin-left: 95px;" src="/imgs/Interface/cronometro.png" alt="">
+                        <img class="d-none d-xl-inline" style="margin-right: 100px;" src="/imgs/Interface/stickman.png" alt="">
+                        <img class="d-none d-xl-inline" style="margin-right: 38px;" src="/imgs/Interface/podio.png" alt="">
+                        <img class="d-none d-xl-inline mr-2" src="/imgs/Interface/medalha.png" alt="">
                     </div> 
                     <div id="listaProvas" class="tab-pane fade active show">
                         <div class="list-group ml-2">
@@ -185,8 +187,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="profile1" class="tab-pane fade">
-                        <div class="list-group-item mb-3">
+                    <div id="listaPessoal" class="tab-pane fade ml-2">
+                        <div class="list-group-item">
                             <div class="row">
                                 <div class="col-6 col-lg-2 offset-xs-3 offset-xl-0 col-xl-1 mt-1" align="center">
                                     <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
@@ -218,7 +220,7 @@
                                     <span class="valor">--</span><span class="valor"> º</span>
                                     <p class="categoria">Class. Equipa</p>
                                 </div>
-                                <div class="col-12 col-xl-1 mt-1">
+                                <div class="col-12 col-xl-1 mt-1" align="center">
                                    <a href="" class="inscrito"><p class="inscritoText">INSCRITO</p></a> 
                                 </div>
                             </div>
@@ -255,7 +257,7 @@
                                     <span class="valor">--</span><span class="valor"> º</span>
                                     <p class="categoria">Class. Equipa</p>
                                 </div>
-                                <div class="col-12 col-xl-1 mt-1">
+                                <div class="col-12 col-xl-1 mt-1" align="center">
                                    <a href="" class="inscrever"><p class="inscreverText">INSCREVER</p></a> 
                                 </div>
                             </div>
@@ -271,7 +273,7 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

@@ -7,41 +7,73 @@
     <title>RunPoint</title>
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/equipas.css">
+    <link rel="stylesheet" href="/css/provas.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
 <body>
-
     <header>
-        <img src="/imgs/logo.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="/html/painel.html">PAINEL</a></li>
-                <li><a href="/html/resultados.html">RESULTADOS</a></li>
-                <li><a href="/html/provas.html" class="active">PROVAS</a></li>
-                <li><a href="/html/equipas.html">EQUIPAS</a></li>
-            </ul>
-        </nav>
-        <div id="nav__btns">
-            <input type="search" id="search" placeholder="PROCURAR">
-            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
-                <div class="dropdown-content">
-                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                    <a href="/index.html">Sair</a>
+        <div class="container-fluid pt-3 pr-3 p-xl-4">
+            <div class="row">
+                <div class="col-xl-2 offset-xl-1 d-flex justify-content-between mb-2 mb-xl-0">
+                    <a href="#" class="d-xl-none btnNotif"><img class="img-xl-responsive" src="/imgs/Interface/bell.png"></a>
+                    <img class="logo" src="/imgs/logo2.png" alt="logo">    
+                    <a href="#" class="d-xl-none dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
+                </div>
+                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5" align="center">
+                    <div id="nav__btns" class="mt-2">
+                        <input class="d-none d-md-inline" type="search" id="search" placeholder="PROCURAR">
+                        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+                        <a href="#" class="btnNotif"><img class="img-xl-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-xl-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                            <div class="dropdown-content">
+                                <a  href="editarPerfil.html"><img class="float-left" src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a id="btnSair" href="/index.html"><img class="float-left ml-1" src="/imgs/Interface/sair.png" alt="">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
+                    <nav>
+                        <ul class="nav__links mt-3">
+                            <li><a href="#" class="active">PAINEL</a></li>
+                            <li><a href="#">RESULTADOS</a></li>
+                            <li><a href="#">PROVAS</a></li>
+                            <li><a href="#">EQUIPAS</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
+    
+    <div class="container w-50 barraProva">
+        <div class="row">
+            <div class="col-12 col-xl-2 offset-xl-0 col-xl-2 p-0" align="center">
+                <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+            </div>
+            <div class="col-12 col-xl-7 mb-5 mb-xl-0 mt-xl-1 pt-1">
+                <span class="nomeProva mt-1">EDP MARATONA DO PORTO</span><br>
+                <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><br class="d-xl-none">
+                <span class="infoProva">Local </span><span class="infoProva2">Porto</span><br class="d-xl-none">
+                <span class="infoProva">Tipo </span><span class="infoProva2">MARATONA</span><br>
+                <a href="#" class="btnAdd"><img class="img-lg-responsive" src="/imgs/Interface/adicionar2.png"></a><span class="infobtn">CLICA PARA ADICIONARES ÀS TUAS PROVAS</span>
+            </div>
+            <div class="col-12 col-sm-3 offset-xl-0 col-xl-2 p-0 mt-5 ml-5">
+                <a href="#" class="btnVerMais">VER MAIS</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/app.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

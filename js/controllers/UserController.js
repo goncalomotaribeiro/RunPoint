@@ -5,9 +5,12 @@ export default class UserController {
         this.userModel = new UserModel();
     }
 
-    createUser(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+    createUser(local, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
         if (!this.userModel.getAll().some(user => user.email === email)) {
             this.userModel.create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado);
+            if(local == 'landingPage'){
+                this.userModel.login(email);
+            }
         } else {
             throw Error(`Email already exists`);
         }
@@ -33,6 +36,14 @@ export default class UserController {
 
     logoutUser() {
         this.userModel.logout();
+    }
+
+    loggedUser(){
+        return this.userModel.getLoggedUserKey();
+    }
+
+    loggedUserData(email){
+        return this.userModel.getLoggedUserData(email);
     }
 
     checkLoginStatus() {

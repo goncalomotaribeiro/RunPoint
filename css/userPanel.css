@@ -1,107 +1,6 @@
 body {
     background-color: #f9f9f9;
 }
-button:focus {
-    outline:0;
-}
-
-.submenuIcon{
-    margin-right: 10px;
-}
-.logo{
-    object-fit: contain;
-}
-.notifIcon{
-    margin-right: 10px;
-    margin-left: 20px;
-}
-
-header{
-    background-color: white;
-}
-
-header a {
-    font-size: 12pt;
-    font-family: PortoSans-BoldItalic;
-    color: black;
-}
-
-header a:hover, .nav-item a {
-    color: black;
-    text-decoration: none;
-}
-
-.nav__links{
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav__links li{
-    display: inline;
-}
-
-.nav__links .active{
-    border-bottom: 1px solid #4CA8E0;
-}
-
-.nav__links li a {
-    transition: all 0.3s ease 0s;
-}
-
-
-#search{
-    border: 1px solid #cacaca;
-    background: none;
-    font-size: 10pt;
-    font-style: italic;
-    font-family: PortoSans-LightItalic;
-    margin-right: 10px;
-    padding: 5px;
-}
-
-.dropbtn {
-    background-color:white;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown a {
-   font-family: PortoSans-RegularItalic;
-  }
-
-  .dropdown img{
-    margin-right: 8px;
-   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #00000011;
-    background: #ffffff;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 
 .barra{
     border-radius: 10px;
@@ -197,7 +96,7 @@ header a:hover, .nav-item a {
 
 #tabs a{
     font-family: PortoSans-RegularItalic;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .conteudo{
@@ -232,7 +131,7 @@ header a:hover, .nav-item a {
 .valorDiv{
     text-align: center;
     padding: 15px 0px 5px 0px;
-    border-left: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(236, 234, 234);
 }
 
 .valor{
@@ -271,20 +170,8 @@ header a:hover, .nav-item a {
     object-fit: cover;
   }
 
-  .footer {
-    height: 100px;
-    padding-top: 44px;
-    text-align: center;
-    margin-top: 100px;
-    border-top: 1px rgb(119, 119, 119);
-    font-family: PortoSans-LightItalic;
-    color: #666666;
-    font-size: 0.9em;
-    background-color: rgb(255, 255, 255);
-  }
-
   .inscritoText {
-    padding: 32px 0px 32px 12px;
+    padding: 32px 0px 32px 0px;
     border-radius: 50px;
     background: #ffffff;
     border: 3px solid #44b7ff;
@@ -294,7 +181,7 @@ header a:hover, .nav-item a {
   }
 
   .inscreverText {
-    padding: 35px 0px 35px 8px;
+    padding: 35px 0px 35px 0px;
     border-radius: 50px;
     background: #ffffff;
     background-color: #5ab5ec;
@@ -336,6 +223,12 @@ header a:hover, .nav-item a {
     .localizacao{
         font-size: 0.6em;
     }
+
+    .nav-item{
+        width: 50%;
+        font-size: 0.5em;
+        padding-left: 12px;
+    }
   }
 
 @media only screen and (max-width: 600px) {
@@ -372,4 +265,26 @@ header a:hover, .nav-item a {
     .shirt{
         left: 2%;
     }
+
+    .inscritoText {
+        padding: 22px 5px 22px 5px;
+        font-size: 0.8em !important;
+      }
+    
+      .inscreverText {
+        padding: 25px 5px 25px 3px;
+        font-size: 0.8em !important;
+      }
+}
+
+@media only screen and (max-width: 1188px) {
+    .inscritoText {
+        width: 50%;
+        padding: 12px 0px 12px 0px;
+      }
+    
+      .inscreverText {
+        width: 50%;
+        padding: 15px 0px 15px 0px;
+      }
 }

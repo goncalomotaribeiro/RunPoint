@@ -59,6 +59,14 @@ export default class UserModel {
         return sessionStorage.getItem('loggedUser') !== null ? true : false;
     }
 
+    getLoggedUserKey(){
+        return sessionStorage.getItem('loggedUser')
+    }
+
+    getLoggedUserData(email){
+        return this.users.find(user => user.email == email)
+    }
+
     _persist() {
         localStorage.setItem('users', JSON.stringify(this.users));
     }
@@ -75,6 +83,7 @@ export default class UserModel {
     getCurrentUser() {
         return this.users.find(user => user.id === + localStorage.user)
     }
+
     
     getUser(id){
         return this.users.find(user => user.id == id)
