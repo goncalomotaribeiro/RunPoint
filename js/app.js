@@ -1,6 +1,8 @@
 import UserView from './views/UserView.js'
 import UserAdminView from './views/UserAdminView.js'
 import UserPanelView from './views/UserPanelView.js'
+import EventPanelView from './views/EventPanelView.js'
+import EventAdminView from './views/EventAdminView.js'
 
 class App {
     constructor() {
@@ -11,11 +13,17 @@ class App {
             'index': [
                 UserView,
             ],
-            'contasAdmin': [
+            'utilizadoresAdmin': [
                 UserAdminView,
             ],
             'painel':[
                 UserPanelView
+            ],
+            'provas':[
+                EventPanelView
+            ],
+            'provasAdmin':[
+                EventAdminView
             ]
         };
 
@@ -43,6 +51,78 @@ class App {
     }
 
     _importDataFixtures() {
+        const events = [
+            {
+                id: 1,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 2,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 3,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 4,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            }
+        ];
+
+         // Load the fixtures in case there is no data in the local storage 
+         if (!localStorage.events) {
+            localStorage.setItem('events', JSON.stringify(events));    
+        }
+
         let users =[]
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
