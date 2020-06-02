@@ -2,10 +2,6 @@ body {
     background-color: #f9f9f9;
 }
 
-body {
-    background-color: #f9f9f9;
-}
-
 .logo {
     width: 11%;
     height: auto;
@@ -136,7 +132,7 @@ header {
 }
 
 
-/*CSS DO PAINEL DE EDITAR PERFIL*/
+/*CSS DO PAINEL DE CRIAR EQUIPAS*/
 
 #painel {
     border-radius: 10px;
@@ -147,39 +143,23 @@ header {
     margin-bottom: 15%;
 }
 
-h3 {
-    font-size: 17px;
-    font-family: PortoSans-BoldItalic;
-    padding-top: 50px;
-}
-
-option,
-select {
-    color: black;
-    font-size: 18;
-    font-family: PortoSans-Light;
-}
-
-#buttonGuardar {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50px;
-    font-family: PortoSans-BoldItalic;
-}
-
-#apagarConta {
-    color: black;
-    text-decoration-line: underline;
+.form-group,
+.txtName {
     font-family: PortoSans-LightItalic;
 }
 
+#descricao {
+    padding: 40px 80px 30px 80px;
+}
+
 .footer {
-    height: 110px;
+    height: 100px;
     padding-top: 44px;
     text-align: center;
-    margin: 0;
-    background-color: #F8F9FA;
-    font-family: PortoSans-RegularItalic;
+    margin-top: 100px;
+    border-top: 1px rgb(119, 119, 119);
+    font-family: PortoSans-LightItalic;
     color: #666666;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
 }
