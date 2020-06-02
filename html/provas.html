@@ -21,7 +21,7 @@
                     <img class="logo" src="/imgs/logo2.png" alt="logo">    
                     <a href="#" class="d-xl-none dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
                 </div>
-                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5" align="center">
+                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5 text-center">
                     <div id="nav__btns" class="mt-2">
                         <input class="d-none d-md-inline" type="search" id="search" placeholder="PROCURAR">
                         <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
@@ -38,34 +38,41 @@
                 <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
                     <nav>
                         <ul class="nav__links mt-3">
-                            <li><a href="#" class="active">PAINEL</a></li>
+                            <li><a href="painel.html">PAINEL</a></li>
                             <li><a href="#">RESULTADOS</a></li>
-                            <li><a href="#">PROVAS</a></li>
-                            <li><a href="#">EQUIPAS</a></li>
+                            <li><a href="#" class="active">PROVAS</a></li>
+                            <li><a href="equipas.html">EQUIPAS</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    
-    <div class="container w-50 barraProva">
-        <div class="row">
-            <div class="col-12 col-xl-2 offset-xl-0 col-xl-2 p-0" align="center">
-                <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
-            </div>
-            <div class="col-12 col-xl-7 mb-5 mb-xl-0 mt-xl-1 pt-1">
-                <span class="nomeProva mt-1">EDP MARATONA DO PORTO</span><br>
-                <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><br class="d-xl-none">
-                <span class="infoProva">Local </span><span class="infoProva2">Porto</span><br class="d-xl-none">
-                <span class="infoProva">Tipo </span><span class="infoProva2">MARATONA</span><br>
-                <a href="#" class="btnAdd"><img class="img-lg-responsive" src="/imgs/Interface/adicionar2.png"></a><span class="infobtn">CLICA PARA ADICIONARES ÀS TUAS PROVAS</span>
-            </div>
-            <div class="col-12 col-sm-3 offset-xl-0 col-xl-2 p-0 mt-5 ml-5">
-                <a href="#" class="btnVerMais">VER MAIS</a>
+
+    <main>
+        <div class="container w-50 barraProva">
+            <div class="row">
+                <div class="col-12 col-xl-2 offset-xl-0 col-xl-2 p-0 mb-4 text-center">
+                    <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+                </div>
+                <div class="col-12 col-xl-7 mb-3 mb-xl-0 mt-xl-1 pt-1 text-center text-xl-left">
+                    <span class="nomeProva mt-1">EDP MARATONA DO PORTO</span><br>
+                    <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><br class="d-xl-none">
+                    <span class="infoProva">Local </span><span class="infoProva2">Porto</span><br class="d-xl-none">
+                    <span class="infoProva">Tipo </span><span class="infoProva2">MARATONA</span><br>
+                    <a href="#" class="btnAdd"><img class="img-lg-responsive" src="/imgs/Interface/adicionar2.png"></a><span class="infobtn d-none d-md-inline ">CLICA PARA ADICIONARES ÀS TUAS PROVAS</span>
+                </div>
+                <div class="col-12 col-xl-3 offset-xl-0 col-xl-2 p-0 mt-xl-5 text-center">
+                    <a href="#" class="btnVerMais">VER MAIS</a>
+                </div>
             </div>
         </div>
+    </main>
+
+    <div class="footer">
+        <p>© 2020 RunPoint Todos os Direitos Reservados.</p>
     </div>
+
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/app.js"></script>

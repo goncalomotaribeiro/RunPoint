@@ -8,69 +8,69 @@
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/equipas.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
 <body>
-
     <header>
-        <img src="/imgs/logo.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="/html/painel.html">PAINEL</a></li>
-                <li><a href="/html/resultados.html">RESULTADOS</a></li>
-                <li><a href="/html/provas.html">PROVAS</a></li>
-                <li><a href="/html/equipas.html" class="active">EQUIPAS</a></li>
-            </ul>
-        </nav>
-        <div id="nav__btns">
-            <input type="search" id="search" placeholder="PROCURAR">
-            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
-                <div class="dropdown-content">
-                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                    <a href="/index.html">Sair</a>
+        <div class="container-fluid pt-3 pr-3 p-xl-4">
+            <div class="row">
+                <div class="col-xl-2 offset-xl-1 d-flex justify-content-between mb-2 mb-xl-0">
+                    <a href="#" class="d-xl-none btnNotif"><img class="img-xl-responsive" src="/imgs/Interface/bell.png"></a>
+                    <img class="logo" src="/imgs/logo2.png" alt="logo">    
+                    <a href="#" class="d-xl-none dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
+                </div>
+                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5" align="center">
+                    <div id="nav__btns" class="mt-2">
+                        <input class="d-none d-md-inline" type="search" id="search" placeholder="PROCURAR">
+                        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+                        <a href="#" class="btnNotif"><img class="img-xl-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-xl-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                            <div class="dropdown-content">
+                                <a  href="editarPerfil.html"><img class="float-left" src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a id="btnSair" href="/index.html"><img class="float-left ml-1" src="/imgs/Interface/sair.png" alt="">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
+                    <nav>
+                        <ul class="nav__links mt-3">
+                            <li><a href="painel.html">PAINEL</a></li>
+                            <li><a href="#">RESULTADOS</a></li>
+                            <li><a href="provas.html">PROVAS</a></li>
+                            <li><a href="#" class="active">EQUIPAS</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container-fluid mt-5">
         <div class="row">
-            <div id="div_localização" style="padding: 60px 50px 50px 50px;">
+            <div class="col-10 offset-1">
                 <input type="search" id="search" placeholder="LOCALIZAÇÃO" style="padding: 10px 10px 10px 10px;">
                 <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            </div>
-            <div class="col-6" id="div_categoria" style="padding: 50px 270px 50px 50px;">
-                <div class="form-group">
-                    <select class="form-control" name="" id="sltCategoria">
-                    <option id="">All</option>
-                    <option id="porto">Porto</option>
-                    <option id="gaia">Gaia</option>
-                    <option id="vilaConde">Vila do Conde</option>
-                  </select>
-                </div>
-            </div>
-            <div style="padding: 55px 50px 50px 50px;">
-                <button class="btn btn-primary" id="btnCriar">CRIAR EQUIPA</button>
+                <button class="btn btn-primary float-right" id="btnCriarEquipa">CRIAR EQUIPA</button>
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
         <div class="row cardsTotal">
-            <div class="col-lg-3 cardsEquip">
-                <div class="card">
+            <div class="col-xl-3 cardsEquip">
+                <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4">
                                 <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
-                            <div class="col text-center">
-                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
-                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                            <div class="col text-center text-xl-left">
+                                <h3 class="nomeEquipa">Bolt Runners</h3>
+                                <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
                                 <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
                             </div>
@@ -78,17 +78,16 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 cardsEquip">
-                <div class="card">
+            <div class="col-xl-3 cardsEquip">
+                <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4">
                                 <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
-                            <div class="col text-center">
-                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
-                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                            <div class="col text-center text-xl-left">
+                                <h3 class="nomeEquipa">Bolt Runners</h3>
+                                <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
                                 <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
                             </div>
@@ -96,17 +95,16 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 cardsEquip">
-                <div class="card">
+            <div class="col-xl-3 cardsEquip">
+                <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4">
                                 <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
-                            <div class="col text-center">
-                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
-                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                            <div class="col text-center text-xl-left">
+                                <h3 class="nomeEquipa">Bolt Runners</h3>
+                                <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
                                 <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
                             </div>
@@ -114,16 +112,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 cardsEquip">
-                <div class="card">
+            <div class="col-xl-3 cardsEquip">
+                <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4">
                                 <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
-                            <div class="col text-center">
-                                <h3 style="font-family: PortoSans-RegularItalic">Bolt Runners</h3>
-                                <h6 style="font-family: PortoSans-LightItalic">Equipa</h6><br>
+                            <div class="col text-center text-xl-left">
+                                <h3 class="nomeEquipa">Bolt Runners</h3>
+                                <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
                                 <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
                             </div>
@@ -131,18 +129,38 @@
                     </div>
                 </div>
             </div>
-
+            <div class="col-xl-3 cardsEquip">
+                <div class="card barraEquipa">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
+                            </div>
+                            <div class="col text-center text-xl-left">
+                                <h3 class="nomeEquipa">Bolt Runners</h3>
+                                <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
+                                <h5 style="font-family: PortoSans-BoldItalic">3 Membros</h5>
+                                <h5 style="font-family: PortoSans-LightItalic">Porto</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-
+    <div class="footer">
+        <p>© 2020 RunPoint Todos os Direitos Reservados.</p>
+    </div>
 
 
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/app.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
