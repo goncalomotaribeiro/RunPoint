@@ -82,9 +82,19 @@ button:focus {outline:0;}
 
 .conteudo {
     margin-top: 90px;
-    background-color: #ffffff;
     color: #000000;
     text-align: center;
+}
+
+.conteudo2 {
+    color: #000000;
+    text-align: center;
+    color: black;
+    margin-top: 150px;
+}
+
+.improve{
+    margin-left: 100px;
 }
 
 .footer {
@@ -99,4 +109,18 @@ button:focus {outline:0;}
 
 .form-group{
     margin-bottom: 40px;
+}
+
+.info h3{
+    font-size: 19px;
+    font-family: PortoSans-BoldItalic;
+}
+
+.info p{
+    font-size: 16px;
+    font-family: PortoSans-RegularItalic;
+}
+
+.info{
+    margin-left: 10px;
 }
