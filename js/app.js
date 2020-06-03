@@ -28,14 +28,7 @@ class App {
             ],
             'teams': [
                 TeamView
-            ],
-            'addTeam': [
-
-            ],
-            'detailTeam': [
-
             ]
-
         };
 
         // import dummy data for testing purposes
@@ -184,8 +177,6 @@ class App {
                 localStorage.setItem('teams', JSON.stringify(teams));
             }
         };
-
-
 
         let users = []
             // Load the fixtures in case there is no data in the local storage 
