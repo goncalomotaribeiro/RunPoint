@@ -5,7 +5,9 @@ export default class TeamController {
         this.teamModel = new TeamModel()
     }
 
-    getTeams() {
+    getTeams(filterLocal) {
+
+
         const teams = this.teamModel.getAll()
         return teams;
     }
