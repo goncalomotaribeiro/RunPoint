@@ -1,6 +1,6 @@
 export default class TeamModel {
     constructor() {
-        this.teams = localStorage.teams ? JSON.parse(localStorage.teams) : [];
+        this.teams = localStorage.teans ? JSON.parse(localStorage.teams) : [];
     }
 
     getAll() {
@@ -8,35 +8,37 @@ export default class TeamModel {
     }
 
     create(nome, localizacao, descricao, foto, membros) {
-        const team = {
-            id: this.teams.length > 0 ? this.teams[this.teams.length - 1].id + 1 : 1,
-            nome: nome,
-            localizacao: localizacao,
-            descricao: descricao,
-            foto: foto,
-            membros: membros
-        }
-
-        this.teams.push(team);
-        this._persist();
-    }
-
-    edit(nome, localizacao, descricao, foto, membros) {
-        const teams = this.teams;
-
-        for (let i = 0; i < teams.length; i++) {
-            const team = teams[i];
-            if (i == id - 1) {
-                team.nome = nome;
-                team.localizacao = localizacao;
-                team.descricao = descricao;
-                team.foto = foto;
-                team.membros = membros;
+            const team = {
+                id: this.teams.length > 0 ? this.teams[this.teams.length - 1].id + 1 : 1,
+                nome: nome,
+                localizacao: localizacao,
+                descricao: descricao,
+                foto: foto,
+                membros: membros
             }
+
+            this.teams.push(team);
+            this._persist();
         }
-        localStorage.setItem('teams', JSON.stringify(teams));
-        location.reload();
-    }
+        /*
+
+        edit(nome, localizacao, descricao, foto, membros) {
+            const teams = this.teams;
+
+            for (let i = 0; i < teams.length; i++) {
+                const team = teams[i];
+                if (i == id - 1) {
+                    team.nome = nome;
+                    team.localizacao = localizacao;
+                    team.descricao = descricao;
+                    team.foto = foto;
+                    team.membros = membros;
+                }
+            }
+            localStorage.setItem('teams', JSON.stringify(teams));
+            location.reload();
+        }
+        */
 
     _persist() {
         localStorage.setItem('teams', JSON.stringify(this.teams));
