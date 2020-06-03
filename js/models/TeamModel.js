@@ -1,6 +1,6 @@
 export default class TeamModel {
     constructor() {
-        this.teams = localStorage.teans ? JSON.parse(localStorage.teams) : [];
+        this.teams = localStorage.teams ? JSON.parse(localStorage.teams) : [];
     }
 
     getAll() {

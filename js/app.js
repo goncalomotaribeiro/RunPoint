@@ -26,7 +26,7 @@ class App {
             'provasAdmin': [
                 EventAdminView
             ],
-            'teams': [
+            'equipas': [
                 TeamView
             ]
         };
@@ -36,9 +36,6 @@ class App {
 
         // instantiate the views mapped in the routes object
         this._instantiateViews();
-
-        // import dummy data for testing purposes - TEAMS
-        this._importDataTeams();
     }
 
     _instantiateViews() {
@@ -123,67 +120,64 @@ class App {
                     estado: 'estado'
                 }
             ]
+
+            const teams = [{
+                id: 1,
+                nome: 'Bolt Runners',
+                localizacao: 'Porto',
+                descricao: 'Equipa Fixe',
+                foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                membros: '3 Membros'
+            },
+            {
+                id: 2,
+                nome: 'RunPorto',
+                localizacao: 'Gaia',
+                descricao: 'Equipa 2 Fixe',
+                foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                membros: '2 Membros'
+            },
+            {
+                id: 3,
+                nome: 'Bolt Runners',
+                localizacao: 'Porto',
+                descricao: 'Equipa Fixe',
+                foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                membros: '3 Membros'
+            },
+            {
+                id: 4,
+                nome: 'Bolt Runners',
+                localizacao: 'Porto',
+                descricao: 'Equipa Fixe',
+                foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                membros: '3 Membros'
+            },
+            {
+                id: 5,
+                nome: 'Bolt Runners',
+                localizacao: 'Porto',
+                descricao: 'Equipa Fixe',
+                foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                membros: '3 Membros'
+            },
+        ]
+            // Load the fixtures in case there is no data in the local storage 
+        if (!localStorage.teams) {
+            localStorage.setItem('teams', JSON.stringify(teams));
+        }
             // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.events) {
             localStorage.setItem('events', JSON.stringify(events));
         }
-    };
-
-    _importDataTeams() {
-        {
-            const teams = [{
-                        id: 1,
-                        nome: 'Bolt Runners',
-                        localizacao: 'Porto',
-                        descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
-                        membros: '3 Membros'
-                    },
-                    {
-                        id: 2,
-                        nome: 'RunPorto',
-                        localizacao: 'Gaia',
-                        descricao: 'Equipa 2 Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
-                        membros: '2 Membros'
-                    },
-                    {
-                        id: 3,
-                        nome: 'Bolt Runners',
-                        localizacao: 'Porto',
-                        descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
-                        membros: '3 Membros'
-                    },
-                    {
-                        id: 4,
-                        nome: 'Bolt Runners',
-                        localizacao: 'Porto',
-                        descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
-                        membros: '3 Membros'
-                    },
-                    {
-                        id: 5,
-                        nome: 'Bolt Runners',
-                        localizacao: 'Porto',
-                        descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
-                        membros: '3 Membros'
-                    },
-                ]
-                // Load the fixtures in case there is no data in the local storage 
-            if (!localStorage.teams) {
-                localStorage.setItem('teams', JSON.stringify(teams));
-            }
-        };
-
+        
         let users = []
             // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
         }
-    }
+    };
+
 }
 
 new App();

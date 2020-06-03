@@ -6,51 +6,37 @@ export default class TeamView {
         this.teamController = new TeamController()
 
         //Catálogo das equipas
-        this.main = document.querySelector("main");
+        this.cardsTotal = document.querySelector("#cardsTotal");
         this.txtLocal = document.querySelector("#txtSearch");
         this.btnSearch = document.querySelector("#btnSearch");
 
-        this.renderCardsTeam(this.teamController.getTeams())
+        this.renderTable(this.teamController.getTeams())
     }
 
-    renderCardsTeam(teams = []) {
+   
+    renderTable(teams = []) {
         let result = ''
-        let i = 0
-
         for (const team of teams) {
-            if (i % 4 === 0) { result += `<div class="row">` }
-            result += this._generateTeamCard(team)
-            i++
-
-            if (i % 4 === 0) { result += `</div>` }
-        }
-
-        this.main.innerHTML = result
-
-    }
-
-    _generateTeamCard(team) {
-        let html = `
+            result += `
             <div class="col-xl-3 cardsEquip">
                 <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-4">
-                                <img src="${team.foto}" alt="" class="img-lg-responsive">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
                             <div class="col text-center text-xl-left">
-                                <h3 class="nomeEquipa">${team.name}</h3>
+                                <h3 class="nomeEquipa">${team.nome}</h3>
                                 <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
-                                <h5 style="font-family: PortoSans-BoldItalic">${team.membros}</h5>
+                                <h5 style="font-family: PortoSans-BoldItalic">${team.membros} Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">${team.localizacao}</h5>
-                                <small>See more</small>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        `
-        return html
+            </div>`           
+        }
+        this.cardsTotal.innerHTML = result
     }
 
 
