@@ -5,13 +5,34 @@ export default class TeamController {
         this.teamModel = new TeamModel()
     }
 
-    getTeams(filterLocal) {
+    getTeams(filterLocal = '', isSorted = false) {
 
+        if (isSorted) {
+            this.teamModel.sort()
+        }
 
         const teams = this.teamModel.getAll()
-        return teams;
+
+        if (filterLocal === '') {
+            return teams
+        }
+
+        let filteredTeams = []
+
+        for (const team of teams) {
+            let filterTeamLocal = false
+
+            if ((team.localizacao.includes(filterLocal) && filterLocal != '') || filterLocal === '') {
+                filterTeamLocal = true
+            }
+
+            // Alimentar filteredTeams
+            if (filterTeamLocal) {
+                filteredTeams.push(team)
+            }
+        }
+
+        return filteredTeams
+
     }
-
-
-    /**/
 }

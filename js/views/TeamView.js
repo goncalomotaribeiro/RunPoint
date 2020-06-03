@@ -11,9 +11,16 @@ export default class TeamView {
         this.btnSearch = document.querySelector("#btnSearch");
 
         this.renderTable(this.teamController.getTeams())
+
+        this.bindFilterEvent()
     }
 
-   
+    bindFilterEvent() {
+        this.btnSearch.addEventListener('click', event => {
+            this.renderTable(this.teamController.getTeams(this.txtLocal.value))
+        })
+    }
+
     renderTable(teams = []) {
         let result = ''
         for (const team of teams) {
@@ -34,7 +41,7 @@ export default class TeamView {
                         </div>
                     </div>
                 </div>
-            </div>`           
+            </div>`
         }
         this.cardsTotal.innerHTML = result
     }
