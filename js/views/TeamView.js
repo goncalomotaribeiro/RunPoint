@@ -11,7 +11,26 @@ export default class TeamView {
         this.btnSearch = document.querySelector("#btnSearch");
 
         this.renderCardsTeam(this.teamController.getTeams())
+
+        this.bindAddSortEvent()
+        this.bindFilterEvent()
+
+
+
+
+
     }
+
+    bindFilterEvent() {
+        this.btnSearch.addEventListener("click", event => {
+
+            this.renderCardsTeam(this.teamController.getTeams(''))
+        })
+    }
+
+
+
+
 
     renderCardsTeam(teams = []) {
         let result = ''
@@ -36,7 +55,7 @@ export default class TeamView {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-4">
-                                <img src="${team.foto}" alt="" class="img-lg-responsive">
+                                <img src="/imgs/Interface/shirt.png" alt="" class="img-lg-responsive">
                             </div>
                             <div class="col text-center text-xl-left">
                                 <h3 class="nomeEquipa">${team.name}</h3>

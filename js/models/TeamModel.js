@@ -21,23 +21,22 @@ export default class TeamModel {
             this._persist();
         }
         /*
+            edit(nome, localizacao, descricao, foto, membros) {
+                const teams = this.teams;
 
-        edit(nome, localizacao, descricao, foto, membros) {
-            const teams = this.teams;
-
-            for (let i = 0; i < teams.length; i++) {
-                const team = teams[i];
-                if (i == id - 1) {
-                    team.nome = nome;
-                    team.localizacao = localizacao;
-                    team.descricao = descricao;
-                    team.foto = foto;
-                    team.membros = membros;
+                for (let i = 0; i < teams.length; i++) {
+                    const team = teams[i];
+                    if (i == id - 1) {
+                        team.nome = nome;
+                        team.localizacao = localizacao;
+                        team.descricao = descricao;
+                        team.foto = foto;
+                        team.membros = membros;
+                    }
                 }
+                localStorage.setItem('teams', JSON.stringify(teams));
+                location.reload();
             }
-            localStorage.setItem('teams', JSON.stringify(teams));
-            location.reload();
-        }
         */
 
     _persist() {
@@ -58,7 +57,7 @@ export default class TeamModel {
     }
 
 
-    getTeam(id) {
+    getTeams(id) {
         return this.teams.find(team => team.id == id)
     }
 

@@ -136,7 +136,7 @@ class App {
                         nome: 'Bolt Runners',
                         localizacao: 'Porto',
                         descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                        foto: 'foto',
                         membros: '3 Membros'
                     },
                     {
@@ -144,7 +144,7 @@ class App {
                         nome: 'RunPorto',
                         localizacao: 'Gaia',
                         descricao: 'Equipa 2 Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                        foto: 'foto',
                         membros: '2 Membros'
                     },
                     {
@@ -152,7 +152,7 @@ class App {
                         nome: 'Bolt Runners',
                         localizacao: 'Porto',
                         descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                        foto: 'foto',
                         membros: '3 Membros'
                     },
                     {
@@ -160,7 +160,7 @@ class App {
                         nome: 'Bolt Runners',
                         localizacao: 'Porto',
                         descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                        foto: 'foto',
                         membros: '3 Membros'
                     },
                     {
@@ -168,7 +168,7 @@ class App {
                         nome: 'Bolt Runners',
                         localizacao: 'Porto',
                         descricao: 'Equipa Fixe',
-                        foto: 'https://i.pinimg.com/originals/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.png',
+                        foto: 'foto',
                         membros: '3 Membros'
                     },
                 ]
