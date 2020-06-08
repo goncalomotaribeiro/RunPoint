@@ -12,11 +12,11 @@ export default class TeamView {
 
         this.renderTable(this.teamController.getTeams())
 
-        this.bindFilterEvent()
+        this.bindAddFilterEvent()
     }
 
-    bindFilterEvent() {
-        this.btnSearch.addEventListener('click', event => {
+    bindAAddFilterEvent() {
+        this.btnSearch.addEventListener('click', () => {
             this.renderTable(this.teamController.getTeams(this.txtLocal.value))
         })
     }

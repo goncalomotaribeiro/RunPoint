@@ -136,9 +136,9 @@ header {
 
 #painel {
     border-radius: 10px;
-    box-shadow: 0px 0px 5px #00000011;
+    box-shadow: 2px 6px 6px #00000011;
     background: #ffffff;
-    width: 65%;
+    width: 50%;
     margin-top: 5%;
     margin-bottom: 15%;
 }
@@ -148,8 +148,60 @@ header {
     font-family: PortoSans-LightItalic;
 }
 
-#descricao {
-    padding: 40px 80px 30px 80px;
+#descricao,
+#painelConvidar {
+    padding: 30px 80px 30px 80px;
+}
+
+#divConvidar {
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000011;
+    background: white;
+}
+
+h6 {
+    font-family: PortoSans-RegularItalic;
+    font-size: 18pt;
+    padding: 0px 20px 0px 50px;
+}
+
+#btnAdd {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    font-family: PortoSans-Bold;
+    border-radius: 50px;
+}
+
+#btnConvidar {
+    padding: 8px 60px 8px 60px;
+    background-color: #4CA8E0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-family: PortoSans-RegularItalic;
+    font-size: 14pt;
+}
+
+.btnCriar {
+    position: responsive;
+    padding: 18px 0px 40px 340px;
+}
+
+#btnCriar {
+    padding: 18px 150px 18px 150px;
+    background-color: #4CA8E0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-family: PortoSans-RegularItalic;
+    font-size: 16pt;
 }
 
 .footer {
