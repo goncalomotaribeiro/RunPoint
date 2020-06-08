@@ -8,16 +8,24 @@ export default class TeamView {
         //Catálogo das equipas
         this.cardsTotal = document.querySelector("#cardsTotal");
         this.txtLocal = document.querySelector("#txtSearch");
-        this.btnSearch = document.querySelector("#btnSearch");
+        this.btnProcurar = document.querySelector("#btnProcurar");
+        this.btnCriarEquipa = document.querySelector("#btnCriarEquipa");
 
         this.renderTable(this.teamController.getTeams())
 
         this.bindAddFilterEvent()
+        this.bindAddAddEvent()
     }
 
-    bindAAddFilterEvent() {
-        this.btnSearch.addEventListener('click', () => {
+    bindAddFilterEvent() {
+        this.btnProcurar.addEventListener('click', () => {
             this.renderTable(this.teamController.getTeams(this.txtLocal.value))
+        })
+    }
+
+    bindAddAddEvent() {
+        this.btnCriarEquipa.addEventListener('click', () => {
+            location.href = '../html/criarEquipa.html';
         })
     }
 
