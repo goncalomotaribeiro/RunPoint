@@ -4,6 +4,7 @@ import UserPanelView from './views/UserPanelView.js'
 import EventPanelView from './views/EventPanelView.js'
 import EventAdminView from './views/EventAdminView.js'
 import TeamView from './views/TeamView.js'
+import CriarPerfilView from './views/CriarPerfilView.js'
 
 class App {
     constructor() {
@@ -28,6 +29,9 @@ class App {
             ],
             'equipas': [
                 TeamView
+            ],
+            'criarPerfil':[
+                CriarPerfilView
             ]
         };
 

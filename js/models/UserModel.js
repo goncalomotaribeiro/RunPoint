@@ -7,7 +7,7 @@ export default class UserModel {
         return this.users;
     }
 
-    create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+    create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, ...listaPessoal) {
         const user = {
             id: this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1,
             email: email,
@@ -20,16 +20,17 @@ export default class UserModel {
             foto: foto,
             tipo: tipo,
             estado: estado,
+            listaPessoal: listaPessoal
         }
         this.users.push(user);
         this._persist();
     }
 
-    edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
-        const users = this.users;
+    edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal) {
 
-        for (let i = 0; i < users.length; i++) {
-            const user = users[i];
+        for (let i = 0; i < this.users.length; i++) {
+            const user = this.users[i];
+            
             if(i == id - 1){
                 user.email = email;
                 user.password = password;
@@ -41,9 +42,11 @@ export default class UserModel {
                 user.foto = foto;
                 user.tipo = tipo;
                 user.estado = estado;
+                user.listaPessoal = listaPessoal
             }
         }
-        localStorage.setItem('users', JSON.stringify(users));
+        
+        this._persist();
         location.reload();
     }
 

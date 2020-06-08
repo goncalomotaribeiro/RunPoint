@@ -5,9 +5,9 @@ export default class UserController {
         this.userModel = new UserModel();
     }
 
-    createUser(local, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+    createUser(local, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal) {
         if (!this.userModel.getAll().some(user => user.email === email)) {
-            this.userModel.create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado);
+            this.userModel.create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal);
             if(local == 'landingPage'){
                 this.userModel.login(email);
             }
@@ -16,10 +16,10 @@ export default class UserController {
         }
     }
 
-    editUser(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado) {
+    editUser(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal) {
         const userEdit =  this.userModel.getUser(id)
         if (!this.userModel.getAll().some(user => user.email === email) || (userEdit.email == email) ) {
-            this.userModel.edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado);
+            this.userModel.edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal);
         } else {
             throw Error(`Email already exists`);
         }
