@@ -5,7 +5,7 @@ export default class TeamAddView {
         this.teamController = new TeamController();
 
         //Add Equipa DOM
-        this.addTeamForm = document.querySelector('#frmAddTeam');
+        this.btnCriar = document.querySelector('#btnCriar');
         this.teamFoto = document.querySelector('#btnShirt');
         this.teamNome = document.querySelector('#txtNome');
         this.teamLocalizacao = document.querySelector('#sltLocalizacao');
@@ -13,12 +13,12 @@ export default class TeamAddView {
         this.teamMembros = document.querySelector('#txtMembros');
         this.addTeamMessage = document.querySelector('#addTeamMessage');
 
-        this.renderAddTeamForm(this.userController.checkLoginStatus());
+        this.renderAddTeamForm(this.teamController.getTeams());
         this.bindAddAddTeamForm();
     }
 
     bindAddAddTeamForm() {
-        this.addTeamForm.addEventListener('submit', event => {
+        this.btnCriar.addEventListener('submit', event => {
             event.preventDefault();
 
             try {
