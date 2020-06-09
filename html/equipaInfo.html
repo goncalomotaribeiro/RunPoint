@@ -50,34 +50,55 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding: 100px 200px 100px 200px;">
         <div class="row">
-            <div class="col-xl-8">
-                <div class="row">
-                    <div class="col">
-                        <a><img src="/imgs/Interface/shirt.png" alt=""></a>
+
+            <div class="col-xl-7">
+                <div class="row" id="infoEquipa" align="center">
+                    <div class="row">
+                        <div class="col">
+                            <a><img src="/imgs/Interface/shirt.png" alt=""></a>
+                        </div>
+                        <div class="col">
+                            <p id="pNomeEquipa">Bold Runners</p>
+                            <small>Equipa</small>
+                        </div>
+                        <div class="col">
+                            <p id="pMembros">3/20</p>
+                            <small>Membros</small>
+                        </div>
+                        <div class="col">
+                            <p id="pLocal">Porto</p>
+                            <small>Localização</small>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary" id="btnInscrever">Inscrever</button>
+                            <button type="button" class="btn btn-primary" id="btnMembro">Membro</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary" id="btnEditar">Editar</button>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p id="pNomeEquipa">Bold Runners</p><br>
-                        <small>Equipa</small>
-                    </div>
-                    <div class="col">
-                        <p id="pMembros">3/20</p><br>
-                        <small>Membros</small>
-                    </div>
-                    <div class="col">
-                        <p id="pLocal">Porto</p><br>
-                        <small>Localização</small>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Inscrever</button>
-                        <button type="button" class="btn btn-primary" hidden="true">Membro</button>
+                    <div class="col" id="equipaDesc">
+                        <div class="form-group" align="left">
+                            <label for="">Descrição</label>
+                            <textarea class="form-control" name="" id="" rows="3"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-4" id="divResultados">
+            <div class="col-xl-5 text-center" id="divResultados">
                 <h3>Resultados em provas</h3>
+                <div class="row">
+                    <img src="/imgs/niveis/allstar.png">
+                </div>
+                <div class="row">
+                    <img src="/imgs/niveis/allstar.png">
+                </div>
+                <div class="row">
+                    <img src="/imgs/niveis/allstar.png">
+                </div>
             </div>
         </div>
     </div>
