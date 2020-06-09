@@ -4,7 +4,7 @@ import UserPanelView from './views/UserPanelView.js'
 import EventPanelView from './views/EventPanelView.js'
 import EventAdminView from './views/EventAdminView.js'
 import TeamView from './views/TeamView.js'
-import CriarPerfilView from './views/AddTeamView.js'
+import CreateProfileView from './views/CreateProfileView.js'
 
 class App {
     constructor() {
@@ -31,7 +31,7 @@ class App {
                 TeamView
             ],
             'criarPerfil': [
-                CriarPerfilView
+                CreateProfileView
             ]
         };
 
