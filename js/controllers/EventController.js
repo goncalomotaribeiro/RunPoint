@@ -38,24 +38,21 @@ export default class EventController {
         return this.eventModel.getEvent(id)
     }
 
-    getEvents(filterEmail='', filterType='', isSorted=false) {
-        if (isSorted) {
-            this.eventModel.sort()
-        }
+    getEvents(filterLocation='', filterType='') {
 
         const events = this.eventModel.getAll()
         
-        if (filterEmail==='' && filterType==='') {
+        if (filterLocation==='' && filterType==='') {
             return events
         }
 
         let filteredEvents = []
 
         for (const event of events) {
-            let filterEventNome = false, filterEventType = false
+            let filterEventLocal = false, filterEventType = false
 
-            if((event.nome.includes(filterNome) && filterNome!='') || filterNome==='') {
-                filterEventNome = true
+            if((event.local.includes(filterLocation) && filterLocation!='') || filterLocation==='') {
+                filterEventLocal = true
             }
 
             if((event.tipo===filterType && filterType!='') || filterType==='') {
@@ -63,7 +60,7 @@ export default class EventController {
             }
 
             // Alimentar filteredEvents
-            if(filterEventNome && filterEventType) {
+            if(filterEventLocal && filterEventType) {
                 filteredEvents.push(event)
             }
         }

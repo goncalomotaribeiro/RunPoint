@@ -9,14 +9,25 @@ export default class EventPanelView {
         this.btnAdd = document.querySelector(".btnAdd")
         this.main = document.querySelector("main")
 
+        this.btnFilter = document.querySelector("#btnFilter")
+        this.txtLocalizacao = document.querySelector("#search")
+        this.sltType = document.querySelector("#sltType")
+
         this.userEmail = this.userController.loggedUser();
         this.userData = this.userController.loggedUserData(this.userEmail);
 
         this.renderTable(this.eventController.getEvents());
+        this.bindAddFilterEvent()
+    }
+
+    bindAddFilterEvent() {
+        this.btnFilter.addEventListener('click', () => {
+            event.preventDefault();        
+            this.renderTable(this.eventController.getEvents(this.txtLocalizacao.value, this.sltType.value))
+        })
     }
 
     bindAddEditEvent(){
-
         document.addEventListener('click',event => {
                 if(event.target && event.target.matches("img.btnAdd")){
                     this.userData.listaPessoal.push(event.target.id)
