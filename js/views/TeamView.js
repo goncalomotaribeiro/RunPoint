@@ -14,7 +14,8 @@ export default class TeamView {
         this.renderTable(this.teamController.getTeams())
 
         this.bindAddFilterEvent()
-        this.bindAddAddEvent()
+        this.bindAddTeamEvent()
+        this.bindInfoTeamEvent()
     }
 
     bindAddFilterEvent() {
@@ -23,9 +24,15 @@ export default class TeamView {
         })
     }
 
-    bindAddAddEvent() {
+    bindAddTeamEvent() {
         this.btnCriarEquipa.addEventListener('click', () => {
             location.href = '../html/criarEquipa.html';
+        })
+    }
+
+    bindInfoTeamEvent() {
+        this.cardsTotal.addEventListener('click', () => {
+            location.href = '../html/equipaInfo.html';
         })
     }
 
