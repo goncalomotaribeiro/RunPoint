@@ -8,30 +8,42 @@
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/criarEquipa.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
 <body>
-
     <header>
-        <img src="/imgs/logo.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="/html/painel.html">PAINEL</a></li>
-                <li><a href="/html/resultados.html">RESULTADOS</a></li>
-                <li><a href="/html/provas.html">PROVAS</a></li>
-                <li><a href="/html/equipas.html" class="active">EQUIPAS</a></li>
-            </ul>
-        </nav>
-        <div id="nav__btns">
-            <input type="search" id="search" placeholder="PROCURAR">
-            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
-                <div class="dropdown-content">
-                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                    <a href="/index.html">Sair</a>
+        <div class="container-fluid pt-3 pr-3 p-xl-4">
+            <div class="row">
+                <div class="col-xl-2 offset-xl-1 d-flex justify-content-between mb-2 mb-xl-0">
+                    <a href="#" class="d-xl-none btnNotif"><img class="img-xl-responsive" src="/imgs/Interface/bell.png"></a>
+                    <img class="logo" src="/imgs/logo2.png" alt="logo">
+                    <a href="#" class="d-xl-none dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
+                </div>
+                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5 text-center">
+                    <div id="nav__btns" class="mt-2">
+                        <input class="d-none d-md-inline" type="search" id="search" placeholder="PROCURAR">
+                        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+                        <a href="#" class="btnNotif"><img class="img-xl-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-xl-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                            <div class="dropdown-content">
+                                <a href="editarPerfil.html"><img class="float-left" src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a id="btnSair" href="/index.html"><img class="float-left ml-1" src="/imgs/Interface/sair.png" alt="">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
+                    <nav>
+                        <ul class="nav__links mt-3">
+                            <li><a href="#" class="active">PAINEL</a></li>
+                            <li><a href="#">RESULTADOS</a></li>
+                            <li><a href="provas.html">PROVAS</a></li>
+                            <li><a href="equipas.html">EQUIPAS</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
