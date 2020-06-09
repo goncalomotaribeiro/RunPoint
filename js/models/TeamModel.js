@@ -39,10 +39,6 @@ export default class TeamModel {
             }
         */
 
-    _persist() {
-        localStorage.setItem('teams', JSON.stringify(this.teams));
-    }
-
     sort() {
         this.teams.sort(this._compare);
         this._persist();
@@ -64,6 +60,10 @@ export default class TeamModel {
     remove(id) {
         this.teams = this.teams.filter(team => team.id != id)
         this._persist()
+    }
+
+    _persist() {
+        localStorage.setItem('teams', JSON.stringify(this.teams));
     }
 
     _compare(teamA, teamB) {

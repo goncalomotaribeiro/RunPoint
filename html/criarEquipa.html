@@ -38,7 +38,6 @@
     </header>
 
     <!--PAINEL CRIAR EQUIPA-->
-    <!--PAINEL EDITAR EQUIPA-->
     <div class="container" id="painel">
         <div class="row">
             <div class="col">
@@ -51,32 +50,33 @@
             </div>
         </div>
 
+        <!--FORMULÁRIO DE CRIAÇÃO DA EQUIPA-->
         <div class="row">
             <div class="col" align="center">
-                <button style="border: none; background: none;"><img src="/imgs/Interface/shirt.png" alt="" class="lg-responsive"></button><br>
+                <button style="border: none; background: none;" id="btnShirt"><img src="/imgs/Interface/shirt.png" alt="" class="lg-responsive"></button><br>
                 <button style="border: none; background: none;"><p style="font-size: 15pt; font-family: PortoSans-LightItalic; opacity: 0.8;">Camisola</p></button>
             </div>
         </div>
 
         <div class="row" style="padding-top: 50px;">
             <div class="col txtName" style="padding-left: 250px;">
-                <input type="text" class="form-control" placeholder="Nome">
+                <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
             </div>
             <div class="col form-group" style="padding-right: 250px;">
-                <select class="form-control" name="" id="">
-                    <option id="">Localização</option>
-                    <option id="porto">Porto</option>
-                    <option id="gaia">Gaia</option>
-                    <option id="maia">Maia</option>
-                    <option id="vilaDoConde">Vila do Conde</option>
-                  </select>
+                <select class="form-control" name="" id="sltLocalizacao">
+                        <option id="">Localização</option>
+                        <option id="porto">Porto</option>
+                        <option id="gaia">Gaia</option>
+                        <option id="maia">Maia</option>
+                        <option id="vilaDoConde">Vila do Conde</option>
+                    </select>
             </div>
         </div>
 
         <div class="col" id="descricao">
             <label for="text" style="font-family: PortoSans-LightItalic; font-size: 18pt;">Descrição</label>
             <div class="form-group">
-                <textarea class="form-control" name="" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;"></textarea>
+                <textarea class="form-control" id="txtDescricao" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;"></textarea>
             </div>
         </div>
 
@@ -87,7 +87,7 @@
                     <button class="btn" id="btnAdd">+</button>
                 </div>
                 <div style="padding-left: 35px;">
-                    <input type="text" placeholder="@participante" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
+                    <input type="text" placeholder="@participante" id="txtMembros" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
                 </div>
                 <div style="padding: 35px 0px 0px 35px;">
                     <button id="btnConvidar">Convidar</button>
@@ -96,7 +96,9 @@
         </div>
 
         <div class="col btnCriar">
-            <button class="btn btn-primary" id="btnCriar">CRIAR</button>
+            <button type="submit" class="btn btn-primary" id="btnCriar">CRIAR</button>
+            <br><br>
+            <div id="addTeamMessage" style="font-family: PortoSans-Bold;"></div>
         </div>
 
     </div>
