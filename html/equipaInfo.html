@@ -39,10 +39,10 @@
                 <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
                     <nav>
                         <ul class="nav__links mt-3">
-                            <li><a href="#" class="active">PAINEL</a></li>
+                            <li><a href="painel.html">PAINEL</a></li>
                             <li><a href="#">RESULTADOS</a></li>
                             <li><a href="provas.html">PROVAS</a></li>
-                            <li><a href="equipas.html">EQUIPAS</a></li>
+                            <li><a href="equipas.html" class="active">EQUIPAS</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -59,18 +59,18 @@
                 <div class="row" id="infoEquipa">
                     <div class="row">
                         <div class="col">
-                            <a><img src="/imgs/Interface/shirt.png" alt=""></a>
+                            <a><img src="" id="equipaFoto"></a>
                         </div>
                         <div class="col">
-                            <p id="pNomeEquipa">Bold Runners</p>
+                            <p id="equipaNome"></p>
                             <small>Equipa</small>
                         </div>
                         <div class="col">
-                            <p id="pMembros">3/20</p>
+                            <p id="equipaMembros"></p>
                             <small>Membros</small>
                         </div>
                         <div class="col">
-                            <p id="pLocal">Porto</p>
+                            <p id="equipaLocal"></p>
                             <small>Localização</small>
                         </div>
                         <div class="col">
@@ -83,7 +83,7 @@
                         <div class="col-xl-12" id="divDescricao">
                             <div class="form-group" align="left">
                                 <label for="">Descrição</label>
-                                <textarea class="form-control" name="" id="" rows="5"></textarea>
+                                <textarea class="form-control" name="" id="equipaDescricao" rows="5"></textarea>
                             </div>
                         </div>
                     </div>
@@ -137,21 +137,21 @@
                                 <h3 style="padding-bottom: 20px;">Membros</h3>
                             </div>
                             <div class="col-12" style="padding-bottom: 20px;">
-                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 10%;">
                                 <label id="nomeUtil ">Gonçalo Ribeiro</label>
                             </div>
                             <div class="col-12" style="padding-bottom: 20px;">
-                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
-                                <label id="nomeUtil ">Gonçalo Ribeiro</label>
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 10%;">
+                                <label id="nomeUtil ">Maria Cardoso</label>
                             </div>
 
                             <div class="col-12" style="padding-bottom: 20px;">
-                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
-                                <label id="nomeUtil ">Gonçalo Ribeiro</label>
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 10%;">
+                                <label id="nomeUtil ">Diogo Almeida</label>
                             </div>
-                            <hr>
                             <div class="col-12" id="divConvidar" style="padding-bottom: 20px;">
-                                <label for="text">Convidar</label>
+                                <hr/>
+                                <label for="text">Convidar Membros</label>
                                 <button class="btn btn-primary">+</button>
                             </div>
                         </div>

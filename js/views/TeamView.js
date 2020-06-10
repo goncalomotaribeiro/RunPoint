@@ -3,27 +3,34 @@ import TeamController from '../controllers/TeamController.js'
 export default class TeamView {
 
     constructor() {
-        this.teamController = new TeamController()
+        this.teamController = new TeamController();
 
         //Catálogo das equipas
         this.cardsTotal = document.querySelector("#cardsTotal");
-        this.txtLocal = document.querySelector("#txtSearch");
-        this.btnProcurar = document.querySelector("#btnProcurar");
+        this.txtLocalizacao = document.querySelector("#search")
+        this.btnFilter = document.querySelector("#btnFilter");
         this.btnCriarEquipa = document.querySelector("#btnCriarEquipa");
 
-        this.renderTable(this.teamController.getTeams())
+        this.renderTable(this.teamController.getTeams());
 
-        this.bindAddFilterEvent()
-        this.bindAddTeamEvent()
-        this.bindInfoTeamEvent()
+        this.bindAddFilterEvent();
+        this.bindAddTeamEvent();
+        this.bindInfoTeamEvent();
     }
 
     bindAddFilterEvent() {
-        this.btnProcurar.addEventListener('click', () => {
+        this.btnFilter.addEventListener('click', () => {
             event.preventDefault();
-            this.renderTable(this.teamController.getTeams(this.txtLocal.value))
+            this.renderTable(this.teamController.getTeams(this.txtLocalizacao.value))
         })
     }
+
+    /* bindAddFilterEvent() {
+        this.btnFilter.addEventListener('click', () => {
+            event.preventDefault();        
+            this.renderTable(this.eventController.getEvents(this.txtLocalizacao.value, this.sltType.value))
+        })
+    } */
 
     bindAddTeamEvent() {
         this.btnCriarEquipa.addEventListener('click', () => {

@@ -4,6 +4,7 @@ import UserPanelView from './views/UserPanelView.js'
 import EventPanelView from './views/EventPanelView.js'
 import EventAdminView from './views/EventAdminView.js'
 import TeamView from './views/TeamView.js'
+import InfoTeamView from './views/InfoTeamView.js'
 import CreateProfileView from './views/CreateProfileView.js'
 
 class App {
@@ -29,6 +30,9 @@ class App {
             ],
             'equipas': [
                 TeamView
+            ],
+            'equipaInfo': [
+                InfoTeamView
             ],
             'criarPerfil': [
                 CreateProfileView
