@@ -53,8 +53,10 @@
     <div class="container-fluid" style="padding: 100px 200px 100px 200px;">
         <div class="row">
 
-            <div class="col-xl-7">
-                <div class="row" id="infoEquipa" align="center">
+            <div class="col-xl-8">
+
+                <!--PAINEL DA INFO DA EQUIPA-->
+                <div class="row" id="infoEquipa">
                     <div class="row">
                         <div class="col">
                             <a><img src="/imgs/Interface/shirt.png" alt=""></a>
@@ -73,42 +75,126 @@
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-primary" id="btnInscrever">Inscrever</button>
-                            <button type="button" class="btn btn-primary" id="btnMembro">Membro</button>
+                            <button type="button" class="btn btn-primary" id="btnMembro" hidden="true">Membro</button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-primary" id="btnEditar">Editar</button>
+                            <button type="button" class="btn btn-primary" id="btnEditar" hidden="true">Editar</button>
+                        </div>
+                        <div class="col-xl-12" id="divDescricao">
+                            <div class="form-group" align="left">
+                                <label for="">Descrição</label>
+                                <textarea class="form-control" name="" id="" rows="5"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="col" id="equipaDesc">
-                        <div class="form-group" align="left">
-                            <label for="">Descrição</label>
-                            <textarea class="form-control" name="" id="" rows="3"></textarea>
+                </div>
+
+
+                <div class="row">
+                    <!--PAINEL ATIVIDADE TOTAL DA EQUIPA-->
+                    <div class="col-xl-4" id="divAtividades" align="center">
+                        <h3>Total Atividade Em Equipa</h3>
+                        <div class="col">
+                            <h4 id="totalKm">10 km</h4>
+                            <small>Total de Kilómetros</small>
+                        </div>
+                        <div class="col">
+                            <h4 id="totalKm">5:00:10</h4>
+                            <small>Total de Tempo</small>
+                        </div>
+                        <div class="col">
+                            <h4 id="totalKm">5</h4>
+                            <small>Total de Provas</small>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-7">
+                        <!--PAINEL RECORDES EM EQUIPA-->
+                        <div class="row" id="divRecordes">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>Recordes</h3>
+                                </div>
+                                <div class="col" align="center">
+                                    <h4 id="maiorDist">0,03Km</h4>
+                                    <small>Maior Distância</small>
+                                </div>
+                                <div class="col" align="center">
+                                    <h4 id="melhorTempo">1:10:01</h4>
+                                    <small>Melhor Tempo</small>
+                                </div>
+                                <div class="col" align="center">
+                                    <h4 id="melhorClassif">1º</h4>
+                                    <small>Melhor Classificação</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--PAINEL MEMBROS DA EQUIPA-->
+                        <div class="row" id="divMembros">
+                            <div class="col-12">
+                                <h3 style="padding-bottom: 20px;">Membros</h3>
+                            </div>
+                            <div class="col-12" style="padding-bottom: 20px;">
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
+                                <label id="nomeUtil ">Gonçalo Ribeiro</label>
+                            </div>
+                            <div class="col-12" style="padding-bottom: 20px;">
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
+                                <label id="nomeUtil ">Gonçalo Ribeiro</label>
+                            </div>
+
+                            <div class="col-12" style="padding-bottom: 20px;">
+                                <img src="/imgs/Interface/fotoPerfil.png" style="width: 15%;">
+                                <label id="nomeUtil ">Gonçalo Ribeiro</label>
+                            </div>
+                            <hr>
+                            <div class="col-12" id="divConvidar" style="padding-bottom: 20px;">
+                                <label for="text">Convidar</label>
+                                <button class="btn btn-primary">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-5 text-center" id="divResultados">
-                <h3>Resultados em provas</h3>
-                <div class="row">
-                    <img src="/imgs/niveis/allstar.png">
+
+            <!--PAINEL DOS RESULTADOS EM PROVAS-->
+
+            <div class="col-xl-4 " id="divResultados " align="center ">
+                <h3 style="font-size: 15pt; padding-bottom: 30px; ">Resultados em provas</h3>
+                <div class="col ">
+                    <img style="width: 20%; " src="/imgs/niveis/allstar.png ">
+                    <p>x 1</p>
                 </div>
-                <div class="row">
-                    <img src="/imgs/niveis/allstar.png">
+                <div class="col ">
+                    <img style="width: 20%; " src="/imgs/niveis/prime.png ">
+                    <p>x 3</p>
                 </div>
-                <div class="row">
-                    <img src="/imgs/niveis/allstar.png">
+                <div class="col ">
+                    <img style="width: 20%; " src="/imgs/niveis/experienced.png ">
+                    <p>x 15</p>
+                </div>
+                <div class="col ">
+                    <img style="width: 20%; " src="/imgs/niveis/talented.png ">
+                    <p>x 10</p>
+                </div>
+                <div class="col ">
+                    <img style="width: 20%; " src="/imgs/niveis/beginner.png ">
+                    <p>x 30</p>
                 </div>
             </div>
         </div>
     </div>
 
 
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 </body>
 
 </html>

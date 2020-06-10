@@ -1,12 +1,10 @@
 #infoEquipa {
     background: white;
     padding: 50px 20px 50px 20px;
-    margin-right: 40px;
+    margin-right: 20px;
     margin-bottom: 50px;
-}
-
-#divResultados {
-    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px #00000011;
 }
 
 p {
@@ -51,8 +49,83 @@ small {
     border-radius: 50px;
 }
 
-#equipaDesc {
+#divDescricao {
     padding: 50px 60px 0px 60px;
     font-family: PortoSans-Regular;
     font-size: 15pt;
+}
+
+#divDescricao textarea {
+    background: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    font-size: 15pt;
+    font-family: PortoSans-BoldItalic;
+    color: black;
+}
+
+#divResultados {
+    font-family: PortoSans-BoldItalic;
+    padding-top: 50px;
+    background: green;
+    border-radius: 10px;
+    box-shadow: 6px 6px 3px #00000011;
+}
+
+#divResultados p {
+    font-size: 15pt;
+    font-family: PortoSans-BoldItalic;
+    color: black;
+}
+
+#divAtividades {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px #00000011;
+    padding: 20px 20px 20px 20px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-family: PortoSans-BoldItalic;
+    font-size: 17pt;
+    padding-top: 20px;
+}
+
+h4 {
+    font-family: PortoSans-RegularItalic;
+    font-size: 22pt;
+    padding-top: 25px;
+}
+
+#divRecordes {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px #00000011;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+#divAtividades small,
+#divRecordes small {
+    font-size: 15pt;
+}
+
+#divMembros {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px #00000011;
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+#divConvidar button {
+    background-color: #4CA8E0;
+    border: none;
+    color: white;
+    font-family: PortoSans-Bold;
+    border-radius: 50px;
 }
