@@ -8,7 +8,7 @@ export default class TeamView {
         //Catálogo das equipas
         this.cardsTotal = document.querySelector("#cardsTotal");
         this.txtLocalizacao = document.querySelector("#search")
-        this.btnFilter = document.querySelector("#btnFilter");
+        this.btnProcurar = document.querySelector("#btnProcurar");
         this.btnCriarEquipa = document.querySelector("#btnCriarEquipa");
 
         this.renderTable(this.teamController.getTeams());
@@ -19,18 +19,11 @@ export default class TeamView {
     }
 
     bindAddFilterEvent() {
-        this.btnFilter.addEventListener('click', () => {
+        this.btnProcurar.addEventListener('click', () => {
             event.preventDefault();
             this.renderTable(this.teamController.getTeams(this.txtLocalizacao.value))
         })
     }
-
-    /* bindAddFilterEvent() {
-        this.btnFilter.addEventListener('click', () => {
-            event.preventDefault();        
-            this.renderTable(this.eventController.getEvents(this.txtLocalizacao.value, this.sltType.value))
-        })
-    } */
 
     bindAddTeamEvent() {
         this.btnCriarEquipa.addEventListener('click', () => {
@@ -67,6 +60,14 @@ export default class TeamView {
             </div>`
         }
         this.cardsTotal.innerHTML = result
+    }
+
+    _renderCreateTeamButton(userIsLogged) {
+        if (userIsLogged) {
+            this.btnCriarEquipa.style.visibility = 'visible';
+        } else {
+            this.btnCriarEquipa.style.visibility = 'hidden';
+        }
     }
 
 

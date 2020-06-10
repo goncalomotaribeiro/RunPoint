@@ -13,12 +13,19 @@ export default class InfoTeamView {
         this.equipaDescricao = document.querySelector('#equipaDescricao')
 
         // Info Painel Aividade Total
-        //this.equipaNome = document.querySelector('#equipaNome')
-        //this.equipaMembros = document.querySelector('#equipaMembros')
-        //this.equipaLocal = document.querySelector('#equipaLocal')
-        //this.equipaDescricao = document.querySelector('#equipaDescricao')
+        this.totalKm = document.querySelector('#totalKm')
+        this.totalTempo = document.querySelector('#totalTempo')
+        this.totalProvas = document.querySelector('#totalProvas')
+
+        // Info Painel Recorde
+        this.maiorDist = document.querySelector('#maiorDist')
+        this.melhorTempo = document.querySelector('#melhorTempo')
+        this.melhorClassif = document.querySelector('#melhorClassif')
+
 
         this.fillTeamData()
+            //this.fillTeamAtivities()
+            //this.fillTeamRecords()
             //this.bindBackButton()
     }
 
@@ -30,4 +37,10 @@ export default class InfoTeamView {
         this.equipaLocal.innerHTML = currentTeam.localizacao
         this.equipaDescricao.innerHTML = currentTeam.descricao
     }
+
+    //fillTeamAtivities() {}
+
+    //fillTeamRecords() {}
+
+
 }
