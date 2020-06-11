@@ -10,7 +10,7 @@ export default class EventPanelView {
         this.main = document.querySelector("main")
 
         this.btnFilter = document.querySelector("#btnFilter")
-        this.txtLocalizacao = document.querySelector("#search")
+        this.txtLocalizacao = document.querySelector("#search2")
         this.sltType = document.querySelector("#sltType")
 
         this.userEmail = this.userController.loggedUser();

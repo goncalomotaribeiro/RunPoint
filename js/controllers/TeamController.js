@@ -5,34 +5,47 @@ export default class TeamController {
         this.teamModel = new TeamModel()
     }
 
-    getTeams(filterLocal = '', isSorted = false) {
-
-        if (isSorted) {
-            this.teamModel.sort()
+    createTeam(local, nome, localizacao, descricao, foto, membros) {
+        if (!this.teamModel.getAll().some(team => team.nome === nome)) {
+            this.teamModel.create(nome, localizacao, descricao, foto, membros);
+            if(local == 'criarEquipa'){
+                this.UserAddTeam(nome);
+            }
+        } else {
+            throw Error(`Team already exists`);
         }
+    }
+
+    UserAddTeam(){
+
+    }
+
+    getTeams(filterLocation='', filterName='') {
 
         const teams = this.teamModel.getAll()
-
-        if (filterLocal === '') {
+        
+        if (filterLocation==='' && filterName==='') {
             return teams
         }
 
-        let filteredTeams = []
+        let filteredEvents = []
 
         for (const team of teams) {
-            let filterTeamLocal = false
+            let filterEventLocal = false, filterEventName = false
 
-            if ((team.localizacao.includes(filterLocal) && filterLocal != '') || filterLocal === '') {
-                filterTeamLocal = true
+            if((team.localizacao.includes(filterLocation) && filterLocation!='') || filterLocation==='') {
+                filterEventLocal = true
             }
 
-            // Alimentar filteredTeams
-            if (filterTeamLocal) {
-                filteredTeams.push(team)
+            if((team.nome.includes(filterName) && filterName!='') || filterName==='') {
+                filterEventName = true
+            }
+
+            // Alimentar filteredEvents
+            if(filterEventLocal && filterEventName) {
+                filteredEvents.push(team)
             }
         }
-
-        return filteredTeams
-
+        return filteredEvents
     }
 }

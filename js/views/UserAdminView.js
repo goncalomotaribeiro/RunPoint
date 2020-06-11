@@ -5,6 +5,9 @@ export default class UserAdminView {
     constructor() {
         this.userController = new UserController();
         
+        this.userEmail = this.userController.loggedUser();
+        this.userData = this.userController.loggedUserData(this.userEmail);
+        
         // Tabela
         this.tBody = document.querySelector("#tBody")
         this.btnFilter = document.querySelector("#btnFilter")
@@ -111,7 +114,9 @@ export default class UserAdminView {
                 this.addDataNasc.value,
                 this.addFoto.value,
                 this.addChxAdmin.checked ? 'admin' : 'comum',
-                this.addChxEstado.checked ? 'ativo' : 'bloqueado'
+                this.addChxEstado.checked ? 'ativo' : 'bloqueado',
+                this.userData.listaPessoal
+
                 );
                 this.displayAddUserMessage('User edited with success!', 'success');
 
@@ -155,7 +160,8 @@ export default class UserAdminView {
                 this.addDataNasc.value,
                 this.addFoto.value,
                 this.addChxAdmin.checked ? 'admin' : 'comum',
-                this.addChxEstado.checked ? 'ativo' : 'bloqueado'
+                this.addChxEstado.checked ? 'ativo' : 'bloqueado',
+                this.userData.listaPessoal
                 );
                 this.displayAddUserMessage('User added with success!', 'success');
 

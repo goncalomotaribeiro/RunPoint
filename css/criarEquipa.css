@@ -62,15 +62,3 @@ h6 {
     padding: 18px 150px 18px 150px;
     font-size: 16pt;
 }
-
-.footer {
-    height: 100px;
-    padding-top: 44px;
-    text-align: center;
-    margin-top: 100px;
-    border-top: 1px rgb(119, 119, 119);
-    font-family: PortoSans-LightItalic;
-    color: #666666;
-    font-size: 0.9em;
-    background-color: rgb(255, 255, 255);
-}
