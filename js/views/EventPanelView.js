@@ -98,7 +98,7 @@ export default class EventPanelView {
                     result += btnLista
                     result += `</div>
                     <div class="col-12 col-xl-3 offset-xl-0 col-xl-2 p-0 mt-xl-5 text-center">
-                        <a href="#" class="btnVerMais">VER MAIS</a>
+                        <a href="infoProva.html" id="${event.id}" class="btnVerMais">VER MAIS</a>
                     </div>
                 </div>
             </div>`            

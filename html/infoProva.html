@@ -49,43 +49,25 @@
         </div>
     </header>
 
-    <div class="container col-6 offset-lg-3">
-        <form class="form-inline  d-flex justify-content-between">
-            <div class="form-group m-2">
-                <input type="search" id="search2" class="search" placeholder="LOCALIZAÇÃO" style="padding: 5px 5px 5px 5px;">
-                <button id="btnFilter" style="background: none; border: none;"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></button>                                                                                          
-            </div>
-            <div class="form-group">
-                <label for="sltType">Tipo </label>
-                <select class="form-control m-2 sltType" id="sltType">
-                    <option value="">All</option>
-                    <option value="Maratona">Maratona</option>
-                    <option value="Meia-maratona">Meia-Maratona</option>
-                    <option value="Trail">Trail</option>
-                    <option value="Fun">Fun Run</option>
-                </select>
-            </div>
-        </form>
+    <div class="container text-center">
+        <img src="/imgs/cartaz/cartaz.jpg" class="img-fluid cartaz" alt="Responsive image">
     </div>
     
     <div class="container w-50 barraProva">
         <div class="row">
-            <div class="col-12 col-xl-2 offset-xl-0 col-xl-2 p-0 mb-4 text-center">
-                <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+            <div class="col-12 offset-xl-0 col-xl-1 p-0 mb-4 text-center">
+                <img class="img-fluid" src="/imgs/Interface/shirt.png" alt="">
             </div>
             <div class="col-12 col-xl-7 mb-3 mb-xl-0 mt-xl-1 pt-1 text-center text-xl-left">
-                <span class="nomeProva mt-1">Camisola</span>
-                <span class="infoProva">Data </span><span class="infoProva2">${event.data}</span><br class="d-xl-none">
-                <span class="infoProva">Local </span><span class="infoProva2">${event.local}</span><br class="d-xl-none">
-                <span class="infoProva">Tipo </span><span class="infoProva2">Equipamento</span><br>
-                <a href="" class="btnAdd"><img id="${event.id}" class="btnAdd img-lg-responsive" src="/imgs/Interface/adicionar2.png"></a><span class="infobtn d-none d-md-inline ">CLICA PARA ADICIONARES ÀS TUAS PROVAS</span>`
-                <a href="" class="btnRemove"><img id="${event.id}" class="btnRemove img-lg-responsive" src="/imgs/Interface/eliminar.png"></a>`
+                <span class="nomeProva mt-1">Camisola</span><span class="nomeProva mt-1">3/20</span><span class="nomeProva mt-1">Porto</span><span class="nomeProva mt-1">16ª</span><br>
+                <span>Equipamento</span><span>Capacidade</span><span>Localização</span><span>Edição</span>
             </div>
             <div class="col-12 col-xl-3 offset-xl-0 col-xl-2 p-0 mt-xl-5 text-center">
                 <a href="#" class="btnVerMais">VER MAIS</a>
             </div>
         </div>
-    </div>`     
+    </div>
+
 
     <div class="footer">
         <p>© 2020 RunPoint Todos os Direitos Reservados.</p>

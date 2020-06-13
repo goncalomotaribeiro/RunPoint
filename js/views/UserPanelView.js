@@ -60,7 +60,7 @@ export default class UserPanelView {
                 </div>
                 <div class="col-6 col-xl-2 valorDiv">
                     <img class="d-xl-none" src="/imgs/Interface/stickman.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
-                    <span class="valor">10</span><span class="valor"> km</span>
+                    <span class="valor">--</span><span class="valor"> km</span>
                     <p class="categoria">Distância</p>
                 </div>
                 <div class="d-xl-none col-12 valorDiv">
