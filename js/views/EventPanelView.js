@@ -22,10 +22,10 @@ export default class EventPanelView {
 
     bindAddSeeMoreEvent() {
         document.addEventListener('click', event => {
-            event.preventDefault()
             if(event.target && event.target.matches("a.btnVerMais")){
                 this.eventController.setCurrentEvent(event.target.id)  
                 location.href='infoProva.html';
+                event.preventDefault()
             }
         })
     }
