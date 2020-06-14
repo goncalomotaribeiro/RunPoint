@@ -7,6 +7,7 @@ import TeamView from './views/TeamView.js'
 import InfoTeamView from './views/InfoTeamView.js'
 import CreateProfileView from './views/CreateProfileView.js'
 import CreateTeamView from './views/CreateTeamView.js'
+import InfoEventView from './views/InfoEventView.js'
 
 class App {
     constructor() {
@@ -40,6 +41,9 @@ class App {
             ],
             'criarEquipa': [
                 CreateTeamView
+            ],
+            'infoProva': [
+                InfoEventView
             ]
         };
 

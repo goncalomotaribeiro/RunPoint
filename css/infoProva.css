@@ -1,0 +1,87 @@
+.breadcrumb{
+    margin: 0;
+    background-color: #f9f9f9;
+    font-family: PortoSans-Light;
+}
+
+.breadcrumb a{
+    color: #47a4df;
+}
+
+.breadcrumb a:hover{
+    text-decoration: none;
+}
+
+.cartaz{
+    margin-bottom: 20px;
+    width: 65%;
+}
+
+.titulo{
+    font-family: PortoSans-BoldItalic;
+    font-size: 1.2em;
+}
+
+.infoProva{
+    font-size: 1.5em;
+    font-family: PortoSans-RegularItalic;
+    margin-right: 10px;
+    color: black;
+}
+
+.infoProva2{
+    font-size: 1.2em;
+    font-family: PortoSans-LightItalic;
+    margin-right: 10px;
+    color: rgb(165, 165, 165);
+}
+
+.infoProva3{
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-family: PortoSans-RegularItalic;
+    margin-right: 10px;
+    color:black;
+}
+
+.descricao{
+    border: none;
+    font-family: PortoSans-Regular;
+    font-size:20px ;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+.descricao:disabled{
+    background: #f9f9f9;
+}
+
+.barraProva{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000011;
+    background: #ffffff;
+    margin-top: 30px;
+    padding: 18px 25px 10px 40px;
+}
+
+.infobtn{
+    font-family: PortoSans-Regular;
+    font-size: 0.9em;
+    margin-left: 10px;
+    color: rgb(71, 71, 71);
+}
+
+.btnVerMais{
+    padding: 15px 25px 15px 25px;
+    background-color: #4CA8E0;
+    font-family: PortoSans-BoldItalic;
+    color: white;
+    font-size: 1em;
+    border-radius: 35px;
+}
+
+.btnVerMais:hover {
+    color: white;
+    background-color: #47a4df;
+    text-decoration: none;
+}

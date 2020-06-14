@@ -20,6 +20,16 @@ export default class EventPanelView {
         this.bindAddFilterEvent()
     }
 
+    bindAddSeeMoreEvent() {
+        document.addEventListener('click', event => {
+            event.preventDefault()
+            if(event.target && event.target.matches("a.btnVerMais")){
+                this.eventController.setCurrentEvent(event.target.id)  
+                location.href='infoProva.html';
+            }
+        })
+    }
+
     bindAddFilterEvent() {
         this.btnFilter.addEventListener('click', () => {
             event.preventDefault();        
@@ -98,7 +108,7 @@ export default class EventPanelView {
                     result += btnLista
                     result += `</div>
                     <div class="col-12 col-xl-3 offset-xl-0 col-xl-2 p-0 mt-xl-5 text-center">
-                        <a href="infoProva.html" id="${event.id}" class="btnVerMais">VER MAIS</a>
+                        <a href="" id="${event.id}" class="btnVerMais">VER MAIS</a>
                     </div>
                 </div>
             </div>`            
@@ -106,5 +116,6 @@ export default class EventPanelView {
         this.main.innerHTML = result
         this.bindAddEditEvent()
         this.bindAddRemoveEvent()
+        this.bindAddSeeMoreEvent()
     }
 }
