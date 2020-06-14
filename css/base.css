@@ -2,6 +2,21 @@ body {
     background-color: #f9f9f9;
 }
 
+.breadcrumb{
+    margin: 0;
+    margin-left: 110px;
+    background-color: #f9f9f9;
+    font-family: PortoSans-Light;
+}
+
+.breadcrumb a{
+    color: #47a4df;
+}
+
+.breadcrumb a:hover{
+    text-decoration: none;
+}
+
 button:focus {
     outline:0;
 }

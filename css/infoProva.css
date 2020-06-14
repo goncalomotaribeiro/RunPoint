@@ -1,17 +1,3 @@
-.breadcrumb{
-    margin: 0;
-    background-color: #f9f9f9;
-    font-family: PortoSans-Light;
-}
-
-.breadcrumb a{
-    color: #47a4df;
-}
-
-.breadcrumb a:hover{
-    text-decoration: none;
-}
-
 .cartaz{
     margin-bottom: 20px;
     width: 65%;
@@ -71,7 +57,7 @@
     color: rgb(71, 71, 71);
 }
 
-.btnVerMais{
+.btnInscrever{
     padding: 15px 25px 15px 25px;
     background-color: #4CA8E0;
     font-family: PortoSans-BoldItalic;
@@ -80,7 +66,7 @@
     border-radius: 35px;
 }
 
-.btnVerMais:hover {
+.btnInscrever:hover {
     color: white;
     background-color: #47a4df;
     text-decoration: none;

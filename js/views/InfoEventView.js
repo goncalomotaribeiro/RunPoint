@@ -42,12 +42,12 @@ export default class InfoEventView {
                     <span class="infoProva mt-1">${currentEvent.local}</span> <br>
                     <span class="infoProva2">Localização</span>
                 </div>
-                <div class="col-12 offset-xl-0 col-xl-1 p-0 mb-4 text-center mt-3">
+                <div class="col-12 offset-xl-0 col-xl-2 p-0 mb-4 text-center mt-3">
                     <span class="infoProva mt-1">16ª</span><br>
                     <span class="infoProva2">Edição</span>
                 </div>
-                <div class="col-12 col-xl-3 offset-xl-1 p-0 mt-xl-5 text-center">
-                    <a href="#" class="btnVerMais">INSCREVER</a>
+                <div class="col-12 col-xl-2 offset-xl-1 d-flex align-items-center justify-content-center">
+                    <a href="#" class="btnInscrever">INSCREVER</a>
                 </div>
             </div>
             <div class="row">
