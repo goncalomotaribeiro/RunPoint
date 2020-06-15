@@ -47,7 +47,7 @@ export default class InfoEventView {
                     <span class="infoProva2">Edição</span>
                 </div>
                 <div class="col-12 col-xl-2 offset-xl-1 d-flex align-items-center justify-content-center">
-                    <a href="#" class="btnInscrever">INSCREVER</a>
+                    <a href="inscrever.html" class="btnInscrever">INSCREVER</a>
                 </div>
             </div>
             <div class="row">
