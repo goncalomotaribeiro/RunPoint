@@ -1,8 +1,10 @@
 import EventController from '../controllers/EventController.js'
+import EnrollController from '../controllers/EnrollController.js'
 
 export default class InfoEventView {
     constructor() {
         this.eventController = new EventController();
+        this.enrollController = new EnrollController();
 
         this.main = document.querySelector("main")
         this.btnBack = document.querySelector(".btnBack")
@@ -20,6 +22,7 @@ export default class InfoEventView {
 
     renderTable() {
         const currentEvent = this.eventController.getCurrentEvent()
+        let enrolls = this.enrollController.getEnrolls()
         let result = `
         <div class="container text-center">
             <img src="/imgs/cartaz/cartaz.jpg" class="img-fluid cartaz" alt="Responsive image">
@@ -46,9 +49,20 @@ export default class InfoEventView {
                     <span class="infoProva mt-1">16ª</span><br>
                     <span class="infoProva2">Edição</span>
                 </div>
+                `
+                if(!enrolls.find(enroll => enroll.id == currentEvent.id)){
+                    result += `
                 <div class="col-12 col-xl-2 offset-xl-1 d-flex align-items-center justify-content-center">
                     <a href="inscrever.html" class="btnInscrever">INSCREVER</a>
-                </div>
+                </div>`
+                }else{
+                    result += `
+                    <div class="col-12 col-xl-2 offset-xl-1 d-flex align-items-center justify-content-center">
+                        <a class="btnInscrever">INSCRITO</a>
+                    </div>`
+                }
+            
+            result += `
             </div>
             <div class="row">
                 <div class="col mt-3" id="descricao">

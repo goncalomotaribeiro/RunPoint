@@ -7,7 +7,7 @@
     <title>RunPoint</title>
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/infoProva.css">
+    <link rel="stylesheet" href="/css/inscrever.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
@@ -51,12 +51,77 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="" class="btnBack">Provas</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Info Prova</li>
+            <li class="breadcrumb-item"><a href="provas.html">Provas</a></li>
+            <li class="breadcrumb-item"><a href="" class="btnBack">Info Prova</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Inscrever</li>
         </ol>
     </nav>
-    
-    <main></main>
+
+    <div class="container opcao">
+        <div class="row">
+            <div class="col-xl-5 offset-xl-0 text-center barraProva" id="btnIndividual" data-toggle="modal" data-target="#modelId">
+                <p class="titulo">Individual</p>
+                <p class="subtitulo">Atleta</p>
+            </div>
+            <div class="col-xl-5 offset-xl-1 text-center barraProva" id="btnEquipa" data-toggle="modal" data-target="#modelId">
+                <p class="titulo">Equipa</p>
+                <p class="subtitulo">Inscrever Equipa</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulário Inscrição Individual -->
+    <div class="modal fade bd-example-modal-lg" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid p-5">
+                        <h5 class="modal-title mb-4" id="modal-title" style="font-family: PortoSans-BoldItalic; font-size: 1.5em;">Inscrição</h5>
+                        <div class="image-upload text-center" >
+                            <label for="file-input">
+                            <img src="../imgs/Interface/fotoPerfil.png" id="imagePreview"/>
+                            </label>                                 
+                            <input id="file-input" type="file" name="addFoto"/>
+                            <p style="font-family: PortoSans-RegularItalic; margin-right: 11px; font-size: 1.5em;">Gonçalo Ribeiro</p>
+                        </div>
+                        <form id="frmNewUser" action="painel.html">
+                            <div class="row">
+                                <div class="col-lg">
+                                <input type="text" class="form-control" placeholder="Nr Cartao de Identidade" id="addNrIdentidade">
+                                </div>
+                                <div class="col-lg">
+                                <input type="text" class="form-control" placeholder="Telefone" id="addTelefone">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg">
+                                    <input type="text" class="form-control" placeholder="Endereço" id="addEndereco">
+                                </div>
+                                <div class="col-lg">
+                                    <input type="text" class="form-control" placeholder="Codigo Postal" id="addCodPostal">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg">
+                                    <input placeholder="Cidade"  type="text" class="form-control" id="addCidade">
+                                </div>
+                                <div class="col-lg">
+                                    <select class="form-control" id="addTipo">
+                                        <option value="maratona">Maratona</option>
+                                        <option value="meia-maratona">Meia-Maratona</option>
+                                        <option value="fun">Fun</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btnAdicionar" id="btnInscrever">Enviar</button>
+                            <div id="addEnrollMessage" style="font-family: PortoSans-Bold;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="footer">
         <p>© 2020 RunPoint Todos os Direitos Reservados.</p>

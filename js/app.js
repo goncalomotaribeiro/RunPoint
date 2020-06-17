@@ -8,6 +8,7 @@ import InfoTeamView from './views/InfoTeamView.js'
 import CreateProfileView from './views/CreateProfileView.js'
 import CreateTeamView from './views/CreateTeamView.js'
 import InfoEventView from './views/InfoEventView.js'
+import EnrollView from './views/EnrollView.js'
 
 class App {
     constructor() {
@@ -44,6 +45,9 @@ class App {
             ],
             'infoProva': [
                 InfoEventView
+            ],
+            'inscrever': [
+                EnrollView
             ]
         };
 

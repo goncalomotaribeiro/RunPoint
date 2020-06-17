@@ -1,11 +1,14 @@
 import UserController from '../controllers/UserController.js'
 import EventController from '../controllers/EventController.js'
+import EnrollController from '../controllers/EnrollController.js'
+
 
 export default class UserPanelView {
 
     constructor() {
         this.userController = new UserController();
         this.eventController = new EventController();
+        this.enrollController = new EnrollController();
         
         //Logout
         this.btnSair = document.querySelector("#btnSair");
@@ -24,6 +27,15 @@ export default class UserPanelView {
 
     }
 
+    bindAddEnrollEvent(){
+        document.addEventListener('click',event => {
+                if(event.target && event.target.matches(".inscrever")){
+                    this.eventController.setCurrentEvent(event.target.id)  
+                    event.preventDefault()
+                }
+        })
+    }
+
     bindAddLogoutEvent(){
         this.btnSair.addEventListener('click', () =>{
             this.userController.logoutUser();
@@ -37,6 +49,7 @@ export default class UserPanelView {
 
     renderTable(events = []) {
         let result = ''
+        let enrolls = this.enrollController.getEnrolls()
         if (this.userData.listaPessoal.length != 1) {
             for (let i = 1; i < this.userData.listaPessoal.length; i++) {
                 const eventId = this.userData.listaPessoal[i];
@@ -71,14 +84,24 @@ export default class UserPanelView {
                         <span class="valor">--</span><span class="valor"> º</span>
                         <p class="categoria">Class. Individual</p>
                     </div>
-    
                     <div class="col-6 col-xl-2 valorDiv">
                         <span class="valor">--</span><span class="valor"> º</span>
                         <p class="categoria">Class. Equipa</p>
-                    </div>
+                    </div>`
+                    
+                    if(enrolls.find(enroll => enroll.id == event.id)){
+                        result += `
                     <div class="col-12 col-xl-1 mt-1 text-center">
-                       <a href="" class="inscrito"><p class="inscritoText">INSCRITO</p></a> 
-                    </div>
+                       <a href="#" class="inscrito"><p class="inscritoText">INSCRITO</p></a> 
+                    </div>`
+                    }else{
+                        result += `
+                    <div class="col-12 col-xl-1 mt-1 text-center">
+                        <a href="inscrever.html" class="inscrever" id="${event.id}"><p class="inscreverText">INSCREVER</p></a> 
+                    </div>`
+                    }
+
+                  result += `
                 </div>
             </div>`
             }
@@ -89,6 +112,7 @@ export default class UserPanelView {
                 <a href="provas.html" style="font-family: PortoSans-Regular;">Adicione provas á sua lista</a>
             </div>`
             this.proximasProvas.innerHTML = result
+            this.bindAddEnrollEvent();
         }
         
     }

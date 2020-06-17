@@ -8,16 +8,9 @@ export default class TeamController {
     createTeam(local, nome, localizacao, descricao, foto, membros) {
         if (!this.teamModel.getAll().some(team => team.nome === nome)) {
             this.teamModel.create(nome, localizacao, descricao, foto, membros);
-            if(local == 'criarEquipa'){
-                this.UserAddTeam(nome);
-            }
         } else {
             throw Error(`Team already exists`);
         }
-    }
-
-    UserAddTeam(){
-
     }
 
     getTeams(filterLocation='', filterName='') {
