@@ -36,6 +36,7 @@ export default class CriarPerfilView {
             this.addFoto.value,
             userData.tipo,
             userData.estado,
+            userData.equipa,
             userData.listaPessoal
             );
         })

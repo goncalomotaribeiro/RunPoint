@@ -1,6 +1,7 @@
 import UserController from '../controllers/UserController.js'
 import EventController from '../controllers/EventController.js'
 import EnrollController from '../controllers/EnrollController.js'
+import TeamController from '../controllers/TeamController.js'
 
 
 export default class UserPanelView {
@@ -9,6 +10,7 @@ export default class UserPanelView {
         this.userController = new UserController();
         this.eventController = new EventController();
         this.enrollController = new EnrollController();
+        this.teamController = new TeamController();
         
         //Logout
         this.btnSair = document.querySelector("#btnSair");
@@ -19,21 +21,23 @@ export default class UserPanelView {
         this.proximasProvas = document.querySelector("#listaPessoal")
 
         this.renderTable(this.eventController.getEvents());
+
+        //Equipa
+        this.nomeEquipa = document.querySelector("#nomeEquipa")
+        this.nomeEquipaMobile = document.querySelector(".nomeEquipaMobile")
+        this.bindAddTeamData();
         
          //Dados Utilizador
         this.nomeUser = document.querySelector("#nomeUser");
         this.localidade = document.querySelector("#localidade");
         this.renderPesonalData();
-
     }
 
-    bindAddEnrollEvent(){
-        document.addEventListener('click',event => {
-                if(event.target && event.target.matches(".inscrever")){
-                    this.eventController.setCurrentEvent(event.target.id)  
-                    event.preventDefault()
-                }
-        })
+    bindAddTeamData(){
+        if(this.userData.equipa != ""){
+            this.nomeEquipa.textContent = this.userData.equipa;
+            this.nomeEquipaMobile.textContent = this.userData.equipa;
+        }
     }
 
     bindAddLogoutEvent(){
@@ -45,6 +49,15 @@ export default class UserPanelView {
     renderPesonalData(){
         this.nomeUser.textContent = this.userData.nome + " " + this.userData.sobrenome;
         this.localidade.textContent = this.userData.localidade
+    }
+
+    bindAddEnrollEvent() {
+        for (const btnsInscrever of document.getElementsByClassName("inscrever")) {
+            btnsInscrever.addEventListener('click', () => {
+                this.eventController.setCurrentEvent(btnsInscrever.id)
+                location.href = "inscrever.html"  
+            })
+        }
     }
 
     renderTable(events = []) {
@@ -112,8 +125,7 @@ export default class UserPanelView {
                 <a href="provas.html" style="font-family: PortoSans-Regular;">Adicione provas á sua lista</a>
             </div>`
             this.proximasProvas.innerHTML = result
-            this.bindAddEnrollEvent();
         }
-        
+        this.bindAddEnrollEvent();
     }
 }

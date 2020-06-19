@@ -115,6 +115,7 @@ export default class UserAdminView {
                 this.addFoto.value,
                 this.addChxAdmin.checked ? 'admin' : 'comum',
                 this.addChxEstado.checked ? 'ativo' : 'bloqueado',
+                this.userData.equipa,
                 this.userData.listaPessoal
 
                 );
@@ -161,6 +162,7 @@ export default class UserAdminView {
                 this.addFoto.value,
                 this.addChxAdmin.checked ? 'admin' : 'comum',
                 this.addChxEstado.checked ? 'ativo' : 'bloqueado',
+                this.userData.equipa,
                 this.userData.listaPessoal
                 );
                 this.displayAddUserMessage('User added with success!', 'success');

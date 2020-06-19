@@ -16,7 +16,17 @@ export default class TeamView {
 
         this.bindAddFilterEvent();
         this.bindAddTeamEvent();
-        this.bindInfoTeamEvent();
+    }
+
+    bindAddSeeMoreEvent() {
+        document.addEventListener('click', event => {
+            if(event.target && event.target.matches(".cardsEquip")){
+                alert("oi")
+                this.teamController.setCurrentTeam(team.target.id)  
+                location.href='equipaInfo.html';
+                event.preventDefault()
+            }
+        })
     }
 
     bindAddFilterEvent() {
@@ -29,12 +39,6 @@ export default class TeamView {
     bindAddTeamEvent() {
         this.btnCriarEquipa.addEventListener('click', () => {
             location.href = '../html/criarEquipa.html';
-        })
-    }
-
-    bindInfoTeamEvent() {
-        this.cardsTotal.addEventListener('click', () => {
-            location.href = '../html/equipaInfo.html';
         })
     }
 
@@ -61,6 +65,7 @@ export default class TeamView {
             </div>`
         }
         this.cardsTotal.innerHTML = result
+        this.bindAddSeeMoreEvent()
     }
 
     _renderCreateTeamButton(userIsLogged) {

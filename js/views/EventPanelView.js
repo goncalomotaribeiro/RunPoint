@@ -53,6 +53,7 @@ export default class EventPanelView {
                     this.userData.foto,
                     this.userData.tipo,
                     this.userData.estado,
+                    this.userData.equipa,
                     this.userData.listaPessoal
                     );
                 }
@@ -75,6 +76,7 @@ export default class EventPanelView {
                     this.userData.foto,
                     this.userData.tipo,
                     this.userData.estado,
+                    this.userData.equipa,
                     novaLista
                     );
                 }

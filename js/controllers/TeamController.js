@@ -13,6 +13,22 @@ export default class TeamController {
         }
     }
 
+    removeTeam(id) {
+        this.teamModel.remove(id)
+    }
+
+    setCurrentTeam(id) {
+        this.teamModel.setCurrentTeam(id)
+    }
+
+    getCurrentTeam() {
+        return this.teamModel.getCurrentTeam()
+    }
+
+    getTeam(id) {
+        return this.teamModel.getTeam(id)
+    }
+
     getTeams(filterLocation='', filterName='') {
 
         const teams = this.teamModel.getAll()
@@ -21,24 +37,24 @@ export default class TeamController {
             return teams
         }
 
-        let filteredEvents = []
+        let filteredTeams = []
 
         for (const team of teams) {
-            let filterEventLocal = false, filterEventName = false
+            let filterTeamLocal = false, filterTeamName = false
 
             if((team.localizacao.includes(filterLocation) && filterLocation!='') || filterLocation==='') {
-                filterEventLocal = true
+                filterTeamLocal = true
             }
 
             if((team.nome.includes(filterName) && filterName!='') || filterName==='') {
-                filterEventName = true
+                filterTeamName = true
             }
 
-            // Alimentar filteredEvents
-            if(filterEventLocal && filterEventName) {
-                filteredEvents.push(team)
+            // Alimentar filteredTeams
+            if(filterTeamLocal && filterTeamName) {
+                filteredTeams.push(team)
             }
         }
-        return filteredEvents
+        return filteredTeams
     }
 }

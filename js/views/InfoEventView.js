@@ -34,7 +34,7 @@ export default class InfoEventView {
                     <img class="img-fluid" src="/imgs/Interface/shirt.png" alt="">
                 </div>
                 <div class="col-12 offset-xl-0 col-xl-2 p-0 mb-4 text-center mt-3">
-                    <span class="infoProva mt-1">${currentEvent.id}</span> <br>
+                    <span class="infoProva mt-1">Camisola</span> <br>
                     <span class="infoProva2">Equipamento</span>
                 </div>
                 <div class="col-12 offset-xl-0 col-xl-2 p-0 mb-4 text-center mt-3">

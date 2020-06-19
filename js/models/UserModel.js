@@ -7,7 +7,7 @@ export default class UserModel {
         return this.users;
     }
 
-    create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, ...listaPessoal) {
+    create(email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, equipa, ...listaPessoal) {
         const user = {
             id: this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1,
             email: email,
@@ -20,13 +20,14 @@ export default class UserModel {
             foto: foto,
             tipo: tipo,
             estado: estado,
+            equipa: equipa,
             listaPessoal: listaPessoal
         }
         this.users.push(user);
         this._persist();
     }
 
-    edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, listaPessoal) {
+    edit(id, email, password, nome, sobrenome, localidade, genero, dataNasc, foto, tipo, estado, equipa, listaPessoal) {
 
         for (let i = 0; i < this.users.length; i++) {
             const user = this.users[i];
@@ -42,7 +43,8 @@ export default class UserModel {
                 user.foto = foto;
                 user.tipo = tipo;
                 user.estado = estado;
-                user.listaPessoal = listaPessoal
+                user.equipa = equipa;
+                user.listaPessoal = listaPessoal;
             }
         }
         
