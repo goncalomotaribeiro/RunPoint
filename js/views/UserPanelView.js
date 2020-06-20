@@ -23,22 +23,14 @@ export default class UserPanelView {
         this.renderTable(this.eventController.getEvents());
 
         //Equipa
-        this.nomeEquipa = document.querySelector("#nomeEquipa")
+        this.nomeEquipa = document.querySelector(".nomeEquipa")
         this.nomeEquipaMobile = document.querySelector(".nomeEquipaMobile")
-        this.bindAddTeamData();
         
          //Dados Utilizador
         this.fotoPerfil = document.querySelector("#image-preview")
         this.nomeUser = document.querySelector("#nomeUser");
         this.localidade = document.querySelector("#localidade");
         this.renderPesonalData();
-    }
-
-    bindAddTeamData(){
-        if(this.userData.equipa != ""){
-            this.nomeEquipa.textContent = this.userData.equipa;
-            this.nomeEquipaMobile.textContent = this.userData.equipa;
-        }
     }
 
     bindAddLogoutEvent(){
@@ -51,6 +43,11 @@ export default class UserPanelView {
         //this.fotoPerfil.src = this.userData.foto;
         this.nomeUser.textContent = this.userData.nome + " " + this.userData.sobrenome;
         this.localidade.textContent = this.userData.localidade
+
+        if(this.userData.equipa != ""){
+            this.nomeEquipa.textContent = this.userData.equipa;
+            this.nomeEquipaMobile.textContent = this.userData.equipa;
+        }
     }
 
     bindAddEnrollEvent() {

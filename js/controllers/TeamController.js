@@ -5,7 +5,7 @@ export default class TeamController {
         this.teamModel = new TeamModel()
     }
 
-    createTeam(local, nome, localizacao, descricao, foto, membros) {
+    createTeam(nome, localizacao, descricao, foto, membros) {
         if (!this.teamModel.getAll().some(team => team.nome === nome)) {
             this.teamModel.create(nome, localizacao, descricao, foto, membros);
         } else {

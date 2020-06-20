@@ -57,24 +57,24 @@ export default class EnrollView {
                     this.addTipo.value
                     );
                 
-                if(!this.userData.listaPessoal.find(event => event.id == currentEvent.id)){
-                    this.userData.listaPessoal.push(currentEvent.id)
-                    this.userController.editUser(
-                    this.userData.id,
-                    this.userData.email,
-                    this.userData.password,
-                    this.userData.nome,
-                    this.userData.sobrenome,
-                    this.userData.localidade,
-                    this.userData.genero,
-                    this.userData.dataNasc,
-                    this.userData.foto,
-                    this.userData.tipo,
-                    this.userData.estado,
-                    this.userData.equipa,
-                    this.userData.listaPessoal
-                    );
-                }
+                    if(!this.userData.listaPessoal.find(event => event == currentEvent.id)){
+                        this.userData.listaPessoal.push(currentEvent.id)
+                        this.userController.editUser(
+                        this.userData.id,
+                        this.userData.email,
+                        this.userData.password,
+                        this.userData.nome,
+                        this.userData.sobrenome,
+                        this.userData.localidade,
+                        this.userData.genero,
+                        this.userData.dataNasc,
+                        this.userData.foto,
+                        this.userData.tipo,
+                        this.userData.estado,
+                        this.userData.equipa,
+                        this.userData.listaPessoal
+                        );
+                    }
             
                 this.displayAddEnrollMessage('Enroll added with success!', 'success');
                 location.href = 'provas.html';

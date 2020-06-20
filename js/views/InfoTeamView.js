@@ -5,6 +5,8 @@ export default class InfoTeamView {
     constructor() {
         this.teamController = new TeamController()
 
+        this.btnBack = document.querySelector(".btnBack")
+
         // Info Painel Equipa
         this.equipaFoto = document.querySelector('#equipaFoto')
         this.equipaNome = document.querySelector('#equipaNome')
@@ -24,6 +26,14 @@ export default class InfoTeamView {
 
 
         this.fillTeamData()
+        this.bindBackButton()
+    }
+
+    bindBackButton() {
+        this.btnBack.addEventListener('click', () => {
+            event.preventDefault()
+            history.back();
+        })
     }
 
     fillTeamData() {

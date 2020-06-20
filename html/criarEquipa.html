@@ -49,6 +49,13 @@
         </div>
     </header>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="" class="btnBack">Equipas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Criar Equipa</li>
+        </ol>
+    </nav>
+
     <!--PAINEL CRIAR EQUIPA-->
     <div class="container" id="painel">
         <div class="row">
@@ -63,54 +70,55 @@
         </div>
 
         <!--FORMULÁRIO DE CRIAÇÃO DA EQUIPA-->
-        <div class="row">
+        <form>
+            <div class="row">
+                <div class="col text-center">
+                    <button style="border: none; background: none;" id="btnShirt"><img src="/imgs/Interface/shirt.png" alt="" class="lg-responsive"></button><br>
+                    <button style="border: none; background: none;"><p style="font-size: 15pt; font-family: PortoSans-LightItalic; opacity: 0.8;">Camisola</p></button>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 50px;">
+                <div class="col txtName" style="padding-left: 250px;">
+                    <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
+                </div>
+                <div class="col form-group" style="padding-right: 250px;">
+                    <select class="form-control" name="" id="sltLocalizacao" required>
+                            <option id="">Localização</option>
+                            <option id="porto">Porto</option>
+                            <option id="gaia">Gaia</option>
+                            <option id="maia">Maia</option>
+                            <option id="vilaDoConde">Vila do Conde</option>
+                        </select>
+                </div>
+            </div>
+
+            <div class="col" id="descricao">
+                <label for="text" style="font-family: PortoSans-LightItalic; font-size: 18pt;">Descrição</label>
+                <div class="form-group">
+                    <textarea class="form-control" id="txtDescricao" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;" required></textarea>
+                </div>
+            </div>
+
+            <div id="painelConvidar">
+                <div id="divConvidar" style="padding: 50px 150px 50px 70px;">
+                    <div class="row" style="padding-bottom: 25px;">
+                        <h6>Convidar Membros</h6>
+                        <button class="btn" id="btnAdd">+</button>
+                    </div>
+                    <div style="padding-left: 35px;">
+                        <input type="text" placeholder="@participante" id="txtMembros" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
+                        <button class="btn btn-primary float-right" id="btnConvidar">Convidar</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="col text-center">
-                <button style="border: none; background: none;" id="btnShirt"><img src="/imgs/Interface/shirt.png" alt="" class="lg-responsive"></button><br>
-                <button style="border: none; background: none;"><p style="font-size: 15pt; font-family: PortoSans-LightItalic; opacity: 0.8;">Camisola</p></button>
+                <button class="btn btn-primary" id="btnCriarEquipa">CRIAR</button>
+                <br><br>
+                <div id="addTeamMessage" style="font-family: PortoSans-Bold;"></div>
             </div>
-        </div>
-
-        <div class="row" style="padding-top: 50px;">
-            <div class="col txtName" style="padding-left: 250px;">
-                <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
-            </div>
-            <div class="col form-group" style="padding-right: 250px;">
-                <select class="form-control" name="" id="sltLocalizacao" required>
-                        <option id="">Localização</option>
-                        <option id="porto">Porto</option>
-                        <option id="gaia">Gaia</option>
-                        <option id="maia">Maia</option>
-                        <option id="vilaDoConde">Vila do Conde</option>
-                    </select>
-            </div>
-        </div>
-
-        <div class="col" id="descricao">
-            <label for="text" style="font-family: PortoSans-LightItalic; font-size: 18pt;">Descrição</label>
-            <div class="form-group">
-                <textarea class="form-control" id="txtDescricao" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;" required></textarea>
-            </div>
-        </div>
-
-        <div id="painelConvidar">
-            <div id="divConvidar" style="padding: 50px 150px 50px 70px;">
-                <div class="row" style="padding-bottom: 25px;">
-                    <h6>Convidar Membros</h6>
-                    <button class="btn" id="btnAdd">+</button>
-                </div>
-                <div style="padding-left: 35px;">
-                    <input type="text" placeholder="@participante" id="txtMembros" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
-                    <button class="btn btn-primary float-right" id="btnConvidar">Convidar</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col text-center">
-            <button class="btn btn-primary" id="btnCriarEquipa">CRIAR</button>
-            <br><br>
-            <div id="addTeamMessage" style="font-family: PortoSans-Bold;"></div>
-        </div>
-
+        </form>
     </div>
 
     <div class="footer">
