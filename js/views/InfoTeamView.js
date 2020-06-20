@@ -24,23 +24,14 @@ export default class InfoTeamView {
 
 
         this.fillTeamData()
-            //this.fillTeamAtivities()
-            //this.fillTeamRecords()
-            //this.bindBackButton()
     }
 
     fillTeamData() {
-        const currentTeam = this.teamController.getTeams()
-        this.equipaFoto.innerHTML = currentTeam.foto
+        const currentTeam = this.teamController.getCurrentTeam()
         this.equipaNome.innerHTML = currentTeam.nome
         this.equipaMembros.innerHTML = currentTeam.membros
         this.equipaLocal.innerHTML = currentTeam.localizacao
         this.equipaDescricao.innerHTML = currentTeam.descricao
     }
-
-    //fillTeamAtivities() {}
-
-    //fillTeamRecords() {}
-
 
 }

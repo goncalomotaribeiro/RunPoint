@@ -28,6 +28,7 @@ export default class UserPanelView {
         this.bindAddTeamData();
         
          //Dados Utilizador
+        this.fotoPerfil = document.querySelector("#image-preview")
         this.nomeUser = document.querySelector("#nomeUser");
         this.localidade = document.querySelector("#localidade");
         this.renderPesonalData();
@@ -47,6 +48,7 @@ export default class UserPanelView {
     }
 
     renderPesonalData(){
+        //this.fotoPerfil.src = this.userData.foto;
         this.nomeUser.textContent = this.userData.nome + " " + this.userData.sobrenome;
         this.localidade.textContent = this.userData.localidade
     }

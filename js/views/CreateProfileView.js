@@ -16,6 +16,7 @@ export default class CriarPerfilView {
         this.btnCriarPerfil = document.querySelector("#btnCriarPerfil")
 
         this.bindAddEditEvent()
+        this.displayUserImage()
     }
 
     bindAddEditEvent(){
@@ -40,5 +41,32 @@ export default class CriarPerfilView {
             userData.listaPessoal
             );
         })
+    }
+
+    displayUserImage(){      
+        this.addFoto.onchange =  evt => {
+            let newImg;
+            let tgt = evt.target || window.event.srcElement,
+                files = tgt.files;
+        
+            if (FileReader && files && files.length) {
+                let fr = new FileReader();
+                fr.onload = function () {
+                    document.querySelector('#imagePreview').src = fr.result;
+                }
+                fr.readAsDataURL(files[0]);
+            }
+        }
+    }
+
+    SetImage(){      
+        let fullPath = document.getElementById('#imagePreview').src;
+        let filename = fullPath.replace(/^.*[\\\/]/, '');
+        this.addFoto = filename;
+
+        success = copy(document.querySelector('#imagePreview').src , 'C:\\Users\\gonca\\Documents\\_ESMAD\\PROJETO 1\\Implementação\\RunPoint\\imgs\\fotosPerfil\\' + filename)
+        if (!success){
+            alert("Could Not Copy!")
+        }
     }
 }

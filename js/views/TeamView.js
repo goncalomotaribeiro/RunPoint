@@ -19,14 +19,12 @@ export default class TeamView {
     }
 
     bindAddSeeMoreEvent() {
-        document.addEventListener('click', event => {
-            if(event.target && event.target.matches(".cardsEquip")){
-                alert("oi")
-                this.teamController.setCurrentTeam(team.target.id)  
+        for (const cardsEquip of document.getElementsByClassName("cardsEquip")) {
+            cardsEquip.addEventListener('click', () => {
+                this.teamController.setCurrentTeam(cardsEquip.id)  
                 location.href='equipaInfo.html';
-                event.preventDefault()
-            }
-        })
+            })
+        }
     }
 
     bindAddFilterEvent() {
@@ -46,7 +44,7 @@ export default class TeamView {
         let result = ''
         for (const team of teams) {
             result += `
-            <div class="col-xl-3 cardsEquip">
+            <div class="col-xl-3 cardsEquip" id="${team.id}">
                 <div class="card barraEquipa">
                     <div class="card-body">
                         <div class="row">
@@ -75,7 +73,5 @@ export default class TeamView {
             this.btnCriarEquipa.style.visibility = 'hidden';
         }
     }
-
-
 
 }
