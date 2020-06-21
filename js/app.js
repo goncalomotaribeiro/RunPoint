@@ -182,17 +182,63 @@ class App {
                     membros: '3 Membros'
                 },
             ]
+
+            const ratings = [{
+                id: 1,
+                id_event: 1,
+                id_user: 1,
+                dorsal: '1',
+                tempo: '2:00:01',
+                class_user: '10',
+                class_team: '1',
+                badge: '/imgs/niveis/allstar.png'
+            },
+            {
+                id: 2,
+                id_event: 2,
+                id_user: 1,
+                dorsal: '1',
+                tempo: '1:50:01',
+                class_user: '231',
+                class_team: '1',
+                badge: '/imgs/niveis/beginner.png'
+            },
+            {
+                id: 3,
+                id_event: 3,
+                id_user: 1,
+                dorsal: '1',
+                tempo: '2:00:01',
+                class_user: '119',
+                class_team: '1',
+                badge: '/imgs/niveis/experienced.png'
+            },
+            {
+                id: 4,
+                id_event: 4,
+                id_user: 1,
+                dorsal: '1',
+                tempo: '2:00:01',
+                class_user: '30',
+                class_team: '1',
+                badge: '/imgs/niveis/prime.png'
+            }
+        ]
             // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.teams) {
             localStorage.setItem('teams', JSON.stringify(teams));
         }
-        // Load the fixtures in case there is no data in the local storage 
+
         if (!localStorage.events) {
             localStorage.setItem('events', JSON.stringify(events));
         }
 
+        if (!localStorage.ratings) {
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+        }
+
         let users = []
-            // Load the fixtures in case there is no data in the local storage 
+
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
         }
