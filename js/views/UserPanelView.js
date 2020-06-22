@@ -68,7 +68,7 @@ export default class UserPanelView {
         let userRatings = ratings.filter(rating => rating.id_user == this.userData.id)
         let events = this.eventController.getEvents()
 
-        if (userRatings != 1) {
+        if (userRatings.length > 0) {
             for (let i = 0; i < userRatings.length; i++) {
                 const rating = userRatings[i];
                 const event = events.find(event => event.id == rating.id_event)
@@ -164,10 +164,10 @@ export default class UserPanelView {
                         <p class="categoria">Class. Equipa</p>
                     </div>`
                     
-                    if(enrolls.find(enroll => enroll.id == event.id)){
+                    if(enrolls.some(enroll => enroll.provaId == event.id)){
                         result += `
                     <div class="col-12 col-xl-1 mt-1 text-center">
-                       <a href="#" class="inscrito"><p class="inscritoText">INSCRITO</p></a> 
+                       <a class="inscrito"><p class="inscritoText">INSCRITO</p></a> 
                     </div>`
                     }else{
                         result += `

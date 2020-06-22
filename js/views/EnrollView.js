@@ -8,7 +8,6 @@ export default class EnrollView {
         this.enrollController = new EnrollController();
         this.userController = new UserController();
 
-        //this.main = document.querySelector("main")
         this.btnBack = document.querySelector(".btnBack")
         
         this.btnIndidual = document.querySelector("#btnIndividual")
@@ -42,7 +41,6 @@ export default class EnrollView {
 
     bindAddAddEnrollForm() {
         this.btnInscrever.addEventListener('click', event => {
-            event.preventDefault();
             const currentEvent = this.eventController.getCurrentEvent()
             try {
                 this.enrollController.createEnroll(

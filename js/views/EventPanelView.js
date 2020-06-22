@@ -1,10 +1,12 @@
 import EventController from '../controllers/EventController.js'
 import UserController from '../controllers/UserController.js'
+import RatingController from '../controllers/RatingController.js'
 
 export default class EventPanelView {
     constructor() {
         this.eventController = new EventController();
         this.userController = new UserController();
+        this.ratingController = new RatingController();
 
         this.btnAdd = document.querySelector(".btnAdd")
         this.main = document.querySelector("main")
@@ -85,7 +87,21 @@ export default class EventPanelView {
 
     renderTable(events = []) {
         let result = ''
+        let ratings = this.ratingController.getRatings()
+        let newEvents = []
+        
         for (const event of events) {
+            if(!ratings.some(rating => rating.id_event == event.id)){
+                newEvents.push(event)
+            }
+        }
+
+        console.log(ratings);
+        console.log(events);
+        console.log(newEvents);
+        
+        
+        for (const event of newEvents) {
             result += `
             <div class="container w-50 barraProva">
                 <div class="row">

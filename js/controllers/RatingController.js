@@ -6,17 +6,17 @@ export default class RatingController {
     }
 
     createRating(id_event, id_user, dorsal, tempo, class_user, class_team, badge) {
-        if (!this.ratingModel.getAll().some(rating => rating.id_event === id_event && rating.id_user == id_user)) {
+        if (!this.ratingModel.getAll().some(rating => rating.id_event === id_event && rating.id_user === id_user)) {
             this.ratingModel.create(id_event, id_user, dorsal, tempo, class_user, class_team, badge);
         } else {
             throw Error(`Rating already exists`);
         }
     }
 
-    editRating(id_event, id_user, dorsal, tempo, class_user, class_team, badge) {
+    editRating(id, id_event, id_user, dorsal, tempo, class_user, class_team, badge) {
         const ratingEdit =  this.ratingModel.getRating(id)
         if (!this.ratingModel.getAll().some(rating => rating.id_event === id_event && rating.id_user == id_user) || (ratingEdit.id_event === id_event && ratingEdit.id_user == id_user) ) {
-            this.ratingModel.edit(id_event, id_user, dorsal, tempo, class_user, class_team, badge);
+            this.ratingModel.edit(id, id_event, id_user, dorsal, tempo, class_user, class_team, badge);
         } else {
             throw Error(`Rating already exists`);
         }
@@ -38,8 +38,36 @@ export default class RatingController {
         return this.ratingModel.getRating(id)
     }
 
-    getRatings() {
+    getRatings(filterProva='', filterType='', isSorted=false) {
+        if (isSorted) {
+            this.userModel.sort()
+        }
+
         const ratings = this.ratingModel.getAll()
-        return ratings
+        
+        if (filterProva==='' && filterType==='') {
+            return ratings
+        }
+
+        let filteredRatings = []
+
+        for (const rating of ratings) {
+            let filterRatingProva = false, filterRatingType = false
+
+            if((rating.id_event == filterProva && filterProva!='') || filterProva==='') {
+                filterRatingProva = true
+            }
+
+            if((rating.tipo===filterType && filterType!='') || filterType==='') {
+                filterRatingType = true
+            }
+
+            // Alimentar filteredRatings
+            if(filterRatingProva && filterRatingType) {
+                filteredRatings.push(rating)
+            }
+        }
+        return filteredRatings
     }
+
 }

@@ -9,6 +9,7 @@ import CreateProfileView from './views/CreateProfileView.js'
 import CreateTeamView from './views/CreateTeamView.js'
 import InfoEventView from './views/InfoEventView.js'
 import EnrollView from './views/EnrollView.js'
+import RatingAdminView from './views/RatingAdminView.js'
 
 class App {
     constructor() {
@@ -48,6 +49,9 @@ class App {
             ],
             'inscrever': [
                 EnrollView
+            ],
+            'classificacoesAdmin': [
+                RatingAdminView
             ]
         };
 
@@ -125,6 +129,54 @@ class App {
             },
             {
                 id: 4,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 5,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 6,
+                nome: 'Meia Maratona do Porto',
+                data: '13/01/2020',
+                edicao: '1ª',
+                tipo: 'Maratona',
+                descricao: 'Muito cool pessoal',
+                capacidade: '1000',
+                local: 'Porto',
+                distancia: '40',
+                preco: '180',
+                camisola: 'camisola',
+                fotos: 'fotos',
+                percurso: 'percurso',
+                estado: 'estado'
+            },
+            {
+                id: 7,
                 nome: 'Meia Maratona do Porto',
                 data: '13/01/2020',
                 edicao: '1ª',

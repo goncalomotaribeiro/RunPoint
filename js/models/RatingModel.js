@@ -22,7 +22,7 @@ export default class RatingModel{
         this._persist();
     }
 
-    edit(id_event, id_user, dorsal, tempo, class_user, class_team, badge) {
+    edit(id, id_event, id_user, dorsal, tempo, class_user, class_team, badge) {
         const ratings = this.ratings;
 
         for (let i = 0; i < ratings.length; i++) {

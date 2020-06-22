@@ -50,7 +50,7 @@ export default class InfoEventView {
                     <span class="infoProva2">Edição</span>
                 </div>
                 `
-                if(!enrolls.find(enroll => enroll.id == currentEvent.id)){
+                if(!enrolls.some(enroll => enroll.provaId == currentEvent.id)){
                     result += `
                 <div class="col-12 col-xl-2 offset-xl-1 d-flex align-items-center justify-content-center">
                     <a href="inscrever.html" class="btnInscrever">INSCREVER</a>
