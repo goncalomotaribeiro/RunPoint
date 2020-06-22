@@ -235,7 +235,7 @@ class App {
                 },
             ]
 
-            const ratings = [{
+            /*const ratings = [{
                 id: 1,
                 id_event: 1,
                 id_user: 1,
@@ -276,6 +276,10 @@ class App {
                 badge: '/imgs/niveis/prime.png'
             }
         ]
+        
+        if (!localStorage.ratings) {
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+        }*/
             // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.teams) {
             localStorage.setItem('teams', JSON.stringify(teams));
@@ -283,10 +287,6 @@ class App {
 
         if (!localStorage.events) {
             localStorage.setItem('events', JSON.stringify(events));
-        }
-
-        if (!localStorage.ratings) {
-            localStorage.setItem('ratings', JSON.stringify(ratings));
         }
 
         let users = []

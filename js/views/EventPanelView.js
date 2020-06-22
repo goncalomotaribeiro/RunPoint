@@ -95,11 +95,6 @@ export default class EventPanelView {
                 newEvents.push(event)
             }
         }
-
-        console.log(ratings);
-        console.log(events);
-        console.log(newEvents);
-        
         
         for (const event of newEvents) {
             result += `

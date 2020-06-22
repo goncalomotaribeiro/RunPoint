@@ -31,10 +31,14 @@ export default class UserPanelView {
         this.nomeEquipaMobile = document.querySelector(".nomeEquipaMobile")
         
          //Dados Utilizador
+        this.nPontos = document.querySelector("#nPontos")
+        this.nProvas = document.querySelector("#nProvas")
+        this.nKm = document.querySelector("#nKm")
         this.fotoPerfil = document.querySelector("#image-preview")
         this.nomeUser = document.querySelector("#nomeUser");
         this.localidade = document.querySelector("#localidade");
         this.renderPesonalData();
+        this.RenderPontos()
     }
 
     bindAddLogoutEvent(){
@@ -43,8 +47,40 @@ export default class UserPanelView {
         })
     }
 
+    RenderPontos(){
+        let ratings = this.ratingController.getRatings().filter(rating => rating.id_user == this.userData.id)
+        let totalPontos = 0
+        for (const rating of ratings) {
+            if(rating.badge == "/imgs/niveis/allstar.png"){
+                totalPontos += 1500
+            }else if(rating.badge == "/imgs/niveis/prime.png"){
+                totalPontos += 1000
+            }else if(rating.badge == "/imgs/niveis/experienced.png"){
+                totalPontos += 500
+            }else if(rating.badge == "/imgs/niveis/talented.png"){
+                totalPontos += 250
+            }else if(rating.badge == "/imgs/niveis/beginner.png"){
+                totalPontos += 100
+            }else if(rating.badge == "/imgs/niveis/WINNER2.png"){
+                totalPontos += 2000
+            }
+        }
+        this.nPontos.textContent = totalPontos
+    }
+
     renderPesonalData(){
-        //this.fotoPerfil.src = this.userData.foto;
+        let ratings = this.ratingController.getRatings().filter(rating => rating.id_user == this.userData.id)
+        let events = this.eventController.getEvents()
+        let count = 0
+        let km = 0
+        for (const rating of ratings) {
+            const event = events.find(event => event.id == rating.id_event)
+            km += +event.distancia
+            count++
+        }
+
+        this.nProvas.textContent = count;
+        this.nKm.textContent = km;
         this.nomeUser.textContent = this.userData.nome + " " + this.userData.sobrenome;
         this.localidade.textContent = this.userData.localidade
 
@@ -90,7 +126,7 @@ export default class UserPanelView {
                                     </div>
                                     <div class="col-6 col-xl-2 valorDiv">
                                         <img class="d-xl-none" src="/imgs/Interface/stickman.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
-                                        <span class="valor">10</span><span class="valor">${event.distancia} km</span>
+                                        <span class="valor">${event.distancia}</span><span class="valor"> km</span>
                                         <p class="categoria">Distância</p>
                                     </div>
                                     <div class="d-xl-none col-12 valorDiv">
