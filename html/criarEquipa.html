@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/criarEquipa.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/admin.css">
 </head>
 
 <body>
@@ -56,67 +57,65 @@
         </ol>
     </nav>
 
-    <!--PAINEL CRIAR EQUIPA-->
-    <div class="container" id="painel">
+    <div class="container p-5" id="painel">
         <div class="row">
-            <div class="col">
-                <h1 style="width: auto;font-size: 28px; font-family: PortoSans-Regular; padding-bottom: 50px; padding-left: 50px; padding-top: 50px;">Criar Equipa</h1>
+            <div class="col-6 mb-5">
+                <h2 style="font-family: PortoSans-Regular;">Criar Equipa</h2>
             </div>
-            <div class="col">
-                <a href="/html/equipas.html"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 50px; margin-right: 50px;">
-                    <span aria-hidden="true">&times;</span>
+            <div class="col-6 mb-5">
+                <a href="/html/equipas.html"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button></a>
             </div>
         </div>
-
-        <!--FORMULÁRIO DE CRIAÇÃO DA EQUIPA-->
-        <form>
+        <div class="row">
+            <div class="col-12 mt-5 mb-4">
+                <div class="image-upload text-center" >
+                    <label for="file-input">
+                    <img src="../imgs/Interface/shirt.png" id="imagePreview"/>
+                    </label>                                 
+                    <input id="file-input" type="file" name="addFoto"/>
+                    <p style="font-family: PortoSans-LightItalic; margin-right: 11px;">Camisola</p>
+                </div>
+            </div>
+        </div>
+        <form id="frmNewUser" action="equipas.html">
             <div class="row">
-                <div class="col text-center">
-                    <button style="border: none; background: none;" id="btnShirt"><img src="/imgs/Interface/shirt.png" alt="" class="lg-responsive"></button><br>
-                    <button style="border: none; background: none;"><p style="font-size: 15pt; font-family: PortoSans-LightItalic; opacity: 0.8;">Camisola</p></button>
+                <div class="col-lg">
+                    <input type="text" class="form-control" placeholder="Nome" id="addNome">
+                    <div id="addTeamMessage" style="font-family: PortoSans-Bold;"></div>
+                </div>
+                <div class="col-lg">
+                    <input type="text" class="form-control" placeholder="Localização" id="sltLocalizacao">
                 </div>
             </div>
-
-            <div class="row" style="padding-top: 50px;">
-                <div class="col txtName" style="padding-left: 250px;">
-                    <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
-                </div>
-                <div class="col form-group" style="padding-right: 250px;">
-                    <select class="form-control" name="" id="sltLocalizacao" required>
-                            <option id="">Localização</option>
-                            <option id="porto">Porto</option>
-                            <option id="gaia">Gaia</option>
-                            <option id="maia">Maia</option>
-                            <option id="vilaDoConde">Vila do Conde</option>
-                        </select>
+            <div class="row">
+                <div class="col-lg mt-3">
+                    <label for="txtDescricao">Descrição</label>
+                    <textarea class="form-control" id="txtDescricao" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px; background: #f9f9f9; border-radius: 15px;" required></textarea>
                 </div>
             </div>
-
-            <div class="col" id="descricao">
-                <label for="text" style="font-family: PortoSans-LightItalic; font-size: 18pt;">Descrição</label>
-                <div class="form-group">
-                    <textarea class="form-control" id="txtDescricao" rows="5" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;" required></textarea>
-                </div>
-            </div>
-
-            <div id="painelConvidar">
-                <div id="divConvidar" style="padding: 50px 150px 50px 70px;">
-                    <div class="row" style="padding-bottom: 25px;">
-                        <h6>Convidar Membros</h6>
+            <div class="container painelConvidar text-center p-4 mb-5">
+                <div class="row">
+                    <div class="col-lg-3 mt-3">
+                        <h3 style=" font-family: PortoSans-Regular; font-size:20px;">Convidar Membros</h3>
+                    </div>
+                    <div class="col-lg-1 mt-3">
                         <button class="btn" id="btnAdd">+</button>
                     </div>
-                    <div style="padding-left: 35px;">
-                        <input type="text" placeholder="@participante" id="txtMembros" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
-                        <button class="btn btn-primary float-right" id="btnConvidar">Convidar</button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mt-3">
+                        <input type="text" class="form-control" placeholder="@participante" id="txtMembros" style="border: none; font-family: PortoSans-Regular; font-size:20px ; background: #f9f9f9; border-radius: 15px;">
+                    </div>
+                    <div class="col-2 mt-2">
+                        <button class="btnAdicionar" id="btnConvidar">Convidar</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col text-center">
-                <button class="btn btn-primary" id="btnCriarEquipa">CRIAR</button>
-                <br><br>
-                <div id="addTeamMessage" style="font-family: PortoSans-Bold;"></div>
+            <div class="row">
+                <div class="col-lg text-center">
+                    <button type="submit" class="btnAdicionar" id="btnCriarEquipa">Criar Equipa</button>
+                </div>
             </div>
         </form>
     </div>

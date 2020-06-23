@@ -7,40 +7,199 @@
     <title>RunPoint</title>
     <link rel="shortcut icon" type="image/png" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/resultados.css">
+    <link rel="stylesheet" href="/css/userPanel.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/resultados.css">
 </head>
 
 <body>
     <header>
-        <img src="/imgs/logo.png" alt="logo" class="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="/html/painel.html">PAINEL</a></li>
-                <li><a href="/html/resultados.html" class="active">RESULTADOS</a></li>
-                <li><a href="/html/provas.html">PROVAS</a></li>
-                <li><a href="/html/equipas.html">EQUIPAS</a></li>
-            </ul>
-        </nav>
-        <div id="nav__btns">
-            <input type="search" id="search" placeholder="PROCURAR">
-            <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
-            <a href="#" class="btnNotif"><img class="img-lg-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="img-lg-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-lg-responsive" src="/imgs/Interface/arrowDown.png"></button>
-                <div class="dropdown-content">
-                    <a href="editarPerfil.html"><img src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
-                    <a href="/index.html">Sair</a>
+        <div class="container-fluid pt-3 pr-3 p-xl-4">
+            <div class="row">
+                <div class="col-xl-2 offset-xl-1 d-flex justify-content-between mb-2 mb-xl-0">
+                    <a href="#" class="d-xl-none btnNotif"><img class="img-xl-responsive" src="/imgs/Interface/bell.png"></a>
+                    <img class="logo" src="/imgs/logo2.png" alt="logo">
+                    <a href="#" class="d-xl-none dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"></a>
+                </div>
+                <div class="col-xl-3 order-xl-1 d-none d-xl-inline ml-xl-5 text-center">
+                    <div id="nav__btns" class="mt-2">
+                        <input class="d-none d-md-inline" type="search" id="search" placeholder="PROCURAR">
+                        <a href="#" class="btnSearch"><img class="img-lg-responsive" src="/imgs/Interface/lupa.png"></a>
+                        <a href="#" class="btnNotif"><img class="img-xl-responsive notifIcon" src="/imgs/Interface/bell.png"></a>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img class="img-xl-responsive submenuIcon" src="/imgs/Interface/submenu.png"><img class="img-xl-responsive" src="/imgs/Interface/arrowDown.png"></button>
+                            <div class="dropdown-content">
+                                <a href="editarPerfil.html"><img class="float-left" src="/imgs/Interface/editar.png" alt="">Editar Perfil</a>
+                                <a id="btnSair" href="/index.html"><img class="float-left ml-1" src="/imgs/Interface/sair.png" alt="">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 offset-lg-0 offset-xl-1 pr-5">
+                    <nav>
+                        <ul class="nav__links mt-3">
+                            <li><a href="painel.html">PAINEL</a></li>
+                            <li><a href="resultados.html" class="active">RESULTADOS</a></li>
+                            <li><a href="provas.html">PROVAS</a></li>
+                            <li><a href="equipas.html">EQUIPAS</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
 
+
+    <section class="container-fluid barraProvas" style="margin-top: 500px;">
+        <div class="row">
+            <div class="col-md-12 conteudo">
+                <ul id="tabs" class="nav nav-tabs-nostyle">
+                    <li class="nav-item mr-sm-4"><a href="" data-target="#listaProvas" data-toggle="tab" class="nav-link active">Provas Concluídas</a></li>
+                    <li class="nav-item"><a href="" data-target="#listaPessoal" data-toggle="tab" class="nav-link">Próximas Provas</a></li>
+                </ul>
+                <br>
+                <div id="tabsContent" class="tab-content">
+                    <div class="headerProvas d-flex justify-content-between align-items-center mb-1">
+                        <p class="h5" style="font-family: PortoSans-BoldItalic; color: black;">Registo de Provas</p>
+                        <img class="d-none d-xl-inline" style="margin-left: 95px;" src="/imgs/Interface/cronometro.png" alt="">
+                        <img class="d-none d-xl-inline" style="margin-right: 100px;" src="/imgs/Interface/stickman.png" alt="">
+                        <img class="d-none d-xl-inline" style="margin-right: 38px;" src="/imgs/Interface/podio.png" alt="">
+                        <img class="d-none d-xl-inline mr-2" src="/imgs/Interface/medalha.png" alt="">
+                    </div>
+                    <div id="listaProvas" class="tab-pane fade active show">
+                        <div id="listaRatings" class="list-group ml-2">
+                            <div class="list-group-item">
+                                <div class="row">
+                                    <div class="col-12 col-lg-2 offset-xs-3 offset-xl-0 col-xl-1 mt-1 text-center">
+                                        <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-2 mb-5 mb-xl-0 mt-xl-1 pt-1 text-center text-lg-left">
+                                        <span class="nomeProva">EDP Maratona do Porto</span><br>
+                                        <span class="categoriaProva">MARATONA</span><br>
+                                        <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><span class="infoProva">Local </span><span class="infoProva2">Porto</span>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <img class="d-xl-none" src="/imgs/Interface/cronometro.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                        <span class="valor">5:00:01</span>
+                                        <p class="categoria">Tempo</p>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <img class="d-xl-none" src="/imgs/Interface/stickman.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                        <span class="valor">10</span><span class="valor"> km</span>
+                                        <p class="categoria">Distância</p>
+                                    </div>
+                                    <div class="d-xl-none col-12 valorDiv">
+                                        <img src="/imgs/Interface/podio.png" alt=""><br><br>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <span class="valor">150</span><span class="valor"> º</span>
+                                        <p class="categoria">Class. Individual</p>
+                                    </div>
+
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <span class="valor">2</span><span class="valor"> º</span>
+                                        <p class="categoria">Class. Equipa</p>
+                                    </div>
+                                    <div class="col-12 col-xl-1 mt-1 text-center">
+                                        <img class="medalha" src="/imgs/niveis/WINNER2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="row">
+                                    <div class="col-12 col-lg-2 offset-xs-3 offset-xl-0 col-xl-1 mt-1 text-center">
+                                        <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-2 mb-5 mb-xl-0 mt-xl-1 pt-1 text-center text-lg-left">
+                                        <span class="nomeProva">EDP Maratona do Porto</span><br>
+                                        <span class="categoriaProva">MARATONA</span><br>
+                                        <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><span class="infoProva">Local </span><span class="infoProva2">Porto</span>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <img class="d-xl-none" src="/imgs/Interface/cronometro.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                        <span class="valor">5:00:01</span>
+                                        <p class="categoria">Tempo</p>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <img class="d-xl-none" src="/imgs/Interface/stickman.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                        <span class="valor">10</span><span class="valor"> km</span>
+                                        <p class="categoria">Distância</p>
+                                    </div>
+                                    <div class="d-xl-none col-12 valorDiv">
+                                        <img src="/imgs/Interface/podio.png" alt=""><br><br>
+                                    </div>
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <span class="valor">150</span><span class="valor"> º</span>
+                                        <p class="categoria">Class. Individual</p>
+                                    </div>
+
+                                    <div class="col-6 col-xl-2 valorDiv">
+                                        <span class="valor">2</span><span class="valor"> º</span>
+                                        <p class="categoria">Class. Equipa</p>
+                                    </div>
+                                    <div class="col-12 col-xl-1 mt-1 text-center">
+                                        <img class="medalha" src="/imgs/niveis/WINNER2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="listaPessoal" class="tab-pane fade ml-2">
+                        <div class="list-group-item mb-3">
+                            <div class="row">
+                                <div class="col-12 col-lg-2 offset-xs-3 offset-xl-0 col-xl-1 mt-1 text-center">
+                                    <img class="img" src="/imgs/cartaz/cartaz.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 mb-5 mb-xl-0 mt-xl-1 pt-1 text-center text-lg-left">
+                                    <span class="nomeProva">EDP Maratona do Porto</span><br>
+                                    <span class="categoriaProva">MARATONA</span><br>
+                                    <span class="infoProva">Data </span><span class="infoProva2">31/5/2020</span><span class="infoProva">Local </span><span class="infoProva2">Porto</span>
+                                </div>
+                                <div class="col-6 col-xl-2 valorDiv">
+                                    <img class="d-xl-none" src="/imgs/Interface/cronometro.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                    <span class="valor">-:--:--</span>
+                                    <p class="categoria">Tempo</p>
+                                </div>
+                                <div class="col-6 col-xl-2 valorDiv">
+                                    <img class="d-xl-none" src="/imgs/Interface/stickman.png" alt=""><br class="d-xl-none"><br class="d-xl-none">
+                                    <span class="valor">--</span><span class="valor"> km</span>
+                                    <p class="categoria">Distância</p>
+                                </div>
+                                <div class="d-xl-none col-12 valorDiv">
+                                    <img src="/imgs/Interface/podio.png" alt=""><br><br>
+                                </div>
+                                <div class="col-6 col-xl-2 valorDiv">
+                                    <span class="valor">--</span><span class="valor"> º</span>
+                                    <p class="categoria">Class. Individual</p>
+                                </div>
+
+                                <div class="col-6 col-xl-2 valorDiv">
+                                    <span class="valor">--</span><span class="valor"> º</span>
+                                    <p class="categoria">Class. Equipa</p>
+                                </div>
+                                <div class="col-12 col-xl-1 mt-1 text-center">
+                                   <a href="" class="inscrever"><p class="inscreverText">INSCREVER</p></a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>© 2020 RunPoint Todos os Direitos Reservados.</p>
+    </div>
+
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/app.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

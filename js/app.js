@@ -81,7 +81,7 @@ class App {
     _importDataFixtures() {
         const events = [{
                 id: 1,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 1',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -97,7 +97,7 @@ class App {
             },
             {
                 id: 2,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 2',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -113,7 +113,7 @@ class App {
             },
             {
                 id: 3,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 3',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -129,7 +129,7 @@ class App {
             },
             {
                 id: 4,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 4',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -145,7 +145,7 @@ class App {
             },
             {
                 id: 5,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 5',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -161,7 +161,7 @@ class App {
             },
             {
                 id: 6,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 6',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',
@@ -177,7 +177,7 @@ class App {
             },
             {
                 id: 7,
-                nome: 'Meia Maratona do Porto',
+                nome: 'Meia Maratona do Porto 7',
                 data: '13/01/2020',
                 edicao: '1ª',
                 tipo: 'Maratona',

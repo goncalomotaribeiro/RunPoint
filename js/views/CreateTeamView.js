@@ -14,7 +14,7 @@
         //Add Equipa DOM
         this.btnCriar = document.querySelector('#btnCriarEquipa');
         this.teamFoto = document.querySelector('#btnShirt');
-        this.teamNome = document.querySelector('#txtNome');
+        this.teamNome = document.querySelector('#addNome');
         this.teamLocalizacao = document.querySelector('#sltLocalizacao');
         this.teamDescricao = document.querySelector('#txtDescricao');
         this.addTeamMessage = document.querySelector('#addTeamMessage');
@@ -32,14 +32,15 @@
 
     bindAddAddTeamForm() {
         this.btnCriar.addEventListener('click', event => {
+            
             try {
                     if(this.userData.equipa == "" && this.teamNome.value != ""){
                         this.teamController.createTeam(
                         this.teamNome.value,
                         this.teamLocalizacao.value,
                         this.teamDescricao.value,
-                        this.teamFoto.value,
-                        '1'+ ' Membros'
+                        'this.teamFoto.value',
+                        '1'
                         );
 
                         this.userController.editUser(

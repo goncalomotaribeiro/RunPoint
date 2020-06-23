@@ -54,7 +54,7 @@ export default class TeamView {
                             <div class="col text-center text-xl-left">
                                 <h3 class="nomeEquipa">${team.nome}</h3>
                                 <h5 style="font-family: PortoSans-LightItalic">Equipa</h5><br>
-                                <h5 style="font-family: PortoSans-BoldItalic">${team.membros}</h5>
+                                <h5 style="font-family: PortoSans-BoldItalic">${team.membros} Membros</h5>
                                 <h5 style="font-family: PortoSans-LightItalic">${team.localizacao}</h5>
                             </div>
                         </div>

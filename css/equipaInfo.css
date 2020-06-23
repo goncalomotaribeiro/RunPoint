@@ -1,22 +1,17 @@
-#infoEquipa {
-    background: white;
-    padding: 50px 20px 50px 20px;
-    margin-right: 20px;
-    margin-bottom: 50px;
+.descricao:disabled{
+    border: none;
+    font-family: PortoSans-Regular;
+    font-size:20px ;
+    background: #f5f4f4;
+    border-radius: 15px;
+}
+
+.barraEquipa{
     border-radius: 10px;
-    box-shadow: 2px 6px 6px #00000011;
-}
-
-p {
-    font-size: 17pt;
-    font-family: PortoSans-RegularItalic;
-    color: black;
-}
-
-small {
-    font-size: 12pt;
-    font-family: PortoSans-LightItalic;
-    color: gray;
+    box-shadow: 0px 0px 10px #00000011;
+    background: #ffffff;
+    margin-top: 30px;
+    padding: 18px 25px 10px 40px;
 }
 
 #btnInscrever {
@@ -49,45 +44,6 @@ small {
     border-radius: 50px;
 }
 
-#divDescricao {
-    padding: 50px 60px 0px 60px;
-    font-family: PortoSans-Regular;
-    font-size: 15pt;
-}
-
-#divDescricao textarea {
-    background: #f9f9f9;
-    border: none;
-    border-radius: 10px;
-    font-size: 15pt;
-    font-family: PortoSans-BoldItalic;
-    color: black;
-}
-
-#divResultados {
-    background: white;
-    padding: 50px 20px 50px 20px;
-    margin-right: 20px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 6px 6px #00000011;
-    ;
-}
-
-#divResultados p {
-    font-size: 15pt;
-    font-family: PortoSans-BoldItalic;
-    color: black;
-}
-
-#divAtividades {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 2px 6px 6px #00000011;
-    padding: 20px 20px 20px 20px;
-    margin-right: 60px;
-    margin-bottom: 50px;
-}
 
 h3 {
     font-family: PortoSans-BoldItalic;
